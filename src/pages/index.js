@@ -1,7 +1,9 @@
-import React from "react";
+import React from 'react';
+
+import Layout from '../components/layout';
 
 const Home = () => {
-  return <main>Hello, I would like to help you with your garden.</main>;
+  return <Layout>DKG: I'ma help you with your garden.</Layout>;
 };
 
 export default Home;
