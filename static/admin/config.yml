@@ -1,0 +1,26 @@
+backend:
+  name: git-gateway
+  branch: master
+  repo: ogdendavis/denver-kitchen-gardens
+
+media_folder: 'static/images/uploads'
+public_folder: '/images/uploads'
+
+# Start with service pages
+collections:
+  - name: 'services'
+    label: 'Service Pages'
+    label_singular: 'Service Page'
+    folder: 'src/cms/service_pages'
+    create: true
+    slug: '{{slug}}'
+    fields:
+      - {
+          label: 'Published',
+          name: 'published',
+          widget: 'boolean',
+          default: 'false',
+        }
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Main Image', name: 'image', widget: 'image' }
+      - { label: 'Content', name: 'content', widget: 'markdown' }
