@@ -1,10 +1,26 @@
 import React from 'react';
+import { useStaticQuery, graphql } from 'gatsby';
 
 import Layout from '../components/layout';
 
 const Contact = () => {
+  const data = useStaticQuery(graphql`
+    query contactQuery {
+      content: markdownRemark(
+        fileAbsolutePath: { regex: "//cms/pages/contact.md/" }
+      ) {
+        frontmatter {
+          title
+          image
+        }
+        html
+      }
+    }
+  `);
+
   return (
     <Layout>
+      <h1>{data.content.frontmatter.title}</h1>
       <form name="contact" method="POST" data-netlify="true">
         <input type="hidden" name="form-name" value="contact" />
         <p>
@@ -26,6 +42,12 @@ const Contact = () => {
           <button type="submit">Send</button>
         </p>
       </form>
+      <img
+        src={data.content.frontmatter.image}
+        style={{ maxHeight: '20vh' }}
+        alt="image"
+      />
+      <div dangerouslySetInnerHTML={{ __html: data.content.html }} />
     </Layout>
   );
 };

@@ -1,12 +1,32 @@
 import React from 'react';
+import { useStaticQuery, graphql } from 'gatsby';
 
 import Layout from '../components/layout';
 
 const Work = () => {
+  const data = useStaticQuery(graphql`
+    query workQuery {
+      content: markdownRemark(
+        fileAbsolutePath: { regex: "//cms/pages/work.md/" }
+      ) {
+        frontmatter {
+          title
+          image
+        }
+        html
+      }
+    }
+  `);
+
   return (
     <Layout>
-      If you love what you do, you'll never work a day in your life. Beacuse
-      you're probably rich and don't have to. Lucky bastard.
+      <h1>{data.content.frontmatter.title}</h1>
+      <img
+        src={data.content.frontmatter.image}
+        style={{ maxHeight: '30vh' }}
+        alt="image"
+      />
+      <main dangerouslySetInnerHTML={{ __html: data.content.html }} />
     </Layout>
   );
 };
