@@ -17,28 +17,28 @@ collections:
         fields:
           - { label: 'Headline', name: 'title', widget: 'string' }
           - { label: 'Hero Image', name: 'hero', widget: 'image' }
-          - { label: 'Content', name: 'content', widget: 'markdown' }
+          - { label: 'Content', name: 'body', widget: 'markdown' }
       - name: 'about'
         label: 'About'
         file: 'src/cms/pages/about.md'
         fields:
           - { label: 'Headline', name: 'title', widget: 'string' }
           - { label: 'Main Image', name: 'image', widget: 'image' }
-          - { label: 'Content', name: 'content', widget: 'markdown' }
+          - { label: 'Content', name: 'body', widget: 'markdown' }
       - name: 'work'
         label: 'Work'
         file: 'src/cms/pages/work.md'
         fields:
           - { label: 'Headline', name: 'title', widget: 'string' }
           - { label: 'Main Image', name: 'image', widget: 'image' }
-          - { label: 'Content', name: 'content', widget: 'markdown' }
+          - { label: 'Content', name: 'body', widget: 'markdown' }
       - name: 'contact'
         label: 'Contact'
         file: 'src/cms/pages/contact.md'
         fields:
           - { label: 'Headline', name: 'title', widget: 'string' }
           - { label: 'Main Image', name: 'image', widget: 'image' }
-          - { label: 'Content', name: 'content', widget: 'markdown' }
+          - { label: 'Content', name: 'body', widget: 'markdown' }
   - name: 'services'
     label: 'Service Pages'
     label_singular: 'Service Page'
@@ -54,4 +54,4 @@ collections:
         }
       - { label: 'Title', name: 'title', widget: 'string' }
       - { label: 'Main Image', name: 'image', widget: 'image' }
-      - { label: 'Content', name: 'content', widget: 'markdown' }
+      - { label: 'Content', name: 'body', widget: 'markdown' }
