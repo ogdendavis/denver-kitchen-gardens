@@ -8,6 +8,37 @@ public_folder: '/images/uploads'
 
 # Start with service pages
 collections:
+  - name: 'pages'
+    label: 'Main Pages'
+    files:
+      - name: 'home'
+        label: 'Home'
+        file: 'src/cms/pages/home.md'
+        fields:
+          - { label: 'Headline', name: 'title', widget: 'string' }
+          - { label: 'Hero Image', name: 'hero', widget: 'image' }
+          - { label: 'Content', name: 'content', widget: 'markdown' }
+      - name: 'about'
+        label: 'About'
+        file: 'src/cms/pages/about.md'
+        fields:
+          - { label: 'Headline', name: 'title', widget: 'string' }
+          - { label: 'Main Image', name: 'image', widget: 'image' }
+          - { label: 'Content', name: 'content', widget: 'markdown' }
+      - name: 'work'
+        label: 'Work'
+        file: 'src/cms/pages/work.md'
+        fields:
+          - { label: 'Headline', name: 'title', widget: 'string' }
+          - { label: 'Main Image', name: 'image', widget: 'image' }
+          - { label: 'Content', name: 'content', widget: 'markdown' }
+      - name: 'contact'
+        label: 'Contact'
+        file: 'src/cms/pages/contact.md'
+        fields:
+          - { label: 'Headline', name: 'title', widget: 'string' }
+          - { label: 'Main Image', name: 'image', widget: 'image' }
+          - { label: 'Content', name: 'content', widget: 'markdown' }
   - name: 'services'
     label: 'Service Pages'
     label_singular: 'Service Page'
@@ -19,7 +50,7 @@ collections:
           label: 'Published',
           name: 'published',
           widget: 'boolean',
-          default: 'false',
+          default: false,
         }
       - { label: 'Title', name: 'title', widget: 'string' }
       - { label: 'Main Image', name: 'image', widget: 'image' }
