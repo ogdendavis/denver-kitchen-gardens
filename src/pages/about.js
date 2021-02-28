@@ -17,7 +17,6 @@ const About = () => {
       }
     }
   `);
-  console.log(data.content.frontmatter);
 
   return (
     <Layout>

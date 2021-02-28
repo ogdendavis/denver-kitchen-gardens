@@ -19,13 +19,6 @@ const Nav = () => {
       <TempLink to="/about">About</TempLink>
       <TempLink to="/work">Work</TempLink>
       <TempLink to="/contact">Contact</TempLink>
-      <TempLink to="/services/personalized-garden-consultation">
-        Services: PGC
-      </TempLink>
-      <TempLink to="/services/high-density-planting">Services: HDP</TempLink>
-      <TempLink to="/services/food-preservation-workshops">
-        Services: FPW
-      </TempLink>
     </TempNav>
   );
 };

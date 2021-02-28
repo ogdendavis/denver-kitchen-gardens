@@ -29,8 +29,15 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `pages`,
+        name: `main_pages`,
         path: `${__dirname}/src/cms/pages`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `service_pages`,
+        path: `${__dirname}/src/cms/service_pages`,
       },
     },
   ],
