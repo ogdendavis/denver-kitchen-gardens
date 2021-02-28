@@ -1,6 +1,7 @@
 ---
 title: About
 image: /images/uploads/beardo.png
+image_alt: Temporary beardo image
 ---
 
 About Page content. I'm baby shabby chic truffaut seitan neutra health goth.

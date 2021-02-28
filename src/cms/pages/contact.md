@@ -1,6 +1,7 @@
 ---
 title: Contact Page
 image: /images/uploads/beardo.png
+image_alt: Temporary beardo image
 ---
 
 Contact Page. Farm-to-table master cleanse VHS twee woke echo park.

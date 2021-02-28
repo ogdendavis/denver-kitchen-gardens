@@ -24,7 +24,7 @@ const Work = () => {
       <img
         src={data.content.frontmatter.image}
         style={{ maxHeight: '30vh' }}
-        alt="image"
+        alt={data.content.frontmatter.image_alt}
       />
       <main dangerouslySetInnerHTML={{ __html: data.content.html }} />
     </Layout>

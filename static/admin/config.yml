@@ -17,6 +17,7 @@ collections:
         fields:
           - { label: 'Headline', name: 'title', widget: 'string' }
           - { label: 'Hero Image', name: 'hero', widget: 'image' }
+          - { label: 'Hero alt test', name: 'hero_alt', widget: 'string' }
           - { label: 'Content', name: 'body', widget: 'markdown' }
       - name: 'about'
         label: 'About'
@@ -24,6 +25,7 @@ collections:
         fields:
           - { label: 'Headline', name: 'title', widget: 'string' }
           - { label: 'Main Image', name: 'image', widget: 'image' }
+          - { label: 'Image alt test', name: 'image_alt', widget: 'string' }
           - { label: 'Content', name: 'body', widget: 'markdown' }
       - name: 'work'
         label: 'Work'
@@ -31,6 +33,7 @@ collections:
         fields:
           - { label: 'Headline', name: 'title', widget: 'string' }
           - { label: 'Main Image', name: 'image', widget: 'image' }
+          - { label: 'Image alt test', name: 'image_alt', widget: 'string' }
           - { label: 'Content', name: 'body', widget: 'markdown' }
       - name: 'contact'
         label: 'Contact'
@@ -38,6 +41,7 @@ collections:
         fields:
           - { label: 'Headline', name: 'title', widget: 'string' }
           - { label: 'Main Image', name: 'image', widget: 'image' }
+          - { label: 'Image alt test', name: 'image_alt', widget: 'string' }
           - { label: 'Content', name: 'body', widget: 'markdown' }
   - name: 'services'
     label: 'Service Pages'

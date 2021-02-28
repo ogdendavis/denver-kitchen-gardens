@@ -21,7 +21,10 @@ const Home = () => {
   return (
     <Layout>
       <h1>{data.content.frontmatter.title}</h1>
-      <img src={data.content.frontmatter.hero} alt="image" />
+      <img
+        src={data.content.frontmatter.hero}
+        alt={data.content.frontmatter.hero_alt}
+      />
       <main dangerouslySetInnerHTML={{ __html: data.content.html }} />
     </Layout>
   );

@@ -17,6 +17,7 @@ const About = () => {
       }
     }
   `);
+  console.log(data.content.frontmatter);
 
   return (
     <Layout>
@@ -24,7 +25,7 @@ const About = () => {
       <img
         src={data.content.frontmatter.image}
         style={{ maxHeight: '30vh' }}
-        alt="image"
+        alt={data.content.frontmatter.image_alt}
       />
       <main dangerouslySetInnerHTML={{ __html: data.content.html }} />
     </Layout>

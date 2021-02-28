@@ -45,7 +45,7 @@ const Contact = () => {
       <img
         src={data.content.frontmatter.image}
         style={{ maxHeight: '20vh' }}
-        alt="image"
+        alt={data.content.frontmatter.image_alt}
       />
       <div dangerouslySetInnerHTML={{ __html: data.content.html }} />
     </Layout>

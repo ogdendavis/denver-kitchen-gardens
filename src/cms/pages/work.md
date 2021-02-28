@@ -1,6 +1,7 @@
 ---
 title: Work Page
 image: /images/uploads/beardo.png
+image_alt: Temporary beardo image
 ---
 
 Work Page (will probably be more of a gallery). Paleo salvia meditation, ugh

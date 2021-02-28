@@ -1,6 +1,7 @@
 ---
 title: This is the homepage headline
 hero: /images/uploads/beardo.png
+hero_alt: Temporary beardo image
 ---
 
 This is the homepage content. Enamel pin swag four dollar toast, woke tattooed
