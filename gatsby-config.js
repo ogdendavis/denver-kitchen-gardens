@@ -40,5 +40,14 @@ module.exports = {
         path: `${__dirname}/src/cms/service_pages`,
       },
     },
+    // Load svg icons with file format [name].icon.svg
+    {
+      resolve: 'gatsby-plugin-react-svg',
+      options: {
+        rule: {
+          include: /\.icon\.svg$/,
+        },
+      },
+    },
   ],
 };
