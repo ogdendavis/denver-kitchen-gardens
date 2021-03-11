@@ -1,7 +1,13 @@
 import React from 'react';
-import { useStaticQuery, graphql } from 'gatsby';
+import styled from 'styled-components';
+import { Link, useStaticQuery, graphql } from 'gatsby';
 
 import Layout from '../components/layout';
+
+const TempLink = styled(Link)`
+  display: inline-block;
+  margin: 1rem;
+`;
 
 const Services = () => {
   const data = useStaticQuery(graphql`
@@ -16,8 +22,37 @@ const Services = () => {
         }
         html
       }
+      subpages: allMarkdownRemark(
+        filter: { fileAbsolutePath: { regex: "//cms/service_pages/" } }
+      ) {
+        edges {
+          node {
+            frontmatter {
+              published
+              title
+            }
+          }
+        }
+      }
     }
   `);
+
+  // Filter out unbpulished service pages
+  const servicePages = data.subpages.edges.filter(
+    x => x.node.frontmatter.published === true
+  );
+  // Link path created in same way as slug is created in gatsby-node
+  const serviceLinks = servicePages.map(({ node }) => (
+    <TempLink
+      key={`nav-${node.frontmatter.title}`}
+      to={`/services/${node.frontmatter.title
+        .toLowerCase()
+        .split(' ')
+        .join('-')}`}
+    >
+      {node.frontmatter.title}
+    </TempLink>
+  ));
 
   return (
     <Layout>
@@ -28,6 +63,7 @@ const Services = () => {
         alt={data.content.frontmatter.image_alt}
       />
       <main dangerouslySetInnerHTML={{ __html: data.content.html }} />
+      {serviceLinks}
     </Layout>
   );
 };
