@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Link } from 'gatsby';
+import { Link, useStaticQuery, graphql } from 'gatsby';
 
 import InstaIcon from '../images/icons/instagram.icon.svg';
 
@@ -16,6 +16,16 @@ const TempIconContainer = styled.div`
 `;
 
 const Footer = () => {
+  const data = useStaticQuery(graphql`
+    query footerQuery {
+      markdownRemark(fileAbsolutePath: { regex: "//cms/general/contact.md/" }) {
+        frontmatter {
+          instagram
+        }
+      }
+    }
+  `);
+
   return (
     <FooterContainer>
       <h2>Denver Kitchen Gardens</h2>
@@ -25,7 +35,7 @@ const Footer = () => {
       </p>
       <TempIconContainer>
         <a
-          href="https://www.instagram.com/denver_kitchen_gardens/"
+          href={data.markdownRemark.frontmatter.instagram}
           target="_blank"
           rel="noreferrer"
         >

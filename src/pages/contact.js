@@ -16,12 +16,20 @@ const Contact = () => {
         }
         html
       }
+      address: markdownRemark(
+        fileAbsolutePath: { regex: "//cms/general/contact.md/" }
+      ) {
+        frontmatter {
+          phone
+        }
+      }
     }
   `);
 
   return (
     <Layout>
       <h1>{data.content.frontmatter.title}</h1>
+      <p>Call us at {data.address.frontmatter.phone}</p>
       <form name="contact" method="POST" data-netlify="true">
         <input type="hidden" name="form-name" value="contact" />
         <p>

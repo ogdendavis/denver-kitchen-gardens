@@ -6,8 +6,16 @@ backend:
 media_folder: 'static/images/uploads'
 public_folder: '/images/uploads'
 
-# Start with service pages
 collections:
+  - name: 'general'
+    label: 'General Info'
+    files:
+      - name: 'contact'
+        label: 'Contact Info'
+        file: 'src/cms/general/contact.md'
+        fields:
+          - { label: 'Phone', name: 'phone', widget: 'string' }
+          - { label: 'Instagram', name: 'instagram', widget: 'string' }
   - name: 'pages'
     label: 'Main Pages'
     files:
