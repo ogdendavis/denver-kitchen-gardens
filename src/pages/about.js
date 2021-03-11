@@ -12,6 +12,7 @@ const About = () => {
         frontmatter {
           title
           image
+          image_alt
         }
         html
       }

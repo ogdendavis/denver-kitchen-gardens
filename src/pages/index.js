@@ -12,6 +12,7 @@ const Home = () => {
         frontmatter {
           title
           hero
+          hero_alt
         }
         html
       }

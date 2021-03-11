@@ -1,32 +1,23 @@
 import React from 'react';
-// import { useStaticQuery, graphql } from 'gatsby';
+import { useStaticQuery, graphql } from 'gatsby';
 
 import Layout from '../components/layout';
 
 const Services = () => {
-  // const data = useStaticQuery(graphql`
-  //   query workQuery {
-  //     content: markdownRemark(
-  //       fileAbsolutePath: { regex: "//cms/pages/work.md/" }
-  //     ) {
-  //       frontmatter {
-  //         title
-  //         image
-  //       }
-  //       html
-  //     }
-  //   }
-  // `);
-  const data = {
-    content: {
-      frontmatter: {
-        title: 'Temp Services Data',
-        image: 'nope.jpg',
-        image_alt: 'Test Alt',
-      },
-      html: '<h2>CONTENT!</h2>',
-    },
-  };
+  const data = useStaticQuery(graphql`
+    query servicesQuery {
+      content: markdownRemark(
+        fileAbsolutePath: { regex: "//cms/pages/services.md/" }
+      ) {
+        frontmatter {
+          title
+          image
+          image_alt
+        }
+        html
+      }
+    }
+  `);
 
   return (
     <Layout>
