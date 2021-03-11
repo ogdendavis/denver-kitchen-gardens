@@ -13,6 +13,7 @@ const TempLink = styled(Link)`
 `;
 
 const Nav = () => {
+  /*
   // Get service page info for nav
   const data = useStaticQuery(graphql`
     query servicePageNavQuery {
@@ -47,14 +48,15 @@ const Nav = () => {
       {node.frontmatter.title}
     </TempLink>
   ));
+  */
 
   return (
     <TempNav>
       <TempLink to="/">Home</TempLink>
+      <TempLink to="/services">Services</TempLink>
+      <TempLink to="/portfolio">Portfolio</TempLink>
       <TempLink to="/about">About</TempLink>
-      <TempLink to="/work">Work</TempLink>
       <TempLink to="/contact">Contact</TempLink>
-      {serviceLinks}
     </TempNav>
   );
 };

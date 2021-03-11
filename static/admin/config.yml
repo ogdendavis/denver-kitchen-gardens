@@ -19,17 +19,25 @@ collections:
           - { label: 'Hero Image', name: 'hero', widget: 'image' }
           - { label: 'Hero alt text', name: 'hero_alt', widget: 'string' }
           - { label: 'Content', name: 'body', widget: 'markdown' }
-      - name: 'about'
-        label: 'About'
-        file: 'src/cms/pages/about.md'
+      - name: 'services'
+        label: 'Services'
+        file: 'src/cms/pages/services.md'
         fields:
           - { label: 'Headline', name: 'title', widget: 'string' }
           - { label: 'Main Image', name: 'image', widget: 'image' }
           - { label: 'Image alt text', name: 'image_alt', widget: 'string' }
           - { label: 'Content', name: 'body', widget: 'markdown' }
       - name: 'work'
-        label: 'Work'
+        label: 'Portfolio'
         file: 'src/cms/pages/work.md'
+        fields:
+          - { label: 'Headline', name: 'title', widget: 'string' }
+          - { label: 'Main Image', name: 'image', widget: 'image' }
+          - { label: 'Image alt text', name: 'image_alt', widget: 'string' }
+          - { label: 'Content', name: 'body', widget: 'markdown' }
+      - name: 'about'
+        label: 'About'
+        file: 'src/cms/pages/about.md'
         fields:
           - { label: 'Headline', name: 'title', widget: 'string' }
           - { label: 'Main Image', name: 'image', widget: 'image' }

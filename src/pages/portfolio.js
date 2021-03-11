@@ -3,9 +3,9 @@ import { useStaticQuery, graphql } from 'gatsby';
 
 import Layout from '../components/layout';
 
-const Work = () => {
+const Portfolio = () => {
   const data = useStaticQuery(graphql`
-    query workQuery {
+    query portfolioQuery {
       content: markdownRemark(
         fileAbsolutePath: { regex: "//cms/pages/work.md/" }
       ) {
@@ -31,4 +31,4 @@ const Work = () => {
   );
 };
 
-export default Work;
+export default Portfolio;
