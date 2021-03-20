@@ -2,11 +2,9 @@ import React from 'react';
 import styled from 'styled-components';
 import { useStaticQuery, graphql, Link } from 'gatsby';
 
+import Button from './button';
+
 const NavContainer = styled.nav`
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
   padding: 1rem 8vw;
   display: flex;
   align-items: center;
@@ -18,7 +16,7 @@ const NavLogo = styled.img`
 `;
 
 const NavLink = styled(Link)`
-  margin: 0 0.5rem;
+  margin: 0 1rem;
   color: ${props => props.theme.colors.text};
   text-decoration: none;
 
@@ -53,9 +51,10 @@ const Nav = () => {
       <div>
         <NavLink to="/services">Services</NavLink>
         <NavLink to="/portfolio">Portfolio</NavLink>
+        <NavLink to="#">FAQ</NavLink>
         <NavLink to="/about">About</NavLink>
       </div>
-      <NavLink to="/contact">Contact</NavLink>
+      <Button to="/contact">Contact</Button>
     </NavContainer>
   );
 };
