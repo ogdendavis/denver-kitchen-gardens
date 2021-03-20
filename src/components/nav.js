@@ -18,12 +18,6 @@ const NavLogo = styled.img`
 const NavLink = styled(Link)`
   margin: 0 1rem;
   color: ${props => props.theme.colors.text};
-  text-decoration: none;
-
-  &:hover {
-    text-decoration-line: underline;
-    text-decoration-thickness: 0.1em;
-  }
 `;
 
 const Nav = () => {

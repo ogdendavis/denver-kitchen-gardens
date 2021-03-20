@@ -1,10 +1,50 @@
 import React from 'react';
-import { ThemeProvider } from 'styled-components';
+import styled, { ThemeProvider } from 'styled-components';
 
 import 'normalize.css';
 
 import Nav from './nav';
 import Footer from './footer';
+
+// Consume theme (set below) and set some global styles
+const ThemeConsumer = styled.div`
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: ${({ theme }) => theme.colors.heading};
+  }
+
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  h1.reset,
+  h2.reset,
+  h3.reset,
+  h4.reset,
+  h5.reset,
+  h6.reset {
+    color: inherit;
+    text-transform: none;
+    letter-spacing: normal;
+  }
+
+  a {
+    text-decoration: none;
+    &:hover {
+      text-decoration-line: underline;
+      text-decoration-thickness: 0.1em;
+    }
+  }
+`;
 
 const Layout = ({ children }) => {
   // Theme for global styles
@@ -27,9 +67,11 @@ const Layout = ({ children }) => {
 
   return (
     <ThemeProvider theme={theme}>
-      <Nav />
-      <div>{children}</div>
-      <Footer />
+      <ThemeConsumer>
+        <Nav />
+        <div>{children}</div>
+        <Footer />
+      </ThemeConsumer>
     </ThemeProvider>
   );
 };
