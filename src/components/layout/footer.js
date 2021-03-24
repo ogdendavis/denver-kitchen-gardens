@@ -3,9 +3,9 @@ import styled from 'styled-components';
 import { useStaticQuery, graphql } from 'gatsby';
 import { StaticImage } from 'gatsby-plugin-image';
 
-import Button from './button';
-import InstaIcon from '../images/icons/instagram.icon.svg';
-import ServicePageLinks from './servicePageLinks';
+import Button from '../button';
+import InstaIcon from '../../images/icons/instagram.icon.svg';
+import ServicePageLinks from '../servicePageLinks';
 
 const FooterContainer = styled.footer`
   margin-top: 2rem;
@@ -116,7 +116,7 @@ const Footer = () => {
             <ServicePageLinks />
           </div>
           <StaticImage
-            src="../images/TEMP_footerchoke.png"
+            src="../../images/TEMP_footerchoke.png"
             alt="Artichoke illustration"
             className="footichoke"
           />

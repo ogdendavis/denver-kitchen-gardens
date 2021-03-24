@@ -3,6 +3,7 @@ import styled, { ThemeProvider } from 'styled-components';
 
 import 'normalize.css';
 
+import Header from './header';
 import Footer from './footer';
 
 // Consume theme (set below) and set some global styles
@@ -45,7 +46,7 @@ const ThemeConsumer = styled.div`
   }
 `;
 
-const Layout = ({ children }) => {
+const Layout = ({ heroImage, heroHeading, heroText, heroPhone, children }) => {
   // Theme for global styles
   const theme = {
     colors: {
@@ -67,7 +68,13 @@ const Layout = ({ children }) => {
   return (
     <ThemeProvider theme={theme}>
       <ThemeConsumer>
-        {children}
+        <Header
+          image={heroImage}
+          heading={heroHeading}
+          text={heroText}
+          phone={heroPhone}
+        />
+        <main>{children}</main>
         <Footer />
       </ThemeConsumer>
     </ThemeProvider>

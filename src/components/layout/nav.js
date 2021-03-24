@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { useStaticQuery, graphql, Link } from 'gatsby';
 
-import Button from './button';
+import Button from '../button';
 
 const NavContainer = styled.nav`
   padding: 2rem 8vw;
@@ -45,7 +45,7 @@ const Nav = () => {
       <div>
         <NavLink to="/services">Services</NavLink>
         <NavLink to="/portfolio">Portfolio</NavLink>
-        <NavLink to="#">FAQ</NavLink>
+        <NavLink to="/faq">FAQ</NavLink>
         <NavLink to="/about">About</NavLink>
       </div>
       <Button to="/contact">Contact</Button>
