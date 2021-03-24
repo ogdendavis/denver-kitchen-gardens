@@ -12,7 +12,7 @@ const HeaderContainer = styled.header`
 
 const HeaderText = styled.div`
   width: 50vw;
-  min-width: 345px;
+  min-width: ${props => props.theme.content.minWidth};
   margin: 5rem auto 2.5rem;
 
   text-align: center;

@@ -46,9 +46,20 @@ const ThemeConsumer = styled.div`
   }
 `;
 
+const Main = styled.main`
+  width: ${props => props.theme.content.width};
+  max-width: ${props => props.theme.content.maxWith};
+  margin: 0 auto;
+`;
+
 const Layout = ({ heroImage, heroHeading, heroText, heroPhone, children }) => {
   // Theme for global styles
   const theme = {
+    content: {
+      width: '1024px',
+      minWidth: '345px',
+      maxWidth: '95vw',
+    },
     colors: {
       background: '#efedeb',
       background_dark: '#cec7b7',
@@ -74,7 +85,7 @@ const Layout = ({ heroImage, heroHeading, heroText, heroPhone, children }) => {
           text={heroText}
           phone={heroPhone}
         />
-        <main>{children}</main>
+        <Main>{children}</Main>
         <Footer />
       </ThemeConsumer>
     </ThemeProvider>
