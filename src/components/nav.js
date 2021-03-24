@@ -5,7 +5,7 @@ import { useStaticQuery, graphql, Link } from 'gatsby';
 import Button from './button';
 
 const NavContainer = styled.nav`
-  padding: 1rem 8vw;
+  padding: 2rem 8vw;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -21,7 +21,7 @@ const NavLink = styled(Link)`
 `;
 
 const Nav = () => {
-  // Grab header info from CMS
+  // Grab nav menu info from CMS
   const data = useStaticQuery(graphql`
     query NavQuery {
       content: markdownRemark(
@@ -40,7 +40,7 @@ const Nav = () => {
   return (
     <NavContainer>
       <Link to="/">
-        <NavLogo src={logoPath} alt="DKG logo" />
+        <NavLogo src={logoPath} alt="Denver Kitchen Gardens" />
       </Link>
       <div>
         <NavLink to="/services">Services</NavLink>

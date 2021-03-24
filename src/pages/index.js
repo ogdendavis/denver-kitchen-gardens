@@ -2,6 +2,7 @@ import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 
 import Layout from '../components/layout';
+import Header from '../components/header';
 
 const Home = () => {
   const data = useStaticQuery(graphql`
@@ -12,7 +13,7 @@ const Home = () => {
         frontmatter {
           title
           hero
-          hero_alt
+          hero_text
         }
         html
       }
@@ -21,10 +22,10 @@ const Home = () => {
 
   return (
     <Layout>
-      <h1>{data.content.frontmatter.title}</h1>
-      <img
-        src={data.content.frontmatter.hero}
-        alt={data.content.frontmatter.hero_alt}
+      <Header
+        heroImage={data.content.frontmatter.hero}
+        heading={data.content.frontmatter.title}
+        text={data.content.frontmatter.hero_text}
       />
       <main dangerouslySetInnerHTML={{ __html: data.content.html }} />
     </Layout>

@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { useStaticQuery, graphql } from 'gatsby';
 
 import Layout from '../components/layout';
+import Header from '../components/header';
 import ServicePageLinks from '../components/servicePageLinks';
 
 const ServiceLinksContainer = styled.div`
@@ -20,8 +21,8 @@ const Services = () => {
       ) {
         frontmatter {
           title
-          image
-          image_alt
+          hero
+          hero_text
         }
         html
       }
@@ -30,11 +31,10 @@ const Services = () => {
 
   return (
     <Layout>
-      <h1>{data.content.frontmatter.title}</h1>
-      <img
-        src={data.content.frontmatter.image}
-        style={{ maxHeight: '30vh' }}
-        alt={data.content.frontmatter.image_alt}
+      <Header
+        heroImage={data.content.frontmatter.hero}
+        heading={data.content.frontmatter.title}
+        text={data.content.frontmatter.hero_text}
       />
       <main dangerouslySetInnerHTML={{ __html: data.content.html }} />
       <ServiceLinksContainer>

@@ -1,7 +1,7 @@
 ---
-title: This is the homepage headline
-hero: /images/uploads/beardo.png
-hero_alt: Temporary beardo image
+title: The best garden resource in the front range
+hero: /images/uploads/TEMP_hero.jpg
+hero_text: Whether you are new to gardening or just new to the Denver area and don't know where to start, Denver Kitchen Gardens is here to help!
 ---
 
 This is the homepage content. Enamel pin swag four dollar toast, woke tattooed

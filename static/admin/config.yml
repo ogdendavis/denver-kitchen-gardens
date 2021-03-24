@@ -30,41 +30,40 @@ collections:
         label: 'Home'
         file: 'src/cms/pages/home.md'
         fields:
-          - { label: 'Headline', name: 'title', widget: 'string' }
           - { label: 'Hero Image', name: 'hero', widget: 'image' }
-          - { label: 'Hero alt text', name: 'hero_alt', widget: 'string' }
+          - { label: 'Headline', name: 'title', widget: 'string' }
+          - { label: 'Hero Text', name: 'hero_text', widget: 'text' }
           - { label: 'Content', name: 'body', widget: 'markdown' }
       - name: 'services'
         label: 'Services'
         file: 'src/cms/pages/services.md'
         fields:
+          - { label: 'Hero Image', name: 'hero', widget: 'image' }
           - { label: 'Headline', name: 'title', widget: 'string' }
-          - { label: 'Main Image', name: 'image', widget: 'image' }
-          - { label: 'Image alt text', name: 'image_alt', widget: 'string' }
+          - { label: 'Hero Text', name: 'hero_text', widget: 'text' }
           - { label: 'Content', name: 'body', widget: 'markdown' }
       - name: 'work'
         label: 'Portfolio'
         file: 'src/cms/pages/work.md'
         fields:
           - { label: 'Headline', name: 'title', widget: 'string' }
-          - { label: 'Main Image', name: 'image', widget: 'image' }
-          - { label: 'Image alt text', name: 'image_alt', widget: 'string' }
+          - { label: 'Hero Text', name: 'hero_text', widget: 'text' }
           - { label: 'Content', name: 'body', widget: 'markdown' }
       - name: 'about'
         label: 'About'
         file: 'src/cms/pages/about.md'
         fields:
+          - { label: 'Hero Image', name: 'hero', widget: 'image' }
           - { label: 'Headline', name: 'title', widget: 'string' }
-          - { label: 'Main Image', name: 'image', widget: 'image' }
-          - { label: 'Image alt text', name: 'image_alt', widget: 'string' }
+          - { label: 'Hero Text', name: 'hero_text', widget: 'text' }
           - { label: 'Content', name: 'body', widget: 'markdown' }
       - name: 'contact'
         label: 'Contact'
         file: 'src/cms/pages/contact.md'
         fields:
+          - { label: 'Hero Image', name: 'hero', widget: 'image' }
           - { label: 'Headline', name: 'title', widget: 'string' }
-          - { label: 'Main Image', name: 'image', widget: 'image' }
-          - { label: 'Image alt text', name: 'image_alt', widget: 'string' }
+          - { label: 'Hero Text', name: 'hero_text', widget: 'text' }
           - { label: 'Content', name: 'body', widget: 'markdown' }
   - name: 'services'
     label: 'Service Pages'

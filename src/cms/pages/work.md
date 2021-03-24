@@ -1,7 +1,6 @@
 ---
-title: Work Page
-image: /images/uploads/beardo.png
-image_alt: Temporary beardo image
+title: Portfolio
+hero_text: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 ---
 
 Work Page (will probably be more of a gallery). Paleo salvia meditation, ugh

@@ -2,6 +2,7 @@ import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 
 import Layout from '../components/layout';
+import Header from '../components/header';
 
 const Contact = () => {
   const data = useStaticQuery(graphql`
@@ -11,8 +12,8 @@ const Contact = () => {
       ) {
         frontmatter {
           title
-          image
-          image_alt
+          hero
+          hero_text
         }
         html
       }
@@ -28,8 +29,12 @@ const Contact = () => {
 
   return (
     <Layout>
-      <h1>{data.content.frontmatter.title}</h1>
-      <p>Call us at {data.address.frontmatter.phone}</p>
+      <Header
+        heroImage={data.content.frontmatter.hero}
+        heading={data.content.frontmatter.title}
+        text={data.content.frontmatter.hero_text}
+        phone={data.address.frontmatter.phone}
+      />
       <form name="contact" method="POST" data-netlify="true">
         <input type="hidden" name="form-name" value="contact" />
         <p>

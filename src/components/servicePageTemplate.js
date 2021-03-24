@@ -1,6 +1,7 @@
 import React from 'react';
 
 import Layout from '../components/layout';
+import Header from '../components/header';
 
 const ServicePage = props => {
   // Extract CMS info passed from page creation in gatsby-node
@@ -8,6 +9,7 @@ const ServicePage = props => {
 
   return (
     <Layout>
+      <Header />
       <h1>{content.frontmatter.title}</h1>
       <img
         src={content.frontmatter.image}

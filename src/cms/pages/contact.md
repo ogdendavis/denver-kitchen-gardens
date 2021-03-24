@@ -1,7 +1,7 @@
 ---
 title: Contact Page
-image: /images/uploads/beardo.png
-image_alt: Temporary beardo image
+hero: /images/uploads/TEMP_hero.jpg
+hero_text: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 ---
 
 Contact Page. Farm-to-table master cleanse VHS twee woke echo park.

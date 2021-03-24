@@ -1,7 +1,7 @@
 ---
-title: About
-image: /images/uploads/beardo.png
-image_alt: Temporary beardo image
+title: Sharing a love for plants
+hero: /images/uploads/TEMP_hero.jpg
+hero_text: Denver Kitchen Gardens was born from a desire to share the knowledge and expertise I have gained over the years as an avid home gardener and urban homesteader.
 ---
 
 About Page content. I'm baby shabby chic truffaut seitan neutra health goth.

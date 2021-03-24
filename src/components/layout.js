@@ -3,7 +3,6 @@ import styled, { ThemeProvider } from 'styled-components';
 
 import 'normalize.css';
 
-import Nav from './nav';
 import Footer from './footer';
 
 // Consume theme (set below) and set some global styles
@@ -15,6 +14,7 @@ const ThemeConsumer = styled.div`
   h5,
   h6 {
     color: ${({ theme }) => theme.colors.heading};
+    letter-spacing: 1px;
   }
 
   h2,
@@ -23,7 +23,6 @@ const ThemeConsumer = styled.div`
   h5,
   h6 {
     text-transform: uppercase;
-    letter-spacing: 1px;
   }
 
   h1.reset,
@@ -68,8 +67,7 @@ const Layout = ({ children }) => {
   return (
     <ThemeProvider theme={theme}>
       <ThemeConsumer>
-        <Nav />
-        <div>{children}</div>
+        {children}
         <Footer />
       </ThemeConsumer>
     </ThemeProvider>
