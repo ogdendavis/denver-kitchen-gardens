@@ -49,6 +49,18 @@ collections:
           - { label: 'Headline', name: 'title', widget: 'string' }
           - { label: 'Hero Text', name: 'hero_text', widget: 'text' }
           - { label: 'Content', name: 'body', widget: 'markdown' }
+      - name: 'faq'
+        label: 'FAQ'
+        file: 'src/cms/pages/faq.md'
+        fields:
+          - { label: 'Headline', name: 'title', widget: 'string' }
+          - { label: 'Hero Text', name: 'hero_text', widget: 'text' }
+          - label: 'Questions'
+            name: 'questions'
+            widget: 'list'
+            fields:
+              - { label: 'Question', name: 'question', widget: 'text' }
+              - { label: 'Answer', name: 'answer', widget: 'markdown' }
       - name: 'about'
         label: 'About'
         file: 'src/cms/pages/about.md'
