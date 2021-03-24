@@ -4,7 +4,7 @@ import { Link } from 'gatsby';
 
 const ButtonContainer = styled(Link)`
   ${props =>
-    props.isLight
+    props.islight
       ? `background: ${props.theme.colors.button_light};
       border: 1px solid ${props.theme.colors.button_light};
       color: ${props.theme.colors.text_dark};
@@ -24,7 +24,7 @@ const ButtonContainer = styled(Link)`
   &:hover {
     text-decoration-line: none !important;
     ${props =>
-      props.isLight
+      props.islight
         ? `border: 1px solid ${props.theme.colors.text_dark};`
         : `border: 1px solid ${props.theme.colors.text_white};`}
   }
@@ -32,7 +32,7 @@ const ButtonContainer = styled(Link)`
 
 const Button = ({ children, to, light = false }) => {
   return (
-    <ButtonContainer to={to} isLight={light}>
+    <ButtonContainer to={to} islight={light}>
       {children}
     </ButtonContainer>
   );

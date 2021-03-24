@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { useStaticQuery, graphql } from 'gatsby';
+import { StaticImage } from 'gatsby-plugin-image';
 
 import Button from './button';
 import InstaIcon from '../images/icons/instagram.icon.svg';
@@ -13,6 +14,7 @@ const FooterContainer = styled.footer`
   display: flex;
   flex-flow: row wrap;
   padding-top: 5rem;
+  justify-content: space-between;
 `;
 
 const FooterLeft = styled.div`
@@ -41,11 +43,18 @@ const IconContainer = styled.div`
 
 const FooterRight = styled.div`
   color: ${({ theme }) => theme.colors.text_dark};
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
 
   a {
     display: block;
     margin: 0.5rem 0;
     color: ${({ theme }) => theme.colors.text_dark};
+  }
+
+  .footichoke {
+    margin: 0 1rem -0.5rem 2rem;
   }
 `;
 
@@ -55,6 +64,8 @@ const FooterBottom = styled.div`
   font-size: 0.8rem;
   text-align: center;
   padding: 1.5rem;
+  position: relative;
+  z-index: 10;
 `;
 
 const Footer = () => {
@@ -100,8 +111,15 @@ const Footer = () => {
           </FooterLinks>
         </FooterLeft>
         <FooterRight>
-          <h3 className="reset">Services</h3>
-          <ServicePageLinks />
+          <div>
+            <h3 className="reset">Services</h3>
+            <ServicePageLinks />
+          </div>
+          <StaticImage
+            src="../images/TEMP_footerchoke.png"
+            alt="Artichoke illustration"
+            className="footichoke"
+          />
         </FooterRight>
       </FooterContainer>
       <FooterBottom>
