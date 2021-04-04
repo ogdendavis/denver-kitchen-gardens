@@ -33,7 +33,24 @@ collections:
           - { label: 'Hero Image', name: 'hero', widget: 'image' }
           - { label: 'Headline', name: 'title', widget: 'string' }
           - { label: 'Hero Text', name: 'hero_text', widget: 'text' }
-          - { label: 'Content', name: 'body', widget: 'markdown' }
+          - { label: 'Intro Image', name: 'intro_image', widget: 'image' }
+          - { label: 'Intro Heading', name: 'intro_heading', widget: 'string' }
+          - { label: 'Intro Copy', name: 'intro_copy', widget: 'markdown' }
+          - {
+              label: 'Mission Copy - above pullquote',
+              name: 'above_pullquote',
+              widget: 'markdown',
+            }
+          - {
+              label: 'Mission Copy - pullquote',
+              name: 'pullquote',
+              widget: 'text',
+            }
+          - {
+              label: 'Mission Copy - below pullquote',
+              name: 'below_pullquote',
+              widget: 'markdown',
+            }
       - name: 'services'
         label: 'Services'
         file: 'src/cms/pages/services.md'
@@ -41,14 +58,47 @@ collections:
           - { label: 'Hero Image', name: 'hero', widget: 'image' }
           - { label: 'Headline', name: 'title', widget: 'string' }
           - { label: 'Hero Text', name: 'hero_text', widget: 'text' }
-          - { label: 'Content', name: 'body', widget: 'markdown' }
+          - {
+              label: 'Services Heading',
+              name: 'services_heading',
+              widget: 'string',
+            }
+          - {
+              label: 'Next Steps Heading',
+              name: 'nextsteps_heading',
+              widget: 'string',
+            }
+          - {
+              label: 'Next Steps Copy',
+              name: 'nextsteps_copy',
+              widget: 'markdown',
+            }
       - name: 'work'
         label: 'Portfolio'
         file: 'src/cms/pages/work.md'
         fields:
           - { label: 'Headline', name: 'title', widget: 'string' }
           - { label: 'Hero Text', name: 'hero_text', widget: 'text' }
-          - { label: 'Content', name: 'body', widget: 'markdown' }
+          - {
+              label: 'Interbutton Link',
+              name: 'interbutton_link',
+              widget: 'string',
+            }
+          - {
+              label: 'Interbutton Text',
+              name: 'interbutton_text',
+              widget: 'string',
+            }
+          - {
+              label: 'Bottom Button Link',
+              name: 'bottombutton_link',
+              widget: 'string',
+            }
+          - {
+              label: 'Bottom Button Text',
+              name: 'bottombutton_text',
+              widget: 'string',
+            }
       - name: 'faq'
         label: 'FAQ'
         file: 'src/cms/pages/faq.md'
@@ -68,7 +118,18 @@ collections:
           - { label: 'Hero Image', name: 'hero', widget: 'image' }
           - { label: 'Headline', name: 'title', widget: 'string' }
           - { label: 'Hero Text', name: 'hero_text', widget: 'text' }
-          - { label: 'Content', name: 'body', widget: 'markdown' }
+          - {
+              label: 'Content Heading',
+              name: 'content_heading',
+              widget: 'string',
+            }
+          - { label: 'Content Copy', name: 'content_copy', widget: 'markdown' }
+          - { label: 'Profile Image', name: 'profile_pic', widget: 'image' }
+          - label: Additional Images
+            name: more_pics
+            widget: list
+            fields:
+              - { label: 'Image', name: 'image', widget: 'image' }
       - name: 'contact'
         label: 'Contact'
         file: 'src/cms/pages/contact.md'
@@ -76,7 +137,8 @@ collections:
           - { label: 'Hero Image', name: 'hero', widget: 'image' }
           - { label: 'Headline', name: 'title', widget: 'string' }
           - { label: 'Hero Text', name: 'hero_text', widget: 'text' }
-          - { label: 'Content', name: 'body', widget: 'markdown' }
+          - { label: 'Form Heading', name: 'form_heading', widget: 'string' }
+          - { label: 'Form Button Text', name: 'form_button', widget: 'string' }
   - name: 'services'
     label: 'Service Pages'
     label_singular: 'Service Page'
@@ -90,7 +152,50 @@ collections:
           widget: 'boolean',
           default: false,
         }
-      - { label: 'Title', name: 'title', widget: 'string' }
-      - { label: 'Main Image', name: 'image', widget: 'image' }
-      - { label: 'Image alt text', name: 'image_alt', widget: 'string' }
-      - { label: 'Content', name: 'body', widget: 'markdown' }
+      - { label: 'Service Name', name: 'title', widget: 'string' }
+      - { label: 'Preview Text', name: 'preview_text', widget: 'text' }
+      - { label: 'Preview Image', name: 'preview_image', widget: 'image' }
+      - { label: 'Header Image', name: 'header_image', widget: 'image' }
+      - {
+          label: 'Intro Subheading',
+          name: 'intro_subheading',
+          widget: 'string',
+        }
+      - { label: 'Intro Copy', name: 'intro_copy', widget: 'markdown' }
+      - {
+          label: 'Detail Heading',
+          name: 'detail_heading',
+          widget: 'string',
+          required: false,
+        }
+      - {
+          label: 'Detail Copy',
+          name: 'detail_copy',
+          widget: 'markdown',
+          required: false,
+        }
+      - { label: 'Process Heading', name: 'process_heading', widget: 'string' }
+      - label: 'Process Points'
+        name: 'process_points'
+        widget: 'list'
+        fields:
+          - { label: 'Point Title', name: 'point_title', widget: 'string' }
+          - { label: 'Point text', name: 'point_text', widget: 'text' }
+      - {
+          label: 'Call to Action Text',
+          name: 'call_text',
+          widget: 'text',
+          required: false,
+        }
+      - {
+          label: 'Call to Action Button Link',
+          name: 'call_url',
+          widget: 'string',
+          required: false,
+        }
+      - {
+          label: 'Call to Action Button Text',
+          name: 'call_button',
+          widget: 'string',
+          required: false,
+        }

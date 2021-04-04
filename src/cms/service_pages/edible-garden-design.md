@@ -1,7 +1,5 @@
 ---
 published: false
 title: Edible Garden Design
-image: /images/uploads/beardo.png
-image_alt: beardo
+header_image: /images/uploads/beardo.png
 ---
-This page isn't published, so shouldn't be visible!
