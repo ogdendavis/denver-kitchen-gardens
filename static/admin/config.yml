@@ -156,11 +156,7 @@ collections:
       - { label: 'Preview Text', name: 'preview_text', widget: 'text' }
       - { label: 'Preview Image', name: 'preview_image', widget: 'image' }
       - { label: 'Header Image', name: 'header_image', widget: 'image' }
-      - {
-          label: 'Intro Subheading',
-          name: 'intro_subheading',
-          widget: 'string',
-        }
+      - { label: 'Intro Subheading', name: 'intro_subheading', widget: 'string' }
       - { label: 'Intro Copy', name: 'intro_copy', widget: 'markdown' }
       - {
           label: 'Detail Heading',

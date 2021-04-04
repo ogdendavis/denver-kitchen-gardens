@@ -13,8 +13,13 @@ const Home = () => {
           title
           hero
           hero_text
+          intro_image
+          intro_heading
+          intro_copy
+          above_pullquote
+          pullquote
+          below_pullquote
         }
-        html
       }
     }
   `);

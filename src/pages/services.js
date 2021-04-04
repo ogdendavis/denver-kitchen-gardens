@@ -22,8 +22,10 @@ const Services = () => {
           title
           hero
           hero_text
+          services_heading
+          nextsteps_heading
+          nextsteps_copy
         }
-        html
       }
     }
   `);

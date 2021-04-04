@@ -13,8 +13,13 @@ const About = () => {
           title
           hero
           hero_text
+          content_heading
+          content_copy
+          profile_pic
+          more_pics {
+            image
+          }
         }
-        html
       }
     }
   `);

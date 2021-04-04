@@ -21,10 +21,20 @@ exports.createPages = ({ graphql, actions }) => {
             frontmatter {
               published
               title
-              image
-              image_alt
+              header_image
+              intro_subheading
+              intro_copy
+              detail_heading
+              detail_copy
+              process_heading
+              process_points {
+                point_title
+                point_text
+              }
+              call_text
+              call_url
+              call_button
             }
-            html
           }
         }
       }

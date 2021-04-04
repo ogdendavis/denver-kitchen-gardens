@@ -12,8 +12,11 @@ const Portfolio = () => {
         frontmatter {
           title
           hero_text
+          interbutton_text
+          interbutton_link
+          bottombutton_text
+          bottombutton_link
         }
-        html
       }
     }
   `);

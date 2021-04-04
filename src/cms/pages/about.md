@@ -5,4 +5,6 @@ hero_text: Denver Kitchen Gardens was born from a desire to share the knowledge 
 content_heading: Hi! I'm Jenny!
 content_copy: I am Jenny. Hear me roar
 profile_pic: /images/uploads/beardo.png
+more_pics:
+  - image: /images/uploads/beardo.png
 ---

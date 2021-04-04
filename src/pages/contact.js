@@ -13,8 +13,9 @@ const Contact = () => {
           title
           hero
           hero_text
+          form_heading
+          form_button
         }
-        html
       }
       address: markdownRemark(
         fileAbsolutePath: { regex: "//cms/general/contact.md/" }
