@@ -5,10 +5,13 @@ import { useStaticQuery, graphql, Link } from 'gatsby';
 import Button from '../button';
 
 const NavContainer = styled.nav`
-  padding: 2rem 8vw;
+  padding: 1rem 8vw;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  background: ${props => props.theme.colors.background};
+  position: sticky;
+  top: 0;
 `;
 
 const NavLogo = styled.img`

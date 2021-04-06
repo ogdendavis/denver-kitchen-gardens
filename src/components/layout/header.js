@@ -1,28 +1,30 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import Nav from './nav';
-
 const HeaderContainer = styled.header`
+  padding-top: 2rem;
   ${props =>
-    props.hero
-      ? `background: linear-gradient(${props.theme.colors.background}bb, ${props.theme.colors.background}bb), url(${props.hero}) center/cover no-repeat; height: 80vh;`
+    props.heroImage
+      ? `background: linear-gradient(${props.theme.colors.background}bb, ${props.theme.colors.background}bb), url(${props.heroImage}) center/cover no-repeat; height: 80vh;`
       : ''}
 `;
 
 const HeaderText = styled.div`
-  width: 50vw;
-  min-width: ${props => props.theme.content.minWidth};
-  margin: 5rem auto 2.5rem;
+  float: right;
+  width: 50%;
+  background: linear-gradient(#222b, #222b);
+  color: ${props => props.theme.colors.text_white};
+  padding: 2rem;
 
-  text-align: center;
-
-  h1 {
+  h1.heroHeading {
+    margin-top: 1.25rem;
+    margin-bottom: 0;
     font-size: 3.25rem;
+    font-weight: 400;
+    color: ${props => props.theme.colors.text_white};
   }
 
   p {
-    color: ${props => props.theme.colors.text};
     font-size: 1.25rem;
     line-height: 2rem;
   }
@@ -35,12 +37,13 @@ const Phone = styled.div`
 `;
 
 const Header = ({ heroImage, heading, text, phone }) => {
-  console.log(heroImage);
+  // Flag to check if heroImage has been passed, for text area styling
+  const hasHero = heroImage ? true : false;
+
   return (
-    <HeaderContainer hero={heroImage}>
-      <Nav />
-      <HeaderText>
-        <h1>{heading}</h1>
+    <HeaderContainer heroImage={heroImage}>
+      <HeaderText hasHero={hasHero}>
+        <h1 className={hasHero ? 'heroHeading' : ''}>{heading}</h1>
         <p>{text}</p>
         {phone && <Phone>CALL US AT {phone}</Phone>}
       </HeaderText>

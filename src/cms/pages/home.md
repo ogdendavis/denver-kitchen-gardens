@@ -1,5 +1,5 @@
 ---
-title: The best garden resource in the front range
+title: Your Front Range Kitchen Garden Partner
 hero: /images/uploads/TEMP_hero.jpg
 hero_text: Whether you are new to gardening or just new to the Denver area and don't know where to start, Denver Kitchen Gardens is here to help!
 intro_image: /images/uploads/tempgarden1.png

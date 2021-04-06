@@ -3,6 +3,7 @@ import styled, { ThemeProvider } from 'styled-components';
 
 import 'normalize.css';
 
+import Nav from './nav';
 import Header from './header';
 import Footer from './footer';
 
@@ -44,6 +45,8 @@ const ThemeConsumer = styled.div`
       text-decoration-thickness: 0.1em;
     }
   }
+
+  background: ${props => props.theme.colors.background};
 `;
 
 const Main = styled.main`
@@ -61,7 +64,7 @@ const Layout = ({ heroImage, heroHeading, heroText, heroPhone, children }) => {
       maxWidth: '95vw',
     },
     colors: {
-      background: '#efedeb',
+      background: '#E3DFDC',
       background_dark: '#cec7b7',
       background_light: '#fbfbfb',
       button: '#22526c',
@@ -79,8 +82,9 @@ const Layout = ({ heroImage, heroHeading, heroText, heroPhone, children }) => {
   return (
     <ThemeProvider theme={theme}>
       <ThemeConsumer>
+        <Nav />
         <Header
-          image={heroImage}
+          heroImage={heroImage}
           heading={heroHeading}
           text={heroText}
           phone={heroPhone}
