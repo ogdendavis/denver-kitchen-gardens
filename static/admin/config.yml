@@ -125,9 +125,9 @@ collections:
             }
           - { label: 'Content Copy', name: 'content_copy', widget: 'markdown' }
           - { label: 'Profile Image', name: 'profile_pic', widget: 'image' }
-          - label: Additional Images
-            name: more_pics
-            widget: list
+          - label: 'Additional Images'
+            name: 'more_pics'
+            widget: 'list'
             fields:
               - { label: 'Image', name: 'image', widget: 'image' }
       - name: 'contact'
@@ -156,7 +156,11 @@ collections:
       - { label: 'Preview Text', name: 'preview_text', widget: 'text' }
       - { label: 'Preview Image', name: 'preview_image', widget: 'image' }
       - { label: 'Header Image', name: 'header_image', widget: 'image' }
-      - { label: 'Intro Subheading', name: 'intro_subheading', widget: 'string' }
+      - {
+          label: 'Intro Subheading',
+          name: 'intro_subheading',
+          widget: 'string',
+        }
       - { label: 'Intro Copy', name: 'intro_copy', widget: 'markdown' }
       - {
           label: 'Detail Heading',
@@ -195,3 +199,16 @@ collections:
           widget: 'string',
           required: false,
         }
+  - name: 'projects'
+    label: 'Projects'
+    label_singular: 'Project'
+    folder: 'src/cms/projects'
+    create: true
+    slug: '{{slug}}'
+    fields:
+      - { label: 'Project Name', name: 'title', widget: 'string' }
+      - label: 'Images'
+        name: 'images'
+        widget: 'list'
+        fields:
+          - { label: 'Image', name: 'image', widget: 'image' }
