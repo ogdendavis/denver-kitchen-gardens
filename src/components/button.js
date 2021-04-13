@@ -30,7 +30,7 @@ const ButtonContainer = styled(Link)`
   }
 `;
 
-const Button = ({ children, to, light = false }) => {
+const Button = ({ children, to, light }) => {
   return (
     <ButtonContainer to={to} islight={light}>
       {children}
