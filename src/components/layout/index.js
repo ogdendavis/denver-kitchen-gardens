@@ -2,21 +2,33 @@ import React from 'react';
 import styled, { ThemeProvider } from 'styled-components';
 
 import 'normalize.css';
+// Workaround to set rem value for all following CSS
+import './rootStyle.css';
 
+import BigHat from './helmet';
 import Nav from './nav';
 import Header from './header';
 import Footer from './footer';
 
 // Consume theme (set below) and set some global styles
 const ThemeConsumer = styled.div`
+  background: ${props => props.theme.colors.background};
+  font-family: Montserrat;
+
   h1,
   h2,
   h3,
   h4,
   h5,
   h6 {
+    font-family: Lora;
     color: ${({ theme }) => theme.colors.heading};
     letter-spacing: 1px;
+  }
+
+  h1 {
+    font-weight: 600;
+    font-size: 3rem;
   }
 
   h2,
@@ -45,8 +57,6 @@ const ThemeConsumer = styled.div`
       text-decoration-thickness: 0.1em;
     }
   }
-
-  background: ${props => props.theme.colors.background};
 `;
 
 const Main = styled.main`
@@ -81,6 +91,7 @@ const Layout = ({ heroImage, heroHeading, heroText, heroPhone, children }) => {
 
   return (
     <ThemeProvider theme={theme}>
+      <BigHat />
       <ThemeConsumer>
         <Nav />
         <Header

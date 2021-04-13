@@ -19,14 +19,12 @@ const HeaderText = styled.div`
   h1.heroHeading {
     margin-top: 1.25rem;
     margin-bottom: 0;
-    font-size: 3.25rem;
-    font-weight: 400;
     color: ${props => props.theme.colors.text_white};
   }
 
   p {
-    font-size: 1.25rem;
-    line-height: 2rem;
+    font-size: 1rem;
+    line-height: 1.75rem;
   }
 `;
 
