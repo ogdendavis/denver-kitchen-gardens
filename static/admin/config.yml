@@ -15,8 +15,6 @@ collections:
         file: 'src/cms/general/site.md'
         fields:
           - { label: 'Header Logo', name: 'header_logo', widget: 'image' }
-          - { label: 'Footer Logo', name: 'footer_logo', widget: 'image' }
-          - { label: 'Footer Text', name: 'body', widget: 'markdown' }
       - name: 'contact'
         label: 'Contact Info'
         file: 'src/cms/general/contact.md'

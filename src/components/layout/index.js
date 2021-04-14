@@ -29,6 +29,18 @@ const ThemeConsumer = styled.div`
     font-size: 3rem;
   }
 
+  h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    letter-spacing: 2.25px;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    letter-spacing: 1.25px;
+  }
+
   h2,
   h3,
   h4,

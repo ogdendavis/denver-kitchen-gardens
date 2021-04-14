@@ -1,11 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
 import { useStaticQuery, graphql } from 'gatsby';
-import { StaticImage } from 'gatsby-plugin-image';
 
 import Button from '../button';
 import InstaIcon from '../../images/icons/instagram.icon.svg';
 import ServicePageLinks from '../servicePageLinks';
+import Footerchoke from '../../images/icons/footerchoke.icon.svg';
 
 const FooterContainer = styled.footer`
   margin-top: 2rem;
@@ -13,17 +13,11 @@ const FooterContainer = styled.footer`
   color: ${({ theme }) => theme.colors.text};
   display: flex;
   flex-flow: row wrap;
-  padding-top: 5rem;
   justify-content: space-between;
 `;
 
 const FooterLeft = styled.div`
-  padding: 0 2rem 5rem 5rem;
-  width: calc(50vw - 7rem);
-`;
-
-const FooterText = styled.div`
-  max-width: 70%;
+  padding: 7.75rem 2rem 5rem 8.875rem;
 `;
 
 const FooterLinks = styled.div`
@@ -31,30 +25,60 @@ const FooterLinks = styled.div`
   flex-flow: row wrap;
   align-items: center;
   margin-top: 1.5rem;
-  padding: 0 1rem;
 `;
 
 const IconContainer = styled.div`
-  svg {
-    width: 40px;
+  margin-left: 2rem;
+
+  a {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+
+    &:hover {
+      text-decoration-color: ${props => props.theme.colors.text_dark};
+    }
   }
-  margin-right: 3rem;
+
+  svg {
+    width: 2rem;
+  }
+
+  span {
+    margin-left: 1rem;
+    font-size: 1.125rem;
+    text-decoration: none;
+    color: ${props => props.theme.colors.text_dark};
+  }
 `;
 
 const FooterRight = styled.div`
-  color: ${({ theme }) => theme.colors.text_dark};
   display: flex;
-  flex-flow: row nowrap;
-  justify-content: space-between;
+`;
+
+const FooterServices = styled.div`
+  max-width: 10rem;
+  padding-top: 7.75rem;
+
+  .footerHeading {
+    text-transform: none;
+    color: ${props => props.theme.colors.green};
+    margin-bottom: 0;
+  }
 
   a {
     display: block;
-    margin: 0.5rem 0;
+    margin: 1.5rem 0;
     color: ${({ theme }) => theme.colors.text_dark};
+    font-size: 0.95rem;
   }
+`;
 
-  .footichoke {
-    margin: 0 1rem -0.5rem 2rem;
+const FooterchokeContainer = styled.div`
+  svg {
+    position: relative;
+    bottom: -2rem;
+    max-width: 500px;
   }
 `;
 
@@ -78,14 +102,6 @@ const Footer = () => {
           instagram
         }
       }
-      content: markdownRemark(
-        fileAbsolutePath: { regex: "//cms/general/site.md/" }
-      ) {
-        frontmatter {
-          footer_logo
-        }
-        html
-      }
     }
   `);
 
@@ -94,8 +110,10 @@ const Footer = () => {
       <FooterContainer>
         <FooterLeft>
           <h2>Denver Kitchen Gardens</h2>
-          <FooterText dangerouslySetInnerHTML={{ __html: data.content.html }} />
           <FooterLinks>
+            <Button light to="/contact">
+              Contact
+            </Button>
             <IconContainer>
               <a
                 href={data.social.frontmatter.instagram}
@@ -103,23 +121,21 @@ const Footer = () => {
                 rel="noreferrer"
               >
                 <InstaIcon />
+                <span>Follow us on Instagram</span>
               </a>
             </IconContainer>
-            <Button light={true} to="/contact">
-              Contact
-            </Button>
           </FooterLinks>
         </FooterLeft>
         <FooterRight>
-          <div>
-            <h3 className="reset">Services</h3>
-            <ServicePageLinks />
-          </div>
-          <StaticImage
-            src="../../images/TEMP_footerchoke.png"
-            alt="Artichoke illustration"
-            className="footichoke"
-          />
+          <FooterServices>
+            <div>
+              <h3 className="footerHeading">Services</h3>
+              <ServicePageLinks />
+            </div>
+          </FooterServices>
+          <FooterchokeContainer>
+            <Footerchoke />
+          </FooterchokeContainer>
         </FooterRight>
       </FooterContainer>
       <FooterBottom>
