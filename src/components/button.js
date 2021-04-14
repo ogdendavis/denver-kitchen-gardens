@@ -6,27 +6,21 @@ const ButtonContainer = styled(Link)`
   ${props =>
     props.islight
       ? `background: ${props.theme.colors.button_light};
-      border: 1px solid ${props.theme.colors.button_light};
       color: ${props.theme.colors.text_dark};
       font-weight: 500;`
       : `background: ${props.theme.colors.button};
-      border: 1px solid ${props.theme.colors.button};
       color: ${props.theme.colors.text_white};
       text-transform: uppercase;
-      font-weight: 700;`}
+      font-weight: 600;`}
 
-  padding: 0.8rem 1.5rem;
-  font-family: sans-serif;
+  padding: 1rem 2.5rem;
   display: inline-block;
-  transition: border 0.5s ease;
-  border: 1px solid transparent;
+  transition: background 0.5s ease, color 0.5s ease;
 
   &:hover {
     text-decoration-line: none !important;
-    ${props =>
-      props.islight
-        ? `border: 1px solid ${props.theme.colors.text_dark};`
-        : `border: 1px solid ${props.theme.colors.text_white};`}
+    background: ${props => props.theme.colors.green};
+    color: ${props => props.theme.colors.text_white};
   }
 `;
 

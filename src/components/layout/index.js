@@ -2,8 +2,6 @@ import React from 'react';
 import styled, { ThemeProvider } from 'styled-components';
 
 import 'normalize.css';
-// Workaround to set rem value for all following CSS
-import './rootStyle.css';
 
 import BigHat from './helmet';
 import Nav from './nav';
@@ -50,6 +48,10 @@ const ThemeConsumer = styled.div`
     letter-spacing: normal;
   }
 
+  p {
+    font-size: 1.125rem;
+  }
+
   a {
     text-decoration: none;
     &:hover {
@@ -79,7 +81,7 @@ const Layout = ({ heroImage, heroHeading, heroText, heroPhone, children }) => {
       background_light: '#fbfbfb',
       button: '#22526c',
       button_light: '#e3dfdc',
-      faq: '#65673b',
+      green: '#65673b',
       heading: '#903e23',
       text: '#737373',
       text_beige: '#cec7b7',
