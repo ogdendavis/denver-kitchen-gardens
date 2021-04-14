@@ -12,6 +12,8 @@ const NavContainer = styled.nav`
   background: ${props => props.theme.colors.background};
   position: sticky;
   top: 0;
+  font-size: 0.9rem;
+  font-weight: 500;
 `;
 
 const NavLogo = styled.img`

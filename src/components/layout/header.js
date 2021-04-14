@@ -5,13 +5,14 @@ const HeaderContainer = styled.header`
   padding-top: 2rem;
   ${props =>
     props.heroImage
-      ? `background: linear-gradient(${props.theme.colors.background}bb, ${props.theme.colors.background}bb), url(${props.heroImage}) center/cover no-repeat; height: 80vh;`
+      ? `background: url(${props.heroImage}) center/cover no-repeat; height: 80vh;`
       : ''}
 `;
 
 const HeaderText = styled.div`
   float: right;
   width: 50%;
+  box-sizing: border-box;
   background: linear-gradient(#222b, #222b);
   color: ${props => props.theme.colors.text_white};
   padding: 2rem;
