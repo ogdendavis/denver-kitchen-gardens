@@ -1,8 +1,9 @@
 ---
 published: true
-title: Personalized Garden Consultations
-preview_text:
-preview_image:
+title: Garden Consultations
+preview_image: /images/uploads/tempgarden1.png
+preview_text: We create comprehensive and personalized plans for your dream garden.
+preview_on_homepage: true
 header_image: /images/uploads/tempgarden1.png
 intro_subheading: Having a garden can bring you so much joy
 intro_copy: You need to know what to plant

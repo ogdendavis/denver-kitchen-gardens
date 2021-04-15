@@ -161,8 +161,14 @@ collections:
           default: false,
         }
       - { label: 'Service Name', name: 'title', widget: 'string' }
-      - { label: 'Preview Text', name: 'preview_text', widget: 'text' }
       - { label: 'Preview Image', name: 'preview_image', widget: 'image' }
+      - { label: 'Preview Text', name: 'preview_text', widget: 'text' }
+      - {
+          label: 'Preview on Homepage?',
+          name: 'preview_on_homepage',
+          widget: 'boolean',
+          default: false,
+        }
       - { label: 'Header Image', name: 'header_image', widget: 'image' }
       - {
           label: 'Intro Subheading',

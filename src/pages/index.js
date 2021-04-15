@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import ReactMarkdown from 'react-markdown';
 
 import Layout from '../components/layout';
+import HomepageServicePreviews from '../components/services/homepageServicePreviews';
 
 const HomeContainer = styled.div`
   margin: 0 auto;
@@ -46,7 +47,6 @@ const ServicesContainer = styled.section`
     font-weight: 500;
     letter-spacing: 0px;
     margin: 0 auto 3.5rem;
-    position: relative;
     text-align: center;
     text-transform: none;
 
@@ -133,15 +133,18 @@ const Home = () => {
           </div>
           <img src={content.intro_image} alt="Denver Kitchen Gardens" />
         </IntroContainer>
+
         <ServicesContainer>
           <h2>Services</h2>
-          <div>This is where the services previews go!</div>
+          <HomepageServicePreviews />
         </ServicesContainer>
+
         <MissionContainer>
           <ReactMarkdown>{content.above_pullquote}</ReactMarkdown>
           <blockquote>{content.pullquote}</blockquote>
           <ReactMarkdown>{content.below_pullquote}</ReactMarkdown>
         </MissionContainer>
+
         <PortfolioContainer>
           <h2>{content.portfolio_heading}</h2>
           <p>{content.portfolio_subheading}</p>

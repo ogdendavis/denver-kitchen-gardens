@@ -95,7 +95,6 @@ const Layout = ({ heroImage, heroHeading, heroText, heroPhone, children }) => {
       green: '#65673b',
       heading: '#903e23',
       text: '#737373',
-      text_beige: '#cec7b7',
       text_dark: '#3d3d3d',
       text_white: '#fcfcfc',
     },
