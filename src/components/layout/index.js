@@ -25,12 +25,12 @@ const ThemeConsumer = styled.div`
   }
 
   h1 {
-    font-weight: 600;
+    font-weight: 500;
     font-size: 3rem;
   }
 
   h2 {
-    font-size: 2rem;
+    font-size: 1.875rem;
     font-weight: 600;
     letter-spacing: 2.25px;
   }
@@ -62,6 +62,7 @@ const ThemeConsumer = styled.div`
 
   p {
     font-size: 1.125rem;
+    line-height: 2rem;
   }
 
   a {
@@ -74,8 +75,6 @@ const ThemeConsumer = styled.div`
 `;
 
 const Main = styled.main`
-  width: ${props => props.theme.content.width};
-  max-width: ${props => props.theme.content.maxWith};
   margin: 0 auto;
 `;
 
@@ -83,22 +82,21 @@ const Layout = ({ heroImage, heroHeading, heroText, heroPhone, children }) => {
   // Theme for global styles
   const theme = {
     content: {
-      width: '1024px',
+      width: '95vw',
+      maxWidth: '1100px',
       minWidth: '345px',
-      maxWidth: '95vw',
     },
     colors: {
       background: '#E3DFDC',
       background_dark: '#cec7b7',
       background_light: '#fbfbfb',
-      button: '#22526c',
+      blue: '#22526c',
       button_light: '#e3dfdc',
       green: '#65673b',
       heading: '#903e23',
       text: '#737373',
       text_beige: '#cec7b7',
       text_dark: '#3d3d3d',
-      text_light: '#e3dfdc',
       text_white: '#fcfcfc',
     },
   };

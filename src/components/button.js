@@ -8,7 +8,7 @@ const ButtonContainer = styled(Link)`
       ? `background: ${props.theme.colors.button_light};
       color: ${props.theme.colors.text_dark};
       font-weight: 500;`
-      : `background: ${props.theme.colors.button};
+      : `background: ${props.theme.colors.blue};
       color: ${props.theme.colors.text_white};
       text-transform: uppercase;
       font-weight: 600;`}

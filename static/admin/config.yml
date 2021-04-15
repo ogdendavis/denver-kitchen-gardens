@@ -49,6 +49,16 @@ collections:
               name: 'below_pullquote',
               widget: 'markdown',
             }
+          - {
+              label: 'Portfolio Heading',
+              name: 'portfolio_heading',
+              widget: 'string',
+            }
+          - {
+              label: 'Portfolio Subheading',
+              name: 'portfolio_subheading',
+              widget: 'text',
+            }
       - name: 'services'
         label: 'Services'
         file: 'src/cms/pages/services.md'

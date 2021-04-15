@@ -8,7 +8,6 @@ import ServicePageLinks from '../servicePageLinks';
 import Footerchoke from '../../images/icons/footerchoke.icon.svg';
 
 const FooterContainer = styled.footer`
-  margin-top: 2rem;
   background: ${({ theme }) => theme.colors.background_dark};
   color: ${({ theme }) => theme.colors.text};
   display: flex;
@@ -111,7 +110,7 @@ const Footer = () => {
         <FooterLeft>
           <h2>Denver Kitchen Gardens</h2>
           <FooterLinks>
-            <Button light to="/contact">
+            <Button light="true" to="/contact">
               Contact
             </Button>
             <IconContainer>
