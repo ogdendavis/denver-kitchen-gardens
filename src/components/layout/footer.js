@@ -4,7 +4,7 @@ import { useStaticQuery, graphql } from 'gatsby';
 
 import Button from '../button';
 import InstaIcon from '../../images/icons/instagram.icon.svg';
-import ServicePageLinks from '../servicePageLinks';
+import ServicePageLinks from '../services/servicePageLinks';
 import Footerchoke from '../../images/icons/footerchoke.icon.svg';
 
 const FooterContainer = styled.footer`

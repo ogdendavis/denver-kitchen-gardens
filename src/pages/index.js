@@ -118,7 +118,6 @@ const Home = () => {
 
   // Avoid typing data.content.frontmatter a million times
   const content = data.content.frontmatter;
-  console.log(content);
 
   return (
     <Layout

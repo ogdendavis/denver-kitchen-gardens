@@ -7,7 +7,7 @@ exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions;
   // Component that will be used to render pages
   const servicePageTemplate = path.resolve(
-    `src/components/servicePageTemplate.js`
+    `src/components/services/servicePageTemplate.js`
   );
 
   // Query to get service page files from graphql

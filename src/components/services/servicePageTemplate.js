@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Layout from '../components/layout';
+import Layout from '../layout';
 
 const ServicePage = props => {
   // Extract CMS info passed from page creation in gatsby-node
