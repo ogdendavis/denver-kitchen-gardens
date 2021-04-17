@@ -194,7 +194,12 @@ collections:
         name: 'process_points'
         widget: 'list'
         fields:
-          - { label: 'Point Title', name: 'point_title', widget: 'string' }
+          - {
+              label: 'Point Title',
+              name: 'point_title',
+              widget: 'string',
+              required: false,
+            }
           - { label: 'Point text', name: 'point_text', widget: 'text' }
       - {
           label: 'Call to Action Text',
