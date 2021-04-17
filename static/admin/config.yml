@@ -161,6 +161,7 @@ collections:
           default: false,
         }
       - { label: 'Service Name', name: 'title', widget: 'string' }
+      - { label: 'Preview Heading', name: 'preview_heading', widget: 'string' }
       - { label: 'Preview Image', name: 'preview_image', widget: 'image' }
       - { label: 'Preview Text', name: 'preview_text', widget: 'text' }
       - {

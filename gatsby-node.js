@@ -21,6 +21,10 @@ exports.createPages = ({ graphql, actions }) => {
             frontmatter {
               published
               title
+              preview_heading
+              preview_image
+              preview_text
+              preview_on_homepage
               header_image
               intro_subheading
               intro_copy
