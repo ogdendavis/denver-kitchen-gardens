@@ -1,7 +1,15 @@
 import React from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
+import styled from 'styled-components';
 
 import ServicePreview from './servicePreview';
+
+const HomepagePreviewsContainer = styled.div`
+  display: flex;
+  margin: 0 auto;
+  width: ${props => props.theme.content.width};
+  max-width: ${props => props.theme.content.maxWidth};
+`;
 
 // Queries for services that should be listed on homepage, and returns group of rendered previews
 const HomepageServicePreviews = () => {
@@ -16,6 +24,7 @@ const HomepageServicePreviews = () => {
               published
               preview_on_homepage
               title
+              preview_heading
               preview_text
               preview_image
             }
@@ -39,12 +48,15 @@ const HomepageServicePreviews = () => {
     <ServicePreview
       key={`preview-${service.title}`}
       title={service.title}
+      heading={service.preview_heading}
       text={service.preview_text}
       image={service.preview_image}
     />
   ));
 
-  return <>{servicePreviews}</>;
+  return (
+    <HomepagePreviewsContainer>{servicePreviews}</HomepagePreviewsContainer>
+  );
 };
 
 export default HomepageServicePreviews;

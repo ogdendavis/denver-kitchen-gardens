@@ -62,14 +62,12 @@ const ServicesContainer = styled.section`
 `;
 
 const MissionContainer = styled.section`
-  width: ${props => props.theme.width};
-  max-width: ${props => props.theme.maxWidth};
-  text-align: center;
   color: ${props => props.theme.colors.text};
+  text-align: center;
 
   p {
     margin: 1em auto;
-    max-width: 800px;
+    max-width: 50rem;
   }
 
   blockquote {
@@ -78,7 +76,7 @@ const MissionContainer = styled.section`
     font-size: 2rem;
     line-spacing: 2.5rem;
     letter-spacing: 0.9px;
-    max-width: 900px;
+    max-width: 52rem;
   }
 `;
 

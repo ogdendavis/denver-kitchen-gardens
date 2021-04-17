@@ -17,8 +17,8 @@ const PreviewContainer = styled(Link)`
   h3 {
     color: ${props => props.theme.colors.background_dark};
     font-family: Montserrat;
-    font-size: 1.875rem;
-    font-weight: 700;
+    font-size: 1.1rem;
+    font-weight: 600;
     letter-spacing: 0px;
   }
 
@@ -48,14 +48,14 @@ const PreviewContainer = styled(Link)`
 `;
 
 // Creates component with preview image, text, and link directly to service sub-page
-const ServicePreview = ({ title, text, image }) => {
+const ServicePreview = ({ title, heading, text, image }) => {
   // Create link based on title to match slug, as done in servicePageLinks
   const link = `/services/${title.toLowerCase().split(' ').join('-')}`;
 
   return (
     <PreviewContainer to={link}>
       <img src={image} alt="" />
-      <h3>{title}</h3>
+      <h3>{heading}</h3>
       <p>{text}</p>
       <span>Read More</span>
     </PreviewContainer>
