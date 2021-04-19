@@ -6,6 +6,8 @@ import ServicePreview from './servicePreview';
 
 const HomepagePreviewsContainer = styled.div`
   display: flex;
+  justify-content: space-around;
+  flex-flow: row wrap;
   margin: 0 auto;
   width: ${props => props.theme.content.width};
   max-width: ${props => props.theme.content.maxWidth};

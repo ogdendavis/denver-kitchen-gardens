@@ -4,14 +4,13 @@ import styled from 'styled-components';
 
 const PreviewContainer = styled(Link)`
   display: block;
-  margin: 0 auto;
   text-align: center;
   text-decoration: none !important;
-  width: 328px;
+  width: 21rem;
 
   img {
     border-radius: 50%;
-    width: 237px;
+    width: 15rem;
   }
 
   h3 {
@@ -19,7 +18,7 @@ const PreviewContainer = styled(Link)`
     font-family: Montserrat;
     font-size: 1.1rem;
     font-weight: 600;
-    letter-spacing: 0px;
+    letter-spacing: 0;
   }
 
   p {
@@ -33,8 +32,9 @@ const PreviewContainer = styled(Link)`
     font-weight: 600;
 
     &:after {
-      border-right: 2px solid ${props => props.theme.colors.background_dark};
-      border-top: 2px solid ${props => props.theme.colors.background_dark};
+      border-right: 0.125rem solid ${props =>
+        props.theme.colors.background_dark};
+      border-top: 0.125rem solid ${props => props.theme.colors.background_dark};
       content: '';
       display: inline-block;
       height: 1rem;

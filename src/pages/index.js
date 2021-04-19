@@ -31,7 +31,7 @@ const IntroContainer = styled.section`
 
   img {
     display: block;
-    width: 500px;
+    width: 45%;
     max-width: 50vw;
   }
 `;
@@ -45,7 +45,7 @@ const ServicesContainer = styled.section`
     color: ${props => props.theme.colors.background_dark};
     font-size: 3.5rem;
     font-weight: 500;
-    letter-spacing: 0px;
+    letter-spacing: 0;
     margin: 0 auto 3.5rem;
     text-align: center;
     text-transform: none;
