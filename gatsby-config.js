@@ -48,6 +48,13 @@ module.exports = {
         path: `${__dirname}/src/cms/general`,
       },
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `projects`,
+        path: `${__dirname}/src/cms/projects`,
+      },
+    },
     // Load svg icons with file format [name].icon.svg
     {
       resolve: 'gatsby-plugin-react-svg',

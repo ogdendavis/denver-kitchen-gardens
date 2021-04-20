@@ -5,6 +5,7 @@ import ReactMarkdown from 'react-markdown';
 
 import Layout from '../components/layout';
 import HomepageServicePreviews from '../components/services/homepageServicePreviews';
+import Gallery from '../components/gallery';
 
 const HomeContainer = styled.div`
   margin: 0 auto;
@@ -146,6 +147,12 @@ const Home = () => {
         <PortfolioContainer>
           <h2>{content.portfolio_heading}</h2>
           <p>{content.portfolio_subheading}</p>
+          <Gallery
+            limitImages={10}
+            bbText="View Full Portfolio"
+            bbLink="/portfolio"
+            bbLight
+          />
         </PortfolioContainer>
       </HomeContainer>
     </Layout>
