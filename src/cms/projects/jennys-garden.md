@@ -14,7 +14,7 @@ images:
     image: /images/uploads/squarsh.png
   - on_homepage: false
     image: /images/uploads/seedlings.png
-  - on_homepage: false
+  - on_homepage: true
     image: /images/uploads/small_pickles.png
   - on_homepage: false
     image: /images/uploads/bed_o_greens.png
@@ -26,7 +26,7 @@ images:
     image: /images/uploads/oscar_shopping.png
   - on_homepage: false
     image: /images/uploads/bean_hands.png
-  - on_homepage: false
+  - on_homepage: true
     image: /images/uploads/strainer_veg.png
   - on_homepage: false
     image: /images/uploads/bean_growing.png
@@ -36,6 +36,6 @@ images:
     image: /images/uploads/so_many_onions.png
   - on_homepage: false
     image: /images/uploads/so_many_pickles.png
-  - on_homepage: false
+  - on_homepage: true
     image: /images/uploads/raised_bed.png
 ---

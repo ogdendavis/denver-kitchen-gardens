@@ -24,7 +24,7 @@ const GalleryImage = styled.img`
 `;
 
 const ButtonContainer = styled.div`
-  margin: 2rem auto 4.25rem;
+  margin: ${props => `${props.isBB ? '4.25rem' : '2rem'} auto 4.25rem`};
   text-align: center;
   width: 100%;
 `;
@@ -86,6 +86,12 @@ const Gallery = ({
     allImagePaths.splice(limitImages);
   }
 
+  // We always want an even number of images
+  if (allImagePaths.length % 2 !== 0) {
+    // If odd length, remove last image
+    allImagePaths.splice(allImagePaths.length - 1);
+  }
+
   // Create array of rendered images
   const galleryImages = allImagePaths.map((path, index) => {
     // even-indexed images will appear on left
@@ -94,14 +100,12 @@ const Gallery = ({
     return <GalleryImage key={path} src={path} side={side} />;
   });
 
-  // Get galleryImages length before insertion starts in loop
-  const galleryLength = galleryImages.length;
-
   // Insert buttons every 10 images (but not at end)
-  for (let i = 10; i < galleryLength; i += 10) {
+  // i iterates by 11 to account for newly-inserted button
+  for (let i = 10; i < galleryImages.length; i += 11) {
     // Draw button
     const interButton = (
-      <ButtonContainer key={`galBut-${i % 10}`}>
+      <ButtonContainer key={`galBut-${i}`}>
         <Button to={ibLink}>{ibText}</Button>
       </ButtonContainer>
     );
@@ -115,7 +119,7 @@ const Gallery = ({
   return (
     <GalleryContainer>
       {galleryImages}
-      <ButtonContainer>
+      <ButtonContainer isBB>
         <Button to={bbLink} variant={bbVariant}>
           {bbText}
         </Button>
