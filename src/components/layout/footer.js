@@ -82,7 +82,7 @@ const FooterchokeContainer = styled.div`
 `;
 
 const FooterBottom = styled.div`
-  background: ${({ theme }) => theme.colors.button};
+  background: ${({ theme }) => theme.colors.blue};
   color: ${({ theme }) => theme.colors.text_white};
   font-size: 0.8rem;
   text-align: center;
