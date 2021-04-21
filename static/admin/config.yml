@@ -86,7 +86,12 @@ collections:
         file: 'src/cms/pages/work.md'
         fields:
           - { label: 'Headline', name: 'title', widget: 'string' }
-          - { label: 'Hero Text', name: 'hero_text', widget: 'text' }
+          - {
+              label: 'Hero Text',
+              name: 'hero_text',
+              widget: 'text',
+              required: false,
+            }
           - {
               label: 'Interbutton Link',
               name: 'interbutton_link',

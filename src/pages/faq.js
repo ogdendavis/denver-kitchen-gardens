@@ -9,6 +9,10 @@ const QuestionsContainer = styled.div`
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
+  margin: 3.75rem auto;
+  width: ${props => props.theme.content.width};
+  max-width: 57rem;
+  min-width: ${props => props.theme.content.minWidth};
 `;
 
 const FAQ = () => {
