@@ -1,5 +1,6 @@
 ---
 title: Jenny's Garden
+date: 2021.04.15
 images:
   - on_homepage: true
     image: /images/uploads/oscar_shopping.png

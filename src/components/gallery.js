@@ -41,14 +41,17 @@ const Gallery = ({
   bbLight,
 }) => {
   // Grab all images associated with projects
+  // Grabs newer projects first (so will be at top)
   const data = useStaticQuery(graphql`
     query galleryQuery {
       allProjects: allMarkdownRemark(
         filter: { fileAbsolutePath: { regex: "//cms/projects/" } }
+        sort: { fields: frontmatter___date, order: DESC }
       ) {
         edges {
           node {
             frontmatter {
+              date
               images {
                 image
                 on_homepage
@@ -61,23 +64,20 @@ const Gallery = ({
   `);
 
   // Flatten all image arrays into one
-  // TEMP reverse so images are in same order as design
-  const allImagePaths = data.allProjects.edges
-    .reduce((all, { node }) => {
-      // Flatten all arrays into one array of only paths
-      const paths = node.frontmatter.images
-        .filter(imageObj => {
-          // If onHomepage is true, filter out images not selected for homepage
-          return !onHomepage || (onHomepage && imageObj.on_homepage);
-        })
-        .map(imageObj => {
-          // Extract only the path from the object
-          return imageObj.image;
-        });
-      // Add the paths to the overall list (accumulator)
-      return all.concat(paths);
-    }, [])
-    .reverse();
+  const allImagePaths = data.allProjects.edges.reduce((all, { node }) => {
+    // Flatten all arrays into one array of only paths
+    const paths = node.frontmatter.images
+      .filter(imageObj => {
+        // If onHomepage is true, filter out images not selected for homepage
+        return !onHomepage || (onHomepage && imageObj.on_homepage);
+      })
+      .map(imageObj => {
+        // Extract only the path from the object
+        return imageObj.image;
+      });
+    // Add the paths to the overall list (accumulator)
+    return all.concat(paths);
+  }, []);
 
   // Limit images displayed to limitImages arg
   if (allImagePaths.length > limitImages) {
