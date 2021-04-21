@@ -110,7 +110,7 @@ const Footer = () => {
         <FooterLeft>
           <h2>Denver Kitchen Gardens</h2>
           <FooterLinks>
-            <Button light="true" to="/contact">
+            <Button to="/contact" variant="light">
               Contact
             </Button>
             <IconContainer>

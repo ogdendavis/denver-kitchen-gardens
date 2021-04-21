@@ -84,7 +84,7 @@ const Gallery = ({ limitImages, ibText, ibLink, bbText, bbLink, bbLight }) => {
   for (let i = 10; i < galleryLength; i += 10) {
     // Draw button
     const interButton = (
-      <ButtonContainer>
+      <ButtonContainer key={`galBut-${i % 10}`}>
         <Button to={ibLink}>{ibText}</Button>
       </ButtonContainer>
     );
@@ -92,11 +92,14 @@ const Gallery = ({ limitImages, ibText, ibLink, bbText, bbLink, bbLight }) => {
     galleryImages.splice(i, 0, interButton);
   }
 
+  // Determine if bottom button is light or not
+  const bbVariant = bbLight ? 'light inverted' : 'default';
+
   return (
     <GalleryContainer>
       {galleryImages}
       <ButtonContainer>
-        <Button to={bbLink} light={bbLight.toString()}>
+        <Button to={bbLink} variant={bbVariant}>
           {bbText}
         </Button>
       </ButtonContainer>
