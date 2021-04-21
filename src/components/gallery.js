@@ -31,7 +31,15 @@ const ButtonContainer = styled.div`
 
 // Renders images on Portfolio page and portfolio segment of homepage
 // limitImages should be an integer of the number of images to display in the gallery (if not all)
-const Gallery = ({ limitImages, ibText, ibLink, bbText, bbLink, bbLight }) => {
+const Gallery = ({
+  onHomepage,
+  limitImages,
+  ibText,
+  ibLink,
+  bbText,
+  bbLink,
+  bbLight,
+}) => {
   // Grab all images associated with projects
   const data = useStaticQuery(graphql`
     query galleryQuery {
@@ -43,6 +51,7 @@ const Gallery = ({ limitImages, ibText, ibLink, bbText, bbLink, bbLight }) => {
             frontmatter {
               images {
                 image
+                on_homepage
               }
             }
           }
@@ -55,8 +64,16 @@ const Gallery = ({ limitImages, ibText, ibLink, bbText, bbLink, bbLight }) => {
   // TEMP reverse so images are in same order as design
   const allImagePaths = data.allProjects.edges
     .reduce((all, { node }) => {
-      // Extract image paths from the individual objects
-      const paths = node.frontmatter.images.map(imageObj => imageObj.image);
+      // Flatten all arrays into one array of only paths
+      const paths = node.frontmatter.images
+        .filter(imageObj => {
+          // If onHomepage is true, filter out images not selected for homepage
+          return !onHomepage || (onHomepage && imageObj.on_homepage);
+        })
+        .map(imageObj => {
+          // Extract only the path from the object
+          return imageObj.image;
+        });
       // Add the paths to the overall list (accumulator)
       return all.concat(paths);
     }, [])

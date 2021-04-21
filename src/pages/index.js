@@ -148,6 +148,7 @@ const Home = () => {
           <h2>{content.portfolio_heading}</h2>
           <p>{content.portfolio_subheading}</p>
           <Gallery
+            onHomepage={true}
             limitImages={10}
             bbText="View Full Portfolio"
             bbLink="/portfolio"
