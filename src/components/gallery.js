@@ -20,9 +20,7 @@ const GalleryImage = styled.img`
   margin-bottom: 3rem;
   width: 31.75rem;
 
-  &.onLeft {
-    margin-right: 3rem;
-  }
+  ${props => (props.side === 'onLeft' ? 'margin-right: 3rem;' : '')}
 `;
 
 const ButtonContainer = styled.div`
@@ -74,8 +72,9 @@ const Gallery = ({ limitImages, ibText, ibLink, bbText, bbLink, bbLight }) => {
   // Create array of rendered images
   const galleryImages = allImagePaths.map((path, index) => {
     // even-indexed images will appear on left
-    const imageClass = index % 2 === 0 ? 'onLeft' : 'onRight';
-    return <GalleryImage src={path} className={imageClass} />;
+    // Used for styling
+    const side = index % 2 === 0 ? 'onLeft' : 'onRight';
+    return <GalleryImage key={path} src={path} side={side} />;
   });
 
   // Get galleryImages length before insertion starts in loop
@@ -97,7 +96,7 @@ const Gallery = ({ limitImages, ibText, ibLink, bbText, bbLink, bbLight }) => {
     <GalleryContainer>
       {galleryImages}
       <ButtonContainer>
-        <Button to={bbLink} light={bbLight}>
+        <Button to={bbLink} light={bbLight.toString()}>
           {bbText}
         </Button>
       </ButtonContainer>
