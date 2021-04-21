@@ -242,11 +242,12 @@ collections:
         name: 'images'
         widget: 'list'
         add_to_top: true
+        summary: '{{filename}}.{{extension}}'
         fields:
           - {
               label: 'Display on Homepage?',
               name: 'on_homepage',
               widget: 'boolean',
-              default: 'false',
+              default: false,
             }
           - { label: 'Image', name: 'image', widget: 'image' }
