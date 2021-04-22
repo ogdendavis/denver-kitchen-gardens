@@ -5,7 +5,7 @@ const HeaderContainer = styled.header`
   padding-top: 2rem;
   ${props =>
     props.heroImage
-      ? `background: url(${props.heroImage}) fixed center/cover no-repeat; height: 80vh;`
+      ? `background: url(${props.heroImage}) fixed center/cover no-repeat; height: 65vh;`
       : ''}
 `;
 
@@ -52,9 +52,12 @@ const HeaderText = styled.div`
 `;
 
 const Phone = styled.div`
-  margin-top: 3rem;
+  color: ${props => props.theme.colors.orange};
+  font-family: Lora;
   font-size: 2rem;
-  color: ${props => props.theme.colors.heading};
+  font-weight: 500;
+  letter-spacing: 2.25px;
+  margin-top: 1.5rem;
 `;
 
 const Header = ({ heroImage, heading, text, phone }) => {
@@ -66,7 +69,7 @@ const Header = ({ heroImage, heading, text, phone }) => {
       <HeaderText className={hasHero ? 'hasHero' : 'noHero'}>
         <h1>{heading}</h1>
         <p>{text}</p>
-        {phone && <Phone>CALL US AT {phone}</Phone>}
+        {phone && <Phone>{phone}</Phone>}
       </HeaderText>
     </HeaderContainer>
   );

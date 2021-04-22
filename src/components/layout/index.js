@@ -97,6 +97,7 @@ const Layout = ({ heroImage, heroHeading, heroText, heroPhone, children }) => {
       text: '#737373',
       text_dark: '#3d3d3d',
       text_white: '#fcfcfc',
+      orange: '#cd8b00',
     },
   };
 
