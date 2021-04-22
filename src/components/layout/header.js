@@ -5,7 +5,7 @@ const HeaderContainer = styled.header`
   padding-top: 2rem;
   ${props =>
     props.heroImage
-      ? `background: url(${props.heroImage}) center/cover no-repeat; height: 80vh;`
+      ? `background: url(${props.heroImage}) fixed center/cover no-repeat; height: 80vh;`
       : ''}
 `;
 
