@@ -138,13 +138,8 @@ collections:
               widget: 'string',
             }
           - { label: 'Content Copy', name: 'content_copy', widget: 'markdown' }
-          - { label: 'Profile Image', name: 'profile_pic', widget: 'image' }
-          - label: 'Additional Images'
-            name: 'more_pics'
-            widget: 'list'
-            add_to_top: true
-            fields:
-              - { label: 'Image', name: 'image', widget: 'image' }
+          - { label: 'Image 1', name: 'image_1', widget: 'image' }
+          - { label: 'Image 2', name: 'image_2', widget: 'image' }
       - name: 'contact'
         label: 'Contact'
         file: 'src/cms/pages/contact.md'

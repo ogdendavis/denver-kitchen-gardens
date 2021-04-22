@@ -22,6 +22,18 @@ const AboutCopy = styled.article`
   h1 {
     margin-top: 0;
   }
+
+  blockquote {
+    margin: 3rem 0;
+
+    p {
+      font-size: 2.25rem;
+      font-family: Lora;
+      font-weight: 300;
+      letter-spacing: 0.88px;
+      line-height: 2.75rem;
+    }
+  }
 `;
 
 const AboutImages = styled.div`
@@ -32,11 +44,6 @@ const AboutImages = styled.div`
 const ProfileImage = styled.img`
   display: block;
   margin-bottom: 1.75rem;
-  width: 100%;
-`;
-
-const AnotherImage = styled.img`
-  display: block;
   width: 100%;
 `;
 
@@ -52,10 +59,8 @@ const About = () => {
           hero_text
           content_heading
           content_copy
-          profile_pic
-          more_pics {
-            image
-          }
+          image_1
+          image_2
         }
       }
     }
@@ -63,11 +68,6 @@ const About = () => {
 
   // Point at content object once
   const content = data.content.frontmatter;
-
-  // Loop over more_pics to generate images
-  const moreImages = content.more_pics.map(({ image }) => (
-    <AnotherImage key={`another-${image}`} src={image} />
-  ));
 
   return (
     <Layout
@@ -81,8 +81,8 @@ const About = () => {
           <ReactMarkdown>{content.content_copy}</ReactMarkdown>
         </AboutCopy>
         <AboutImages>
-          <ProfileImage src={content.profile_pic} />
-          {moreImages}
+          <ProfileImage src={content.image_1} />
+          <ProfileImage src={content.image_2} />
         </AboutImages>
       </AboutContainer>
     </Layout>
