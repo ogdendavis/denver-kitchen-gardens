@@ -1,6 +1,7 @@
 import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 import styled from 'styled-components';
+import ReactMarkdown from 'react-markdown';
 
 import Layout from '../components/layout';
 import ServicepageServicePreviews from '../components/services/servicepageServicePreviews';
@@ -27,6 +28,29 @@ const PreviewsContainer = styled.section`
       margin: 2rem auto;
       width: 4rem;
     }
+  }
+`;
+
+const NextStepsContainer = styled.section`
+  margin: 6.125rem auto 3rem;
+  text-align: center;
+  width: ${props => props.theme.content.width};
+  max-width: ${props => props.theme.content.maxWidth};
+  min-width: ${props => props.theme.content.minWidth};
+
+  h2 {
+    margin: 0 auto 3rem;
+  }
+
+  p {
+    box-sizing: border-box;
+    color: ${props => props.theme.colors.text};
+    margin: 2rem auto;
+    max-width: 50rem;
+  }
+
+  img {
+    margin: 1.25rem auto 3.25rem;
   }
 `;
 
@@ -62,6 +86,12 @@ const Services = ({ location }) => {
         <h2>{content.services_heading}</h2>
         <ServicepageServicePreviews />
       </PreviewsContainer>
+
+      <NextStepsContainer>
+        <h2>{content.nextsteps_heading}</h2>
+        <ReactMarkdown>{content.nextsteps_copy}</ReactMarkdown>
+        <img src="/images/garlic_sketch.png" alt="" />
+      </NextStepsContainer>
     </Layout>
   );
 };
