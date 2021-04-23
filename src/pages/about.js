@@ -19,7 +19,7 @@ const AboutCopy = styled.article`
   width: 47%;
   min-width: ${props => props.theme.content.minWidth};
 
-  h1 {
+  h2 {
     margin-top: 0;
   }
 
@@ -78,7 +78,7 @@ const About = ({ location }) => {
     >
       <AboutContainer>
         <AboutCopy>
-          <h1>{content.content_heading}</h1>
+          <h2>{content.content_heading}</h2>
           <ReactMarkdown>{content.content_copy}</ReactMarkdown>
         </AboutCopy>
         <AboutImages>
