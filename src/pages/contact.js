@@ -28,7 +28,6 @@ const ContactForm = styled.form`
     margin-bottom: 1rem;
     padding: 1rem;
     width: 100%;
-    min-width: ${props => props.theme.content.minWidth};
 
     ::placeholder {
       font-weight: 600;
