@@ -7,7 +7,7 @@ const ServicePage = props => {
   const { content } = props.pageContext;
 
   return (
-    <Layout>
+    <Layout location={props.location}>
       <h1>{content.frontmatter.title}</h1>
       <img
         src={content.frontmatter.image}

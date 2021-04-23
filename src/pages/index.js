@@ -92,7 +92,7 @@ const PortfolioContainer = styled.section`
   }
 `;
 
-const Home = () => {
+const Home = ({ location }) => {
   const data = useStaticQuery(graphql`
     query homeQuery {
       content: markdownRemark(
@@ -123,6 +123,7 @@ const Home = () => {
       heroImage={content.hero}
       heroHeading={content.title}
       heroText={content.hero_text}
+      location={location}
     >
       <HomeContainer>
         <IntroContainer>

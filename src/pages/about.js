@@ -47,7 +47,7 @@ const ProfileImage = styled.img`
   width: 100%;
 `;
 
-const About = () => {
+const About = ({ location }) => {
   const data = useStaticQuery(graphql`
     query aboutQuery {
       content: markdownRemark(
@@ -74,6 +74,7 @@ const About = () => {
       heroImage={content.hero}
       heroHeading={content.title}
       heroText={content.hero_text}
+      location={location}
     >
       <AboutContainer>
         <AboutCopy>

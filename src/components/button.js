@@ -13,9 +13,10 @@ const ButtonContainer = styled(Link)`
   transition: background 0.5s ease, color 0.5s ease;
 
   &:hover {
-    text-decoration-line: none !important;
     background: ${props => props.theme.colors.green};
     color: ${props => props.theme.colors.text_white};
+    cursor: pointer;
+    text-decoration-line: none !important;
   }
 
   ${props => {

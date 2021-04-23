@@ -15,6 +15,11 @@ collections:
         file: 'src/cms/general/site.md'
         fields:
           - { label: 'Header Logo', name: 'header_logo', widget: 'image' }
+          - {
+              label: 'Contact Form Success Message',
+              name: 'contact_message',
+              widget: 'text',
+            }
       - name: 'contact'
         label: 'Contact Info'
         file: 'src/cms/general/contact.md'

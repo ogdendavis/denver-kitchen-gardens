@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import styled, { ThemeProvider } from 'styled-components';
 
 import 'normalize.css';
@@ -7,6 +7,7 @@ import BigHat from './helmet';
 import Nav from './nav';
 import Header from './header';
 import Footer from './footer';
+import Modal from './modal';
 
 // Consume theme (set below) and set some global styles
 const ThemeConsumer = styled.div`
@@ -78,7 +79,14 @@ const Main = styled.main`
   margin: 0 auto;
 `;
 
-const Layout = ({ heroImage, heroHeading, heroText, heroPhone, children }) => {
+const Layout = ({
+  heroImage,
+  heroHeading,
+  heroText,
+  heroPhone,
+  children,
+  location,
+}) => {
   // Theme for global styles
   const theme = {
     content: {
@@ -99,7 +107,39 @@ const Layout = ({ heroImage, heroHeading, heroText, heroPhone, children }) => {
       text_white: '#fcfcfc',
       orange: '#cd8b00',
     },
+    modalBg: 'linear-gradient(rgba(61, 61, 61, 0.8), rgba(61, 61, 61, 0.8))', // text_dark with 80% opacity
   };
+
+  /*
+   * Control modal display
+   */
+  // State for modal toggle
+  const [modalVal, setModalVal] = useState(false);
+
+  // Only check once, on initial component load
+  useEffect(() => {
+    // Get query params individually from location
+    const queryParams = location.search
+      .split('?')
+      .slice(1)
+      .map(str => {
+        // Param strings are in format [key]=[value], so split them...
+        const [key, value] = str.split('=');
+        // ...and return an object with the param formatted!
+        // const retObj = {};
+        // retObj[key] = val;
+        return {
+          key: key,
+          value: value,
+        };
+      });
+    // If there's a modal param in the array, find it to pass to Modal
+    const modalParam = queryParams.find(x => x.key === 'modal');
+    // If a parameter is present, set the modal value!
+    if (modalParam) {
+      setModalVal(modalParam.value);
+    }
+  }, [location]);
 
   return (
     <ThemeProvider theme={theme}>
@@ -115,6 +155,12 @@ const Layout = ({ heroImage, heroHeading, heroText, heroPhone, children }) => {
         <Main>{children}</Main>
         <Footer />
       </ThemeConsumer>
+      <Modal
+        close={() => {
+          setModalVal(false);
+        }}
+        val={modalVal}
+      />
     </ThemeProvider>
   );
 };

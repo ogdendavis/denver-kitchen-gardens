@@ -4,7 +4,7 @@ import { useStaticQuery, graphql } from 'gatsby';
 import Layout from '../components/layout';
 import Gallery from '../components/gallery';
 
-const Portfolio = () => {
+const Portfolio = ({ location }) => {
   const data = useStaticQuery(graphql`
     query portfolioQuery {
       content: markdownRemark(
@@ -26,6 +26,7 @@ const Portfolio = () => {
     <Layout
       heroHeading={data.content.frontmatter.title}
       heroText={data.content.frontmatter.hero_text}
+      location={location}
     >
       <Gallery
         limitImages={30}

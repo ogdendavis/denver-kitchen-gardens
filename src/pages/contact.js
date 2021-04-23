@@ -65,7 +65,7 @@ const ContactForm = styled.form`
   }
 `;
 
-const Contact = () => {
+const Contact = ({ location }) => {
   const data = useStaticQuery(graphql`
     query contactQuery {
       content: markdownRemark(
@@ -95,10 +95,16 @@ const Contact = () => {
       heroHeading={data.content.frontmatter.title}
       heroText={data.content.frontmatter.hero_text}
       heroPhone={data.address.frontmatter.phone}
+      location={location}
     >
       <ContactContainer>
         <h2>{data.content.frontmatter.form_heading}</h2>
-        <ContactForm name="contact" method="POST" data-netlify="true">
+        <ContactForm
+          name="contact"
+          method="POST"
+          data-netlify="true"
+          action="/contact?modal=contactSuccess"
+        >
           <input type="hidden" name="form-name" value="contact" />
           <input type="text" name="first_name" placeholder="FIRST NAME" />
           <input type="text" name="last_name" placeholder="LAST NAME" />

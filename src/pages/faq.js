@@ -15,7 +15,7 @@ const QuestionsContainer = styled.div`
   min-width: ${props => props.theme.content.minWidth};
 `;
 
-const FAQ = () => {
+const FAQ = ({ location }) => {
   const data = useStaticQuery(graphql`
     query faqQuery {
       content: markdownRemark(
@@ -42,6 +42,7 @@ const FAQ = () => {
     <Layout
       heroHeading={data.content.frontmatter.title}
       heroText={data.content.frontmatter.hero_text}
+      location={location}
     >
       <QuestionsContainer>{questions}</QuestionsContainer>
     </Layout>
