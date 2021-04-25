@@ -3,8 +3,8 @@ import styled from 'styled-components';
 import ReactMarkdown from 'react-markdown';
 
 import Layout from '../layout';
-import ServicePageDetails from './ServicePageDetails';
-import ServicePageCall from './ServicePageCall';
+import ServicePageDetails from './servicePageDetails';
+import ServicePageCall from './servicePageCall';
 
 const ServicePageContainer = styled.div`
   color: ${props => props.theme.colors.text};
