@@ -62,6 +62,8 @@ const ServicePage = props => {
   // Extract CMS info passed from page creation in gatsby-node
   const content = props.pageContext.content.frontmatter;
 
+  // Flag for if detail content is present
+  const hasDetail = content.detail_copy ? true : false;
   // Flag for if bottom call to action content is present
   const hasCall = content.call_text ? true : false;
 
@@ -76,12 +78,19 @@ const ServicePage = props => {
           </Cols>
         </Intro>
         <Line />
-        <ServicePageDetails content={content} />
+        <ServicePageDetails
+          content={content}
+          hasDetail={hasDetail}
+          hasCall={hasCall}
+        />
         {
           // render call to action only if provided
           hasCall && (
             <>
-              <Line />
+              {
+                // render line only if detail is present
+                hasDetail && <Line />
+              }
               <ServicePageCall content={content} />
             </>
           )
