@@ -12,6 +12,13 @@ const DetailsContainer = styled.section`
   justify-content: space-between;
 `;
 
+const DetailsHeading = styled.h2`
+  line-height: 3rem;
+  margin: 2rem auto 1rem;
+  text-align: center;
+  width: 100%;
+`;
+
 const Detail = styled.div`
   padding-top: 2rem;
   width: 26rem;
@@ -76,6 +83,7 @@ const LeavesContainer = styled.div`
 const ProcessInner = styled.div`
   margin: 0 auto;
   width: 80%;
+
   h2 {
     color: ${props => props.theme.colors.green};
     font-size: 1.5rem;
@@ -103,10 +111,21 @@ const ProcessList = styled.ul`
     margin: 1.25rem auto;
     width: 20%;
   }
+
+  h3 {
+    color: ${props => props.theme.colors.blue};
+    font-size: 1rem;
+    font-family: Montserrat;
+    letter-spacing: 0;
+    margin: 0;
+  }
 `;
 
 const ServicePageDetails = ({ content }) => {
-  // TODO: logic to figure out which styling variant we'll use
+  // Flag for if detail content is present
+  const hasDetail = content.detail_copy ? true : false;
+  // Flag for if bottom call to action content is present
+  const hasCall = content.call_text ? true : false;
 
   // Generate process points
   const processPoints = content.process_points.map((point, index) => (
@@ -118,11 +137,19 @@ const ServicePageDetails = ({ content }) => {
 
   return (
     <DetailsContainer>
+      {content.detail_heading && (
+        <DetailsHeading>{content.detail_heading}</DetailsHeading>
+      )}
       <Detail>
         <ReactMarkdown>{content.detail_copy}</ReactMarkdown>
-        <ButtonContainer>
-          <Button to={content.call_url}>{content.call_button}</Button>
-        </ButtonContainer>
+        {
+          // Button only goes here if there is no call to action text
+          !hasCall && (
+            <ButtonContainer>
+              <Button to={content.call_url}>{content.call_button}</Button>
+            </ButtonContainer>
+          )
+        }
       </Detail>
       <Process>
         <LeavesContainer>

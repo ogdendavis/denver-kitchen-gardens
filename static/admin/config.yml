@@ -219,13 +219,11 @@ collections:
           label: 'Call to Action Button Link',
           name: 'call_url',
           widget: 'string',
-          required: false,
         }
       - {
           label: 'Call to Action Button Text',
           name: 'call_button',
           widget: 'string',
-          required: false,
         }
   - name: 'projects'
     label: 'Projects'

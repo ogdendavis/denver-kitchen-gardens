@@ -7,12 +7,18 @@ preview_text: Comprehensive and personalized plans for your dream garden.
 preview_on_homepage: true
 header_image: /images/uploads/consultation_hero.png
 intro_subheading: Having a garden can bring you so much joy but if you're new to it, there is so much to learn!
-intro_copy: You need to know what to plant, when to plant and how to keep everything alive. You have to battle Colorado's spring hails and summer droughts. There is infrastructure, irrigation, and soil health to consider. You have seed packets to decipher, conflicting advice to sort through, and pests to deal with.
+intro_copy: >-
+  You need to know what to plant, when to plant and how to keep everything alive. You have to battle Colorado's spring hails and summer droughts. There is infrastructure, irrigation, and soil health to consider.
+
+
+  You have seed packets to decipher, conflicting advice to sort through, and pests to deal with.
 detail_heading: It's no wonder so many folks are overwhelmed and frustrated!
-detail_copy:
+detail_copy: >-
   If any of this sounds familiar, I'm here to help. Whether you're starting from the ground up or are trying to work through challenges from previous growing seasons, you'll benefit from this partnership.
 
+
   Everyone's needs are different and there is no one size fits all approach to gardening. While books and websites are wonderful resources, nothing compares to in-person expert advice. I create individualized plans that work for the specific needs of my clients.
+
 
   Each consultation includes a site assessment where I will note your challenges and opportunities. We'll discuss what your gardening goals are and create a plan for how to get there. each client receives personalized materials to help them save time, money, and effort.
 process_heading: Each client receives

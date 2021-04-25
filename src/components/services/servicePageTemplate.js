@@ -4,6 +4,7 @@ import ReactMarkdown from 'react-markdown';
 
 import Layout from '../layout';
 import ServicePageDetails from './ServicePageDetails';
+import ServicePageCall from './ServicePageCall';
 
 const ServicePageContainer = styled.div`
   color: ${props => props.theme.colors.text};
@@ -14,20 +15,21 @@ const ServicePageContainer = styled.div`
 
   section {
     margin: 0 auto;
-    max-width: 56rem;
+    max-width: 57.25rem;
   }
 `;
 
 const Intro = styled.section`
   h1 {
     font-size: 3.5rem;
-    margin-bottom: 2.625rem;
+    letter-spacing: 0;
+    margin-bottom: 2.5rem;
   }
 
   aside {
     font-size: 1.125rem;
     font-weight: 600;
-    margin-bottom: 2.375rem;
+    margin-bottom: 2.5rem;
   }
 `;
 
@@ -38,6 +40,7 @@ const Cols = styled.div`
   p {
     margin: 0;
     padding: 0 1.5rem;
+    width: 100%;
 
     &:first-child {
       padding-left: 0;
@@ -59,6 +62,9 @@ const ServicePage = props => {
   // Extract CMS info passed from page creation in gatsby-node
   const content = props.pageContext.content.frontmatter;
 
+  // Flag for if bottom call to action content is present
+  const hasCall = content.call_text ? true : false;
+
   return (
     <Layout heroImage={content.header_image} location={props.location}>
       <ServicePageContainer>
@@ -71,6 +77,15 @@ const ServicePage = props => {
         </Intro>
         <Line />
         <ServicePageDetails content={content} />
+        {
+          // render call to action only if provided
+          hasCall && (
+            <>
+              <Line />
+              <ServicePageCall content={content} />
+            </>
+          )
+        }
       </ServicePageContainer>
     </Layout>
   );
