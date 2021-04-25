@@ -9,6 +9,7 @@ const ButtonContainer = styled(Link)`
   display: inline-block;
   font-weight: 600;
   padding: 1rem 2.5rem;
+  text-align: center;
   text-transform: uppercase;
   transition: background 0.5s ease, color 0.5s ease;
 

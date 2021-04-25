@@ -13,7 +13,7 @@ const NavContainer = styled.nav`
   position: sticky;
   top: 0;
   font-weight: 500;
-  z-index: 1;
+  z-index: 999;
 `;
 
 const NavLogo = styled.img`

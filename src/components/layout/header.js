@@ -3,10 +3,18 @@ import styled from 'styled-components';
 
 const HeaderContainer = styled.header`
   padding-top: 2rem;
-  ${props =>
-    props.heroImage
-      ? `background: url(${props.heroImage}) fixed center/cover no-repeat; height: 65vh;`
-      : ''}
+
+  &.hasHero {
+    background-image: ${props => `url(${props.heroImage})`};
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 65vh;
+  }
+
+  &.hasHero.noHeading {
+    height: 35vh;
+  }
 `;
 
 const HeaderText = styled.div`
@@ -49,6 +57,11 @@ const HeaderText = styled.div`
       margin: 1.75rem auto 2.75rem;
     }
   }
+
+  &.noHeading {
+    display: none;
+    visibility: hidden;
+  }
 `;
 
 const Phone = styled.div`
@@ -61,12 +74,19 @@ const Phone = styled.div`
 `;
 
 const Header = ({ heroImage, heading, text, phone }) => {
-  // Flag to check if heroImage has been passed, for text area styling
-  const hasHero = heroImage ? true : false;
+  // Flags to check if heroImage and heading have been passed, for text area styling
+  const [hasHero, hasHeroHeading] = [heroImage ? true : false, heading];
+
+  const headerClass =
+    hasHero && hasHeroHeading // base case: has both
+      ? 'hasHero'
+      : hasHero // has only hero
+      ? 'hasHero noHeading'
+      : 'noHero'; // has neither hero nor heading
 
   return (
-    <HeaderContainer heroImage={heroImage}>
-      <HeaderText className={hasHero ? 'hasHero' : 'noHero'}>
+    <HeaderContainer heroImage={heroImage} className={headerClass}>
+      <HeaderText className={headerClass}>
         <h1>{heading}</h1>
         <p>{text}</p>
         {phone && <Phone>{phone}</Phone>}

@@ -75,6 +75,7 @@ const MissionContainer = styled.section`
     margin: 4.5rem auto;
     font-family: Lora;
     font-size: 2rem;
+    font-weight: 300;
     line-spacing: 2.5rem;
     letter-spacing: 0.9px;
     max-width: 52rem;

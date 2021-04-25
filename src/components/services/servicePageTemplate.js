@@ -1,20 +1,77 @@
 import React from 'react';
+import styled from 'styled-components';
+import ReactMarkdown from 'react-markdown';
 
 import Layout from '../layout';
+import ServicePageDetails from './ServicePageDetails';
+
+const ServicePageContainer = styled.div`
+  color: ${props => props.theme.colors.text};
+  margin: 3rem auto;
+  width: ${props => props.theme.content.width};
+  max-width: ${props => props.theme.content.maxWidth};
+  min-width: ${props => props.theme.content.minWidth};
+
+  section {
+    margin: 0 auto;
+    max-width: 56rem;
+  }
+`;
+
+const Intro = styled.section`
+  h1 {
+    font-size: 3.5rem;
+    margin-bottom: 2.625rem;
+  }
+
+  aside {
+    font-size: 1.125rem;
+    font-weight: 600;
+    margin-bottom: 2.375rem;
+  }
+`;
+
+const Cols = styled.div`
+  display: flex;
+  flex-flow: row nowrap;
+
+  p {
+    margin: 0;
+    padding: 0 1.5rem;
+
+    &:first-child {
+      padding-left: 0;
+    }
+    &: last-child {
+      padding-right: 0;
+    }
+  }
+`;
+
+const Line = styled.div`
+  background: ${props => props.theme.colors.text};
+  height: 2px;
+  margin: 3rem auto 2rem;
+  width: 100%;
+`;
 
 const ServicePage = props => {
   // Extract CMS info passed from page creation in gatsby-node
-  const { content } = props.pageContext;
+  const content = props.pageContext.content.frontmatter;
 
   return (
-    <Layout location={props.location}>
-      <h1>{content.frontmatter.title}</h1>
-      <img
-        src={content.frontmatter.image}
-        style={{ maxHeight: '30vh' }}
-        alt={content.frontmatter.image_alt}
-      />
-      <main dangerouslySetInnerHTML={{ __html: content.html }} />
+    <Layout heroImage={content.header_image} location={props.location}>
+      <ServicePageContainer>
+        <Intro>
+          <h1>{content.title}</h1>
+          <aside>{content.intro_subheading}</aside>
+          <Cols>
+            <ReactMarkdown>{content.intro_copy}</ReactMarkdown>
+          </Cols>
+        </Intro>
+        <Line />
+        <ServicePageDetails content={content} />
+      </ServicePageContainer>
     </Layout>
   );
 };
