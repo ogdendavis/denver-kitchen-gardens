@@ -1,3 +1,5 @@
+// TODO: General Service -> Other Services, for that Read more -> Contact Us, link to contact page
+
 import React from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
 import styled from 'styled-components';

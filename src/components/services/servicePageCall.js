@@ -20,7 +20,6 @@ const CallText = styled.div`
 `;
 
 const ServicePageCall = ({ content }) => {
-  // This comment is to make git acknowledge the capitalization change in this filename
   return (
     <CallContainer>
       <CallText>{content.call_text}</CallText>
