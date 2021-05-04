@@ -1,5 +1,3 @@
-// TODO: What I offer -> What I Offer
-
 import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 import styled from 'styled-components';
