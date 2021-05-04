@@ -71,6 +71,7 @@ const ProcessInner = styled.div`
 
 const ProcessList = styled.ul`
   color: ${props => props.theme.colors.text_dark};
+  line-height: 1.375rem;
   list-style: none;
   margin: 2rem auto 0;
   padding: 0;
