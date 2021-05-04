@@ -1,12 +1,25 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import Leaves from '../../images/icons/leaves.icon.svg';
-import Tomatoes from '../../images/icons/tomatoes.icon.svg';
-
 const SideProcess = styled.div`
+  margin-top: 2.75rem;
+  position: relative;
   width: 26rem;
   min-width: ${props => props.theme.content.minWidth};
+
+  &::before,
+  &::after {
+    content: url('/images/sageline.png');
+    display: block;
+    position: absolute;
+    left: -0.625rem;
+  }
+  &::before {
+    top: -2.75rem;
+  }
+  &::after {
+    bottom: -2.375rem;
+  }
 `;
 
 const WideProcess = styled.div`
@@ -18,34 +31,12 @@ const WideProcess = styled.div`
   min-width: ${props => props.theme.content.minWidth};
 `;
 
-const LeavesContainer = styled.div`
-  margin-bottom: -2rem; /* to crop svg */
-  position: relative;
-  text-align: center;
-
-  &:last-child {
-    margin-top: -1.5rem;
-  }
-
-  svg {
-    position: relative;
-    z-index: 1;
-  }
-
-  :after {
-    background: ${props => props.theme.colors.text};
-    content: '';
-    display: block;
-    height: 1px;
-    position: absolute;
-    top: 49%;
-    width: 100%;
-  }
-`;
-
 const ProcessInner = styled.div`
+  background: #fff;
+  box-sizing: border-box;
   margin: 0 auto;
-  width: 80%;
+  padding: 3rem 1.5rem;
+  width: 95%;
 
   h2 {
     color: ${props => props.theme.colors.green};
@@ -58,9 +49,10 @@ const ProcessInner = styled.div`
   }
 
   &.wide {
+    align-items: center;
     display: flex;
     flex-flow: column nowrap;
-    align-items: center;
+    padding: 0;
     width: auto;
 
     h2 {
@@ -98,7 +90,7 @@ const ProcessList = styled.ul`
   &.wide {
     display: flex;
     flex-flow: column wrap;
-    max-height: 16rem;
+    max-height: 19rem;
     margin: 2.5rem auto 1rem;
     position: relative;
     text-align: left;
@@ -112,6 +104,14 @@ const ProcessList = styled.ul`
     li {
       margin-bottom: 1.5rem;
       width: 47%;
+    }
+
+    li.process__tomatoes {
+      margin-bottom: 0;
+
+      img {
+        width: 224px;
+      }
     }
 
     h3 {
@@ -159,9 +159,9 @@ const ServicePageProcess = ({ content, hasDetail }) => {
         {
           // Add tomatoes if hasDetail is false
           !hasDetail && (
-            <ul>
-              <Tomatoes />
-            </ul>
+            <li className="process__tomatoes">
+              <img src="/images/tomatoes.png" alt="tomatoes" />
+            </li>
           )
         }
       </ProcessList>
@@ -173,15 +173,7 @@ const ServicePageProcess = ({ content, hasDetail }) => {
   );
 
   return hasDetail ? (
-    <SideProcess>
-      <LeavesContainer>
-        <Leaves />
-      </LeavesContainer>
-      {processContent}
-      <LeavesContainer>
-        <Leaves />
-      </LeavesContainer>
-    </SideProcess>
+    <SideProcess>{processContent}</SideProcess>
   ) : (
     <WideProcess>{processContent}</WideProcess>
   );

@@ -1,5 +1,3 @@
-// TODO: Add white background to process points in all layouts (like Service Consultation in design)
-
 import React from 'react';
 import styled from 'styled-components';
 import ReactMarkdown from 'react-markdown';
