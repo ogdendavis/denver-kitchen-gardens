@@ -54,14 +54,17 @@ const PreviewContainer = styled(Link)`
 // Creates component with preview image, text, and link directly to service sub-page
 const ServicePreview = ({ title, heading, text, image, variant }) => {
   // Create link based on title to match slug, as done in servicePageLinks
-  const link = `/services/${title.toLowerCase().split(' ').join('-')}`;
+  const link =
+    title === 'contact'
+      ? '/contact'
+      : `/services/${title.toLowerCase().split(' ').join('-')}`;
 
   return (
     <PreviewContainer to={link} variant={variant}>
       <img src={image} alt="" />
       <h3>{heading}</h3>
       <p>{text}</p>
-      <span>Read More</span>
+      <span>{title === 'contact' ? 'Contact Us' : 'Read More'}</span>
     </PreviewContainer>
   );
 };

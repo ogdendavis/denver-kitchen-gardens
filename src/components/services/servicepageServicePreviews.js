@@ -1,5 +1,3 @@
-// TODO: General Service -> Other Services, for that Read more -> Contact Us, link to contact page
-
 import React from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
 import styled from 'styled-components';
@@ -59,7 +57,7 @@ const ServicepageServicePreviews = () => {
     <ServicePreview
       key="preview-sp-general"
       title="contact"
-      heading="General Service"
+      heading="Other Services"
       text="Looking for something specific? Please reach out to see if we can help."
       image="/images/uploads/garlic.png"
       variant="large"
