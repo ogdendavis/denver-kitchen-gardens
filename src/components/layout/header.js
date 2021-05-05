@@ -1,16 +1,15 @@
-// TODO: Center HeaderText vertically within hero
-
 import React from 'react';
 import styled from 'styled-components';
 
 const HeaderContainer = styled.header`
-  padding-top: 2rem;
-
   &.hasHero {
     background-image: ${props => `url(${props.heroImage})`};
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
     height: 65vh;
   }
 
@@ -21,7 +20,6 @@ const HeaderContainer = styled.header`
 
 const HeaderText = styled.div`
   &.hasHero {
-    float: right;
     width: 50%;
     box-sizing: border-box;
     background: linear-gradient(#222b, #222b);
