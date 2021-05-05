@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import styled from 'styled-components';
 
 const Outer = styled.div`
@@ -55,16 +55,43 @@ const Modal = ({ closeFunc, images, index, setIndex }) => {
     setIndex(index + 1 === numImages ? 0 : index + 1);
   };
 
+  // Function to go to previous photo
+  const decrementIndex = () => {
+    // Either go to previous photo or to end
+    setIndex(index === 0 ? numImages - 1 : index - 1);
+  };
+
+  // Set ref that will point to image
+  // Ref is created with ref property on img tag
+  const imageRef = useRef(null);
+
+  // On load, focus image element
+  useEffect(() => {
+    imageRef.current.focus();
+  }, []);
+
   return (
     <Outer onClick={closeFunc}>
       <Inner>
         <Closer>&times;</Closer>
         <img
+          ref={imageRef}
+          tabIndex="0"
           src={activeImage}
           alt="A Denver Kitchen Gardens project"
           onClick={e => {
             e.stopPropagation();
             incrementIndex();
+          }}
+          onKeyDown={e => {
+            // If right arrow is pressed, go to next image
+            if (e.key === 'ArrowRight') {
+              incrementIndex();
+            }
+            // If left arrow is pressed, go to previous image
+            else if (e.key === 'ArrowLeft') {
+              decrementIndex();
+            }
           }}
         />
       </Inner>
