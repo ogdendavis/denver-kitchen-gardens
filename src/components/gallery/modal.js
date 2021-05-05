@@ -31,6 +31,9 @@ const Inner = styled.div`
     max-height: calc(100% - 2rem);
     max-width: 100%;
   }
+  img:focus {
+    outline: none;
+  }
 `;
 
 const Closer = styled.div`
