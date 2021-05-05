@@ -1,5 +1,6 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect } from 'react';
 import styled from 'styled-components';
+import { useSwipeable } from 'react-swipeable';
 
 const Outer = styled.div`
   display: flex;
@@ -61,21 +62,27 @@ const Modal = ({ closeFunc, images, index, setIndex }) => {
     setIndex(index === 0 ? numImages - 1 : index - 1);
   };
 
-  // Set ref that will point to image
-  // Ref is created with ref property on img tag
-  const imageRef = useRef(null);
-
-  // On load, focus image element
+  // On load, focus image element so keydown handlers fire
   useEffect(() => {
-    imageRef.current.focus();
+    document.querySelector('#modal-activeImage').focus();
   }, []);
+
+  // Use package to add swipe functionality
+  const swipers = useSwipeable({
+    onSwipedLeft: e => {
+      incrementIndex();
+    },
+    onSwipedRight: e => {
+      decrementIndex();
+    },
+  });
 
   return (
     <Outer onClick={closeFunc}>
       <Inner>
         <Closer>&times;</Closer>
         <img
-          ref={imageRef}
+          id="modal-activeImage"
           tabIndex="0"
           src={activeImage}
           alt="A Denver Kitchen Gardens project"
@@ -93,6 +100,7 @@ const Modal = ({ closeFunc, images, index, setIndex }) => {
               decrementIndex();
             }
           }}
+          {...swipers}
         />
       </Inner>
     </Outer>
