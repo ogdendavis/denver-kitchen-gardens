@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 import styled from 'styled-components';
 
-import Button from './button';
+import Button from '../button';
+import Modal from './modal';
 
 const GalleryContainer = styled.div`
   display: flex;
@@ -14,6 +15,7 @@ const GalleryContainer = styled.div`
 `;
 
 const GalleryImage = styled.img`
+  cursor: pointer;
   display: block;
   object-fit: cover;
   height: 24rem;
@@ -97,7 +99,17 @@ const Gallery = ({
     // even-indexed images will appear on left
     // Used for styling
     const side = index % 2 === 0 ? 'onLeft' : 'onRight';
-    return <GalleryImage key={path} src={path} side={side} />;
+    // Render image, with onClick indicating appropriate index
+    return (
+      <GalleryImage
+        key={path}
+        src={path}
+        side={side}
+        onClick={() => {
+          openModal(index);
+        }}
+      />
+    );
   });
 
   // Insert buttons every 10 images (but not at end)
@@ -116,6 +128,23 @@ const Gallery = ({
   // Determine if bottom button is light or not
   const bbVariant = bbLight ? 'light inverted' : 'default';
 
+  // State to manage Modal
+  const [modalOpen, setModalOpen] = useState(false);
+  const [modalImageIndex, setModalImageIndex] = useState(0);
+
+  // Modal opener
+  const openModal = index => {
+    // Set index of image to display
+    setModalImageIndex(index);
+    // Open the modal
+    setModalOpen(true);
+  };
+
+  // Modal closer
+  const closeModal = () => {
+    setModalOpen(false);
+  };
+
   return (
     <GalleryContainer>
       {galleryImages}
@@ -124,6 +153,14 @@ const Gallery = ({
           {bbText}
         </Button>
       </ButtonContainer>
+      {modalOpen && (
+        <Modal
+          closeFunc={closeModal}
+          images={allImagePaths}
+          index={modalImageIndex}
+          setIndex={setModalImageIndex}
+        />
+      )}
     </GalleryContainer>
   );
 };
