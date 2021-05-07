@@ -45,9 +45,9 @@ const ButtonContainer = styled(Link)`
   }}
 `;
 
-const Button = ({ children, to, variant }) => {
+const Button = ({ children, to, variant, className }) => {
   return (
-    <ButtonContainer to={to} variant={variant}>
+    <ButtonContainer to={to} variant={variant} className={className}>
       {children}
     </ButtonContainer>
   );

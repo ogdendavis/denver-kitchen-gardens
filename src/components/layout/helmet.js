@@ -18,8 +18,6 @@ const BigHat = ({ subTitle, pageImage, location }) => {
     }
   `);
 
-  console.log(location);
-
   // Pull out frontmatter for easy reference
   const meta = data.meta.frontmatter;
 
