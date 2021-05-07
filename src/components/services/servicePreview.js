@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'gatsby';
 import styled from 'styled-components';
 
@@ -8,6 +8,15 @@ const PreviewContainer = styled(Link)`
   text-align: center;
   text-decoration: none !important;
   width: ${props => (props.variant === 'large' ? '28.375rem' : '21rem')};
+
+  /* For slide-in animation */
+  position: relative;
+  opacity: 1;
+  transition: all .5s ease;
+  &.offscreen {
+    margin-top: 100px;
+    opacity: 0;
+  }
 
   img {
     border-radius: 50%;
@@ -59,8 +68,41 @@ const ServicePreview = ({ title, heading, text, image, variant }) => {
       ? '/contact'
       : `/services/${title.toLowerCase().split(' ').join('-')}`;
 
+  // State to track whether element is in viewport
+  const [isVisible, setIsVisible] = useState(false);
+
+  // Ref for containing div
+  const containerRef = useRef();
+
+  // On load, create an intersection observer that will check when item is in viewport
+  useEffect(() => {
+    // Create intersection observer
+    const observer = new IntersectionObserver(
+      // observer takes callback function to use when item is in view
+      entries => {
+        // Should only have one entry observed, so grab from array
+        const entry = entries[0];
+        // If onscreen, note so in state
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+        }
+      },
+      // config object for observer:
+      // threshold is % of element visible before observer logs that it's onscreen
+      // rootMargin expands observing box by that many pixels on each side
+      { threshold: 0.3, rootMargin: '100px' }
+    );
+    // point ref to observer, so we're observing the element at the ref!
+    observer.observe(containerRef.current);
+  }, []);
+
   return (
-    <PreviewContainer to={link} variant={variant}>
+    <PreviewContainer
+      to={link}
+      variant={variant}
+      ref={containerRef}
+      className={isVisible ? '' : 'offscreen'}
+    >
       <img src={image} alt="" />
       <h3>{heading}</h3>
       <p>{text}</p>
