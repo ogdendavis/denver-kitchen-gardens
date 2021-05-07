@@ -143,7 +143,11 @@ const Layout = ({
 
   return (
     <ThemeProvider theme={theme}>
-      <BigHat />
+      <BigHat
+        subTitle={heroHeading}
+        pageImage={heroImage}
+        location={location}
+      />
       <ThemeConsumer>
         <Nav />
         <Header

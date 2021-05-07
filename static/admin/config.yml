@@ -20,6 +20,12 @@ collections:
               name: 'contact_message',
               widget: 'text',
             }
+          - {
+              label: 'Site Description',
+              name: 'meta_description',
+              widget: 'text',
+            }
+          - { label: 'Site Image', name: 'meta_image', widget: 'image' }
       - name: 'contact'
         label: 'Contact Info'
         file: 'src/cms/general/contact.md'
