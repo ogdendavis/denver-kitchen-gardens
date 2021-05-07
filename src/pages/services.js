@@ -90,7 +90,7 @@ const Services = ({ location }) => {
       <NextStepsContainer>
         <h2>{content.nextsteps_heading}</h2>
         <ReactMarkdown>{content.nextsteps_copy}</ReactMarkdown>
-        <img src="/images/garlic_sketch.png" alt="" />
+        <img src="/images/garlic.png" alt="" />
       </NextStepsContainer>
     </Layout>
   );
