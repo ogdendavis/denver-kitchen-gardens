@@ -56,6 +56,7 @@ const About = ({ location }) => {
         frontmatter {
           title
           hero
+          hero_mobile
           hero_text
           content_heading
           content_copy
@@ -72,6 +73,7 @@ const About = ({ location }) => {
   return (
     <Layout
       heroImage={content.hero}
+      heroImageMobile={content.hero_mobile}
       heroHeading={content.title}
       heroText={content.hero_text}
       location={location}

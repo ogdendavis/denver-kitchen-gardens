@@ -6,6 +6,7 @@ preview_image: /images/uploads/coaching_preview.png
 preview_text: Need help with your existing garden? We can help.
 preview_on_homepage: true
 header_image: /images/uploads/coaching_hero.png
+header_image_mobile: /images/uploads/coaching_hero_mobile.png
 intro_subheading: Personalized help for your existing garden.
 intro_copy: >-
   Do you already have a garden but feel you could use a little additional help? Do you have a specific issue that you'd like advice on?

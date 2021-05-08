@@ -68,7 +68,11 @@ const ServicePage = props => {
   const hasCall = content.call_text ? true : false;
 
   return (
-    <Layout heroImage={content.header_image} location={props.location}>
+    <Layout
+      heroImage={content.header_image}
+      heroImageMobile={content.header_image_mobile}
+      location={props.location}
+    >
       <ServicePageContainer>
         <Intro>
           <h1>{content.title}</h1>

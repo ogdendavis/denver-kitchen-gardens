@@ -6,6 +6,7 @@ preview_image: /images/uploads/preservation_preview.png
 preview_text: Workshops to preserve your harvest so you can enjoy it year-round.
 preview_on_homepage: true
 header_image: /images/uploads/preservation_hero.png
+header_image_mobile: /images/uploads/preservation_hero_mobile.png
 intro_subheading: A kitchen garden, at its heart, is meant for you to eat from.
 intro_copy: >-
   From your first peas in the spring to your last pumpkin in the fall, your

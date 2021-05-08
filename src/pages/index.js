@@ -102,6 +102,7 @@ const Home = ({ location }) => {
         frontmatter {
           title
           hero
+          hero_mobile
           hero_text
           intro_image
           intro_heading
@@ -122,6 +123,7 @@ const Home = ({ location }) => {
   return (
     <Layout
       heroImage={content.hero}
+      heroImageMobile={content.hero_mobile}
       heroHeading={content.title}
       heroText={content.hero_text}
       location={location}

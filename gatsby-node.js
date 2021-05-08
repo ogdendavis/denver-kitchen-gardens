@@ -26,6 +26,7 @@ exports.createPages = ({ graphql, actions }) => {
               preview_text
               preview_on_homepage
               header_image
+              header_image_mobile
               intro_subheading
               intro_copy
               detail_heading

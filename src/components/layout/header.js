@@ -1,5 +1,7 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
+
+import { useViewport } from '../context/viewport';
 
 const HeaderContainer = styled.header`
   &.hasHero {
@@ -15,6 +17,14 @@ const HeaderContainer = styled.header`
 
   &.hasHero.noHeading {
     height: 35vh;
+  }
+
+  /* Mobile styles */
+  @media only screen and (max-width: 700px) {
+    &.hasHero,
+    &.hasHero.noHeading {
+      height: 70vh;
+    }
   }
 `;
 
@@ -62,6 +72,24 @@ const HeaderText = styled.div`
     display: none;
     visibility: hidden;
   }
+
+  /* Mobile styles */
+  @media only screen and (max-width: 700px) {
+    &.hasHero {
+      background: ${({ theme }) => theme.colors.text_dark};
+      width: 100%;
+
+      h1 {
+        font-size: 2.75rem;
+      }
+    }
+
+    &.noHero {
+      h1 {
+        font-size: 2.75rem;
+      }
+    }
+  }
 `;
 
 const Phone = styled.div`
@@ -73,7 +101,7 @@ const Phone = styled.div`
   margin-top: 1.5rem;
 `;
 
-const Header = ({ heroImage, heading, text, phone }) => {
+const Header = ({ heroImage, heroImageMobile, heading, text, phone }) => {
   // Flags to check if heroImage and heading have been passed, for text area styling
   const [hasHero, hasHeroHeading] = [heroImage ? true : false, heading];
 
@@ -84,13 +112,42 @@ const Header = ({ heroImage, heading, text, phone }) => {
       ? 'hasHero noHeading'
       : 'noHero'; // has neither hero nor heading
 
-  return (
+  // Breakpoint (in px) at which to start mobile styling
+  // Matches media queries above (replace with classes?)
+  const breakpoint = 700;
+
+  // Grab width from context
+  const { width } = useViewport();
+
+  // State to indicate whether or not viewport is narrow enough that mobile view is needed
+  const [isMobile, setIsMobile] = useState(
+    width && width <= breakpoint ? true : false
+  );
+
+  // When width changes, check and update isMobile
+  useEffect(() => {
+    setIsMobile(width <= breakpoint);
+  }, [width]);
+
+  // Hold all header text in one place
+  const renderText = () => (
+    <HeaderText className={headerClass}>
+      <h1>{heading}</h1>
+      <p>{text}</p>
+      {phone && <Phone>{phone}</Phone>}
+    </HeaderText>
+  );
+
+  // On mobile view, text should be rendered BELOW container
+  // On desktop view, text should be rendered within container
+  return isMobile ? (
+    <>
+      <HeaderContainer heroImage={heroImageMobile} className={headerClass} />
+      {renderText()}
+    </>
+  ) : (
     <HeaderContainer heroImage={heroImage} className={headerClass}>
-      <HeaderText className={headerClass}>
-        <h1>{heading}</h1>
-        <p>{text}</p>
-        {phone && <Phone>{phone}</Phone>}
-      </HeaderText>
+      {renderText()}
     </HeaderContainer>
   );
 };

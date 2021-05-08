@@ -82,6 +82,7 @@ const Main = styled.main`
 
 const Layout = ({
   heroImage,
+  heroImageMobile,
   heroHeading,
   heroText,
   heroPhone,
@@ -91,7 +92,7 @@ const Layout = ({
   // Theme for global styles
   const theme = {
     content: {
-      width: '95vw',
+      width: '85vw',
       maxWidth: '1100px',
       minWidth: '345px',
     },
@@ -154,6 +155,7 @@ const Layout = ({
           <Nav />
           <Header
             heroImage={heroImage}
+            heroImageMobile={heroImageMobile}
             heading={heroHeading}
             text={heroText}
             phone={heroPhone}

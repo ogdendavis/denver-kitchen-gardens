@@ -91,7 +91,7 @@ const Nav = () => {
       </LogoLink>
       {
         // Render normal menu if viewport is wide enough
-        useBurger === false && (
+        !useBurger && (
           <>
             <div>
               <NavLink to="/services">Services</NavLink>
@@ -106,7 +106,7 @@ const Nav = () => {
       {
         // Render mobile nav if viewport is at or below breakpoint
         // classNames used for styling in mobileNav.js
-        useBurger === true && (
+        useBurger && (
           <MobileNav>
             <NavLink to="/services" className="mobile-link">
               Services

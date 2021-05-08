@@ -74,6 +74,7 @@ const Contact = ({ location }) => {
         frontmatter {
           title
           hero
+          hero_mobile
           hero_text
           form_heading
           form_button
@@ -92,6 +93,7 @@ const Contact = ({ location }) => {
   return (
     <Layout
       heroImage={data.content.frontmatter.hero}
+      heroImageMobile={data.content.frontmatter.hero_mobile}
       heroHeading={data.content.frontmatter.title}
       heroText={data.content.frontmatter.hero_text}
       heroPhone={data.address.frontmatter.phone}

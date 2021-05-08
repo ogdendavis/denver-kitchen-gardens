@@ -1,5 +1,6 @@
 ---
 hero: /images/uploads/services_hero.png
+hero_mobile: /images/uploads/services_hero_mobile.png
 title: Services
 hero_text: Denver Kitchen Gardens is here to help! Take a look at our services
   to learn more.

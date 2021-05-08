@@ -1,5 +1,6 @@
 ---
 hero: /images/uploads/about_hero.png
+hero_mobile: /images/uploads/about_hero_mobile.png
 title: Sharing a love of food and flowers
 hero_text: Denver Kitchen Gardens was born from a desire to share the knowledge
   and expertise I have gained over the years as an avid home gardener and urban

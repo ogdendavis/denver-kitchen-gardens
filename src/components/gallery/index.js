@@ -20,7 +20,8 @@ const GalleryImage = styled.img`
   object-fit: cover;
   height: 24rem;
   margin-bottom: 3rem;
-  width: 31.75rem;
+  width: 32.75rem;
+  max-width: ${({ theme }) => theme.content.width};
 
   ${props => (props.side === 'onLeft' ? 'margin-right: 3rem;' : '')}
 `;

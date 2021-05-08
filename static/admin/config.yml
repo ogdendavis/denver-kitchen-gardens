@@ -40,6 +40,7 @@ collections:
         file: 'src/cms/pages/home.md'
         fields:
           - { label: 'Hero Image', name: 'hero', widget: 'image' }
+          - { label: 'Mobile Hero Image', name: 'hero_mobile', widget: 'image' }
           - { label: 'Headline', name: 'title', widget: 'string' }
           - { label: 'Hero Text', name: 'hero_text', widget: 'text' }
           - { label: 'Intro Image', name: 'intro_image', widget: 'image' }
@@ -75,6 +76,7 @@ collections:
         file: 'src/cms/pages/services.md'
         fields:
           - { label: 'Hero Image', name: 'hero', widget: 'image' }
+          - { label: 'Mobile Hero Image', name: 'hero_mobile', widget: 'image' }
           - { label: 'Headline', name: 'title', widget: 'string' }
           - { label: 'Hero Text', name: 'hero_text', widget: 'text' }
           - {
@@ -141,6 +143,7 @@ collections:
         file: 'src/cms/pages/about.md'
         fields:
           - { label: 'Hero Image', name: 'hero', widget: 'image' }
+          - { label: 'Mobile Hero Image', name: 'hero_mobile', widget: 'image' }
           - { label: 'Headline', name: 'title', widget: 'string' }
           - { label: 'Hero Text', name: 'hero_text', widget: 'text' }
           - {
@@ -156,6 +159,7 @@ collections:
         file: 'src/cms/pages/contact.md'
         fields:
           - { label: 'Hero Image', name: 'hero', widget: 'image' }
+          - { label: 'Mobile Hero Image', name: 'hero_mobile', widget: 'image' }
           - { label: 'Headline', name: 'title', widget: 'string' }
           - { label: 'Hero Text', name: 'hero_text', widget: 'text' }
           - { label: 'Form Heading', name: 'form_heading', widget: 'string' }
@@ -184,6 +188,11 @@ collections:
           default: false,
         }
       - { label: 'Header Image', name: 'header_image', widget: 'image' }
+      - {
+          label: 'Mobile Header Image',
+          name: 'header_image_mobile',
+          widget: 'image',
+        }
       - {
           label: 'Intro Subheading',
           name: 'intro_subheading',
