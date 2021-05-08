@@ -49,14 +49,19 @@ const Burger = styled.button`
 `;
 
 const Menu = styled.div`
-  background: red;
+  align-items: center;
+  background: ${({ theme }) => theme.colors.background};
+  box-shadow: 0 3px 6px #0000007b;
+  box-sizing: border-box;
   display: flex;
   flex-flow: column nowrap;
-  align-items: center;
-  position: fixed;
-  width: 100vw;
+  opacity: ${({ open }) => (open ? 1 : 0)};
   padding: 1rem;
-  box-sizing: border-box;
+  position: absolute;
+  transform: ${({ open }) => (open ? 'none' : 'translateY(-100vh)')};
+  top: 5.375rem;
+  transition: all 0.5s ease-in-out;
+  width: 100vw;
 
   .mobile-link,
   .mobile-button {

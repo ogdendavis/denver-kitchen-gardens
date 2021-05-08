@@ -6,14 +6,15 @@ import Button from '../button';
 import MobileNav from './mobileNav';
 
 const NavContainer = styled.nav`
-  padding: 1rem 8vw;
-  display: flex;
   align-items: center;
-  justify-content: space-between;
   background: ${props => props.theme.colors.background};
+  box-shadow: 0 3px 6px #0000007b;
+  display: flex;
+  font-weight: 500;
+  justify-content: space-between;
+  padding: 1rem 8vw;
   position: sticky;
   top: 0;
-  font-weight: 500;
   z-index: 999;
 
   /* Mobile nav styling */
@@ -123,6 +124,7 @@ const Nav = () => {
       }
       {
         // Render mobile nav if viewport is at or below breakpoint
+        // classNames used for styling in mobileNav.js
         useBurger === true && (
           <MobileNav>
             <NavLink to="/services" className="mobile-link">
