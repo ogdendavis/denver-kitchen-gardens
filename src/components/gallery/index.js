@@ -12,11 +12,11 @@ const GalleryContainer = styled.div`
   margin: 3rem auto;
   width: ${props => props.theme.content.width};
   max-width: ${props => props.theme.content.maxWidth};
-  /*
-  @media only screen and (max-width: 850px) {
-    flex-flow: column;
-    align-items: center;
-  }*/
+
+  /* Mobile styles (same breakpoint as hero) */
+  @media only screen and (max-width: 700px) {
+    margin: 1.5rem auto;
+  }
 `;
 
 const GalleryImage = styled.img`
@@ -58,6 +58,11 @@ const ButtonContainer = styled.div`
   margin: ${props => `${props.isBB ? '4.25rem' : '2rem'} auto 4.25rem`};
   text-align: center;
   width: 100%;
+
+  /* Mobile styles (same breakpoint as hero) */
+  @media only screen and (max-width: 700px) {
+    margin: 2.5rem auto 3rem;
+  }
 `;
 
 // Renders images on Portfolio page and portfolio segment of homepage

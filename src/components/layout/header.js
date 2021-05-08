@@ -89,6 +89,10 @@ const HeaderText = styled.div`
       h1 {
         font-size: 2.75rem;
       }
+
+      p {
+        margin-bottom: 1.75rem;
+      }
     }
   }
 `;
