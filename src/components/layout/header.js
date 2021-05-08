@@ -120,9 +120,8 @@ const Header = ({ heroImage, heroImageMobile, heading, text, phone }) => {
   const { width } = useViewport();
 
   // State to indicate whether or not viewport is narrow enough that mobile view is needed
-  const [isMobile, setIsMobile] = useState(
-    width && width <= breakpoint ? true : false
-  );
+  // Default to mobile view
+  const [isMobile, setIsMobile] = useState(true);
 
   // When width changes, check and update isMobile
   useEffect(() => {

@@ -71,9 +71,8 @@ const Nav = () => {
   const breakpoint = 800;
 
   // Flag for whether to display full nav or mobile/burger nav
-  const [useBurger, setUseBurger] = useState(
-    width && width <= breakpoint ? true : false
-  );
+  // Default to mobile view
+  const [useBurger, setUseBurger] = useState(true);
 
   // When viewport width chagnes, compare to breakpoint to decide which menu to use
   useEffect(() => {
