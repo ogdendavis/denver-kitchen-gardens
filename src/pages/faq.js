@@ -13,6 +13,11 @@ const QuestionsContainer = styled.div`
   width: ${props => props.theme.content.width};
   max-width: 57rem;
   min-width: ${props => props.theme.content.minWidth};
+
+  /* Mobile view (point at which questions stack) */
+  @media only screen and (max-width: 752px) {
+    margin: 1.5rem auto 3rem;
+  }
 `;
 
 const FAQ = ({ location }) => {

@@ -21,6 +21,12 @@ const QuestionContainer = styled.div`
     color: ${props => props.theme.colors.heading};
     text-decoration: underline;
   }
+
+  /* Mobile view (point at which questions stack) */
+  @media only screen and (max-width: 752px) {
+    width: 100%;
+    margin-bottom: 2rem;
+  }
 `;
 
 const Question = ({ question, answer }) => {
