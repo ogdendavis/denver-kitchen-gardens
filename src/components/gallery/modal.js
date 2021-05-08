@@ -1,3 +1,6 @@
+/* eslint jsx-a11y/no-noninteractive-element-interactions: 0 */
+/* eslint jsx-a11y/no-noninteractive-tabindex: 0 */
+
 import React, { useEffect } from 'react';
 import styled from 'styled-components';
 import { useSwipeable } from 'react-swipeable';

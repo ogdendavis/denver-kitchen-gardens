@@ -49,13 +49,10 @@ const ButtonContainer = styled(Link)`
   }}
 `;
 
-const Button = ({ children, to, variant, className }) => {
-  console.log(variant);
-  return (
-    <ButtonContainer to={to} variant={variant} className={className}>
-      {children}
-    </ButtonContainer>
-  );
-};
+const Button = ({ children, to, variant, className }) => (
+  <ButtonContainer to={to} variant={variant} className={className}>
+    {children}
+  </ButtonContainer>
+);
 
 export default Button;
