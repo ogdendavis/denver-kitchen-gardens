@@ -12,6 +12,11 @@ const GalleryContainer = styled.div`
   margin: 3rem auto;
   width: ${props => props.theme.content.width};
   max-width: ${props => props.theme.content.maxWidth};
+  /*
+  @media only screen and (max-width: 850px) {
+    flex-flow: column;
+    align-items: center;
+  }*/
 `;
 
 const GalleryImage = styled.img`
@@ -24,6 +29,29 @@ const GalleryImage = styled.img`
   max-width: ${({ theme }) => theme.content.width};
 
   ${props => (props.side === 'onLeft' ? 'margin-right: 3rem;' : '')}
+
+  /* When width above would cause 1 image per row */
+  @media only screen and (max-width: 1290px) {
+    height: 21rem;
+    margin-bottom: 2rem;
+    width: 21rem;
+    ${props => (props.side === 'onLeft' ? 'margin-right: 2rem;' : '')}
+  }
+
+  /* Tablet styles */
+  @media only screen and (max-width: 850px) {
+    height: 18rem;
+    margin-bottom: 1rem;
+    width: 18rem;
+    ${props => (props.side === 'onLeft' ? 'margin-right: 1rem;' : '')}
+  }
+
+  /* Mobile styles (same breakpoint as hero) */
+  @media only screen and (max-width: 700px) {
+    height: 14rem;
+    margin: 1rem auto;
+    width: 21rem;
+  }
 `;
 
 const ButtonContainer = styled.div`

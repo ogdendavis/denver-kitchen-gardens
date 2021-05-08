@@ -13,9 +13,17 @@ const HomeContainer = styled.div`
   section {
     margin: 5rem auto 0;
   }
+
+  /* Mobile styles (same breakpoint as hero) */
+  @media only screen and (max-width: 700px) {
+    section {
+      margin: 2rem auto 0;
+    }
+  }
 `;
 
 const IntroContainer = styled.section`
+  color: ${({ theme }) => theme.colors.text};
   display: flex;
   justify-content: space-between;
   width: ${props => props.theme.content.width};
@@ -34,6 +42,19 @@ const IntroContainer = styled.section`
     display: block;
     width: 45%;
     max-width: 50vw;
+    object-fit: cover;
+  }
+
+  /* Mobile styles (same mobile breakpoint as hero) */
+  @media only screen and (max-width: 700px) {
+    display: block;
+
+    div,
+    img {
+      width: 100%;
+      max-width: ${({ theme }) => theme.content.width};
+      margin: 0 auto;
+    }
   }
 `;
 
@@ -60,11 +81,20 @@ const ServicesContainer = styled.section`
       width: 4rem;
     }
   }
+
+  /* Mobile styles (same breakpoint as hero) */
+  @media only screen and (max-width: 700px) {
+    h2 {
+      font-size: 2.75rem;
+    }
+  }
 `;
 
 const MissionContainer = styled.section`
   color: ${props => props.theme.colors.text};
   text-align: center;
+  width: ${props => props.theme.content.width};
+  max-width: ${props => props.theme.content.maxWidth};
 
   p {
     margin: 1em auto;
@@ -74,22 +104,42 @@ const MissionContainer = styled.section`
   blockquote {
     margin: 4.5rem auto;
     font-family: Lora;
-    font-size: 2rem;
+    font-size: 2.25rem;
     font-weight: 300;
+    line-height: 2.75rem;
     line-spacing: 2.5rem;
     letter-spacing: 0.9px;
     max-width: 52rem;
+  }
+
+  /* Mobile styles */
+  @media only screen and (max-width: 700px) {
+    padding: 2rem 0;
+    text-align: left;
+
+    blockquote {
+      margin: 3rem auto;
+    }
   }
 `;
 
 const PortfolioContainer = styled.section`
   background: white;
   color: ${props => props.theme.colors.text};
-  padding: 7rem 0;
+  padding: 6rem 0 1rem;
   text-align: center;
 
   p {
     margin: 1.875rem auto 4rem;
+  }
+
+  @media only screen and (max-width: 700px) {
+    padding: 3rem 0 0.25rem;
+
+    p {
+      line-height: 1.375rem;
+      margin-bottom: 3rem;
+    }
   }
 `;
 

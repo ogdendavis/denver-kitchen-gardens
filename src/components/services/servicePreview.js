@@ -58,6 +58,22 @@ const PreviewContainer = styled(Link)`
       width: 1rem;
     }
   }
+
+  /* Mobile styles (at width that homepage previews stack) */
+  @media only screen and (max-width: 1185px) {
+    &:not(:last-child) {
+      margin-bottom: 3.75rem;
+    }
+
+    span {
+      color: ${({ theme }) => theme.colors.orange};
+
+      &:after {
+        border-right: 0.125rem solid ${props => props.theme.colors.orange};
+        border-top: 0.125rem solid ${props => props.theme.colors.orange};
+      }
+    }
+  }
 `;
 
 // Creates component with preview image, text, and link directly to service sub-page
