@@ -8,6 +8,7 @@ import Nav from './nav';
 import Header from './header';
 import Footer from './footer';
 import Modal from './modal';
+import ViewportProvider from '../context/viewport';
 
 // Consume theme (set below) and set some global styles
 const ThemeConsumer = styled.div`
@@ -149,15 +150,17 @@ const Layout = ({
         location={location}
       />
       <ThemeConsumer>
-        <Nav />
-        <Header
-          heroImage={heroImage}
-          heading={heroHeading}
-          text={heroText}
-          phone={heroPhone}
-        />
-        <Main>{children}</Main>
-        <Footer />
+        <ViewportProvider>
+          <Nav />
+          <Header
+            heroImage={heroImage}
+            heading={heroHeading}
+            text={heroText}
+            phone={heroPhone}
+          />
+          <Main>{children}</Main>
+          <Footer />
+        </ViewportProvider>
       </ThemeConsumer>
       <Modal
         close={() => {

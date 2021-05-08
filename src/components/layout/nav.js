@@ -4,6 +4,7 @@ import { useStaticQuery, graphql, Link } from 'gatsby';
 
 import Button from '../button';
 import MobileNav from './mobileNav';
+import { useViewport } from '../context/viewport';
 
 const NavContainer = styled.nav`
   align-items: center;
@@ -63,41 +64,21 @@ const Nav = () => {
   // Pull logo path out of data
   const logoPath = data.content.frontmatter.header_logo;
 
+  // Grab width from viewport context
+  const { width } = useViewport();
+
   // Set breakpoint (in px) at which to use mobile/burger nav
   const breakpoint = 800;
 
-  // For SSR to work, we need to check if we're in a browser before using window object
-  const inBrowser = typeof window !== 'undefined';
-
   // Flag for whether to display full nav or mobile/burger nav
   const [useBurger, setUseBurger] = useState(
-    inBrowser ? window.innerWidth <= breakpoint : 0
+    width && width <= breakpoint ? true : false
   );
 
-  // Function to pass to resize listener for setting viewportWidth
-  const resizeListener = () => {
-    // Grab viewport width
-    const viewportWidth = window.innerWidth;
-    // If we're narrower than breakpoint, use it!
-    if (viewportWidth <= breakpoint) {
-      setUseBurger(true);
-    }
-    // If we're wider than breakpoint, stop using!
-    else if (viewportWidth > breakpoint) {
-      setUseBurger(false);
-    }
-  };
-
-  // On component mount, listen for window resize
+  // When viewport width chagnes, compare to breakpoint to decide which menu to use
   useEffect(() => {
-    // Add listener to window
-    window.addEventListener('resize', resizeListener);
-
-    // On unmount, remove listener
-    return function cleanup() {
-      window.removeEventListener('resize', resizeListener);
-    };
-  }, []);
+    setUseBurger(width <= breakpoint);
+  }, [width]);
 
   return (
     <NavContainer className={useBurger ? 'mobile-nav' : ''}>
