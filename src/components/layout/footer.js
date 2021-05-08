@@ -5,25 +5,60 @@ import { useStaticQuery, graphql } from 'gatsby';
 import Button from '../button';
 import InstaIcon from '../../images/icons/instagram.icon.svg';
 import ServicePageLinks from '../services/servicePageLinks';
-import Footerchoke from '../../images/icons/footerchoke.icon.svg';
+
+import { useViewport } from '../context/viewport';
+
+const FooterBackground = styled.div`
+  background: ${({ theme }) => theme.colors.background_dark};
+`;
 
 const FooterContainer = styled.footer`
-  background: ${({ theme }) => theme.colors.background_dark};
   color: ${({ theme }) => theme.colors.text};
   display: flex;
-  flex-flow: row wrap;
+  flex-flow: row nowrap;
   justify-content: space-between;
+  margin: 0 auto;
+  padding-top: 3rem;
+  width: ${({ theme }) => theme.content.width};
+  min-width: ${({ theme }) => theme.content.minWidth};
+
+  @media only screen and (max-width: 900px) {
+    padding-top: 0;
+  }
 `;
 
 const FooterLeft = styled.div`
-  padding: 7.75rem 2rem 5rem 8.875rem;
+  padding: 3rem 0 5rem 0;
+  text-align: center;
+  width: 32rem;
+
+  /* Styles for once elements start to stack */
+  @media only screen and (max-width: 1050px) {
+    width: auto;
+    h2.footerHeading {
+      font-size: 1.5rem;
+      margin-bottom: 2rem;
+    }
+  }
+
+  /* Styles for once FooterRight is hidden */
+  @media only screen and (max-width: 500px) {
+    margin: 0 auto;
+    padding: 2rem 0 2.5rem;
+  }
 `;
 
 const FooterLinks = styled.div`
   display: flex;
   flex-flow: row wrap;
   align-items: center;
+  justify-content: center;
   margin-top: 1.5rem;
+
+  /* Styles for once button and icon stack */
+  @media only screen and (max-width: 1200px) {
+    display: block;
+  }
 `;
 
 const IconContainer = styled.div`
@@ -31,7 +66,7 @@ const IconContainer = styled.div`
 
   a {
     display: flex;
-    flex-flow: row wrap;
+    flex-flow: row nowrap;
     align-items: center;
 
     &:hover {
@@ -40,6 +75,7 @@ const IconContainer = styled.div`
   }
 
   svg {
+    flex-shrink: 0;
     width: 2rem;
   }
 
@@ -49,15 +85,38 @@ const IconContainer = styled.div`
     text-decoration: none;
     color: ${props => props.theme.colors.text_dark};
   }
+
+  /* Styles for once this wraps below button */
+  @media only screen and (max-width: 1200px) {
+    margin: 2rem auto 0;
+    width: 9rem;
+
+    a {
+      justify-content: center;
+    }
+
+    span {
+      font-size: 0.875rem;
+      font-weight: 600;
+      text-align: left;
+    }
+  }
 `;
 
 const FooterRight = styled.div`
   display: flex;
+  position: relative;
+  left: 5rem;
+
+  /* Element disappears at 500px width */
+  @media only screen and (max-width: 500px) {
+    display: none;
+    visibility: hidden;
+  }
 `;
 
 const FooterServices = styled.div`
-  max-width: 10rem;
-  padding-top: 7.75rem;
+  padding-top: 3rem;
 
   .footerHeading {
     text-transform: none;
@@ -74,10 +133,12 @@ const FooterServices = styled.div`
 `;
 
 const FooterchokeContainer = styled.div`
-  svg {
-    position: relative;
-    bottom: -2rem;
-    max-width: 500px;
+  display: flex;
+  align-items: flex-end;
+
+  img {
+    max-width: 35vw;
+    min-width: 300px;
   }
 `;
 
@@ -104,13 +165,16 @@ const Footer = () => {
     }
   `);
 
+  // Grab viewport width from context
+  const { width } = useViewport();
+
   return (
-    <>
+    <FooterBackground>
       <FooterContainer>
         <FooterLeft>
-          <h2>Denver Kitchen Gardens</h2>
+          <h2 className="footerHeading">Denver Kitchen Gardens</h2>
           <FooterLinks>
-            <Button to="/contact" variant="light">
+            <Button to="/contact" variant={width > 500 ? 'light' : 'green'}>
               Contact
             </Button>
             <IconContainer>
@@ -133,14 +197,14 @@ const Footer = () => {
             </div>
           </FooterServices>
           <FooterchokeContainer>
-            <Footerchoke />
+            <img src="/images/FooterArtichoke.png" alt="" />
           </FooterchokeContainer>
         </FooterRight>
       </FooterContainer>
       <FooterBottom>
         {`@ ${new Date().getFullYear()} Denver Kitchen Gardens. All rights reserved.`}
       </FooterBottom>
-    </>
+    </FooterBackground>
   );
 };
 

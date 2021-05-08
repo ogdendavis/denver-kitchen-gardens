@@ -27,12 +27,8 @@ const ButtonContainer = styled(Link)`
       color: ${props.theme.colors.text_dark};
       font-weight: 500;
       text-transform: none;`
-      : '';
-  }}
-
-  ${props => {
-    // Styles if exactly 'light inverted' is passed as variant
-    return props.variant === 'light inverted'
+      : // Styles if exactly 'light inverted' is passed as variant
+      props.variant === 'light inverted'
       ? `background: transparent;
       border: 2px solid ${props.theme.colors.text};
       color: ${props.theme.colors.text_dark};
@@ -41,11 +37,20 @@ const ButtonContainer = styled(Link)`
       &:hover {
         border: 2px solid ${props.theme.colors.text};
       }`
+      : // Styles if exactly 'green' is passed as variant
+      props.variant === 'green'
+      ? `background: ${props.theme.colors.green};
+
+      &:hover {
+        background: ${props.theme.colors.button_light};
+        color: ${props.theme.colors.green};
+      }`
       : '';
   }}
 `;
 
 const Button = ({ children, to, variant, className }) => {
+  console.log(variant);
   return (
     <ButtonContainer to={to} variant={variant} className={className}>
       {children}
