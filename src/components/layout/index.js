@@ -94,7 +94,7 @@ const Layout = ({
     content: {
       width: '85vw',
       maxWidth: '1100px',
-      minWidth: '345px',
+      minWidth: '320px',
     },
     colors: {
       background: '#E3DFDC',

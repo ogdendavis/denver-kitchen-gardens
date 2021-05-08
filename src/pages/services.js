@@ -29,9 +29,18 @@ const PreviewsContainer = styled.section`
       width: 4rem;
     }
   }
+
+  /* Mobile styles (same breakpoint as hero) */
+  @media only screen and (max-width: 700px) {
+    padding-bottom: 2rem;
+    h2 {
+      font-size: 2.75rem;
+    }
+  }
 `;
 
 const NextStepsContainer = styled.section`
+  box-sizing: border-box;
   margin: 6.125rem auto 3rem;
   text-align: center;
   width: ${props => props.theme.content.width};
@@ -51,6 +60,7 @@ const NextStepsContainer = styled.section`
 
   img {
     margin: 1.25rem auto 3.25rem;
+    max-width: 100%;
   }
 `;
 

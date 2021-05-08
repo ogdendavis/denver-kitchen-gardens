@@ -81,6 +81,7 @@ const HeaderText = styled.div`
 
       h1 {
         font-size: 2.75rem;
+        margin-top: 0;
       }
     }
 
