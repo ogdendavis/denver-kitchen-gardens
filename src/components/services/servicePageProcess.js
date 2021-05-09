@@ -31,6 +31,7 @@ const SideProcess = styled.div`
   @media only screen and (max-width: 780px) {
     width: 100%;
     margin: 5rem auto 3rem;
+    ${({ hasCall }) => (hasCall ? 'order: 2;' : '')}
   }
 
   /* Mobile view (sage .png about to overflow) */
@@ -149,11 +150,20 @@ const ProcessList = styled.ul`
     span {
       color: ${props => props.theme.colors.text};
     }
+  }
 
-    svg {
-      position: absolute;
-      bottom: 0;
-      right: 2rem;
+  /* Mobile view (same breakpoint as hero) */
+  @media only screen and (max-width: 700px) {
+    &.wide {
+      flex-flow: column nowrap;
+      max-height: none;
+
+      li {
+        width: 100%;
+      }
+      li.process__tomatoes {
+        text-align: center;
+      }
     }
   }
 `;
@@ -162,9 +172,10 @@ const Line = styled.div`
   background: #b7b7b7;
   height: 2px;
   width: 45rem;
+  max-width: 100vw;
 `;
 
-const ServicePageProcess = ({ content, hasDetail }) => {
+const ServicePageProcess = ({ content, hasDetail, hasCall }) => {
   // Generate process points
   const processPoints = content.process_points.map((point, index) => (
     <li key={`point-${index}`}>
@@ -200,7 +211,7 @@ const ServicePageProcess = ({ content, hasDetail }) => {
   );
 
   return hasDetail ? (
-    <SideProcess>{processContent}</SideProcess>
+    <SideProcess hasCall={hasCall}>{processContent}</SideProcess>
   ) : (
     <WideProcess>{processContent}</WideProcess>
   );

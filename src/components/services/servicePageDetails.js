@@ -17,6 +17,11 @@ const DetailsHeading = styled.h2`
   margin: 2rem auto 1rem;
   text-align: center;
   width: 100%;
+
+  /* Mobile view */
+  @media only screen and (max-width: 450px) {
+    width: ${({ theme }) => theme.content.width};
+  }
 `;
 
 const Detail = styled.div`
@@ -53,7 +58,8 @@ const Detail = styled.div`
   /* For real tablet view (SideProcess about to wrap again) */
   @media only screen and (max-width: 780px) {
     width: 100%;
-    order: 2;
+    order: 1;
+    ${({ hasCall }) => (hasCall ? 'padding-top: 0;' : '')}
   }
 
   /* Mobile view */
@@ -81,7 +87,7 @@ const ServicePageDetails = ({ content, hasDetail, hasCall }) => {
       {
         // Render details only if they have content!
         hasDetail && (
-          <Detail>
+          <Detail hasCall={hasCall}>
             <ReactMarkdown>{content.detail_copy}</ReactMarkdown>
             {
               // Button only goes here if there is no call to action text
@@ -94,7 +100,11 @@ const ServicePageDetails = ({ content, hasDetail, hasCall }) => {
           </Detail>
         )
       }
-      <ServicePageProcess content={content} hasDetail={hasDetail} />
+      <ServicePageProcess
+        content={content}
+        hasDetail={hasDetail}
+        hasCall={hasCall}
+      />
     </DetailsContainer>
   );
 };

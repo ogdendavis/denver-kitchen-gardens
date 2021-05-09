@@ -42,6 +42,10 @@ const Intro = styled.section`
   /* Mobile view */
   @media only screen and (max-width: 450px) {
     width: ${({ theme }) => theme.content.width};
+
+    h1 {
+      font-size: 2.75rem;
+    }
   }
 `;
 
@@ -117,8 +121,8 @@ const ServicePage = props => {
           hasCall && (
             <>
               {
-                // render line only if detail is present
-                hasDetail && <Line />
+                // render line only if detail is present and not on mobile view
+                hasDetail && width > 450 && <Line />
               }
               <ServicePageCall content={content} />
             </>

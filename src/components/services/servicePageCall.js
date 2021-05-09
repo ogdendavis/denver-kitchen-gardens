@@ -6,6 +6,7 @@ import Button from '../button';
 const CallContainer = styled.section`
   padding: 2.5rem 0;
   text-align: center;
+  width ${({ theme }) => theme.content.width};
 `;
 
 const CallText = styled.div`
