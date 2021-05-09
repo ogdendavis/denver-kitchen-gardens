@@ -12,13 +12,37 @@ const SideProcess = styled.div`
     content: url('/images/sageline.png');
     display: block;
     position: absolute;
-    left: -0.625rem;
+    left: 50%;
+    transform: translateX(-50%);
   }
   &::before {
     top: -2.75rem;
   }
   &::after {
     bottom: -2.375rem;
+  }
+
+  /* Tablet view (just before SideProcess is about to wrap under) */
+  @media only screen and (max-width: 980px) {
+    width: 45%;
+  }
+
+  /* For real tablet view (SideProcess about to wrap again) */
+  @media only screen and (max-width: 780px) {
+    width: 100%;
+    margin: 5rem auto 3rem;
+  }
+
+  /* Mobile view (sage .png about to overflow) */
+  @media only screen and (max-width: 450px) {
+    background: #fff;
+
+    &::before,
+    &::after {
+      overflow: hidden;
+      text-align: center;
+      width: 100vw;
+    }
   }
 `;
 
@@ -77,6 +101,9 @@ const ProcessList = styled.ul`
     height: 1px;
     margin: 1.25rem auto;
     width: 20%;
+  }
+  li:last-child {
+    margin-bottom: 0.5rem;
   }
 
   h3 {

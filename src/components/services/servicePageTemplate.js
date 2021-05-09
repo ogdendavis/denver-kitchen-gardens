@@ -6,6 +6,8 @@ import Layout from '../layout';
 import ServicePageDetails from './servicePageDetails';
 import ServicePageCall from './servicePageCall';
 
+import { useViewport } from '../context/viewport';
+
 const ServicePageContainer = styled.div`
   color: ${props => props.theme.colors.text};
   margin: 3rem auto;
@@ -16,6 +18,11 @@ const ServicePageContainer = styled.div`
   section {
     margin: 0 auto;
     max-width: 57.25rem;
+  }
+
+  /* Mobile view */
+  @media only screen and (max-width: 450px) {
+    width: 100vw;
   }
 `;
 
@@ -30,6 +37,11 @@ const Intro = styled.section`
     font-size: 1.125rem;
     font-weight: 600;
     margin-bottom: 2.5rem;
+  }
+
+  /* Mobile view */
+  @media only screen and (max-width: 450px) {
+    width: ${({ theme }) => theme.content.width};
   }
 `;
 
@@ -47,6 +59,16 @@ const Cols = styled.div`
     }
     &: last-child {
       padding-right: 0;
+    }
+  }
+
+  /* Mobile styling (same breakpoint as hero) */
+  @media only screen and (max-width: 700px) {
+    display: block;
+
+    p {
+      margin: 1rem 0 1.5rem;
+      padding: 0;
     }
   }
 `;
@@ -67,6 +89,9 @@ const ServicePage = props => {
   // Flag for if bottom call to action content is present
   const hasCall = content.call_text ? true : false;
 
+  // Get viewport width from context
+  const { width } = useViewport();
+
   return (
     <Layout
       heroImage={content.header_image}
@@ -81,7 +106,7 @@ const ServicePage = props => {
             <ReactMarkdown>{content.intro_copy}</ReactMarkdown>
           </Cols>
         </Intro>
-        <Line />
+        {width > 780 && <Line />}
         <ServicePageDetails
           content={content}
           hasDetail={hasDetail}

@@ -44,10 +44,32 @@ const Detail = styled.div`
       margin-top: 0;
     }
   }
+
+  /* Tablet view (just before SideProcess is about to wrap under) */
+  @media only screen and (max-width: 980px) {
+    width: 45%;
+  }
+
+  /* For real tablet view (SideProcess about to wrap again) */
+  @media only screen and (max-width: 780px) {
+    width: 100%;
+    order: 2;
+  }
+
+  /* Mobile view */
+  @media only screen and (max-width: 450px) {
+    margin: auto;
+    width: ${({ theme }) => theme.content.width};
+  }
 `;
 
 const ButtonContainer = styled.div`
   max-width: 20.5rem;
+
+  /* Mobile view */
+  @media only screen and (max-width: 450px) {
+    margin: 0 auto 2rem;
+  }
 `;
 
 const ServicePageDetails = ({ content, hasDetail, hasCall }) => {
