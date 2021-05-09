@@ -63,6 +63,18 @@ const ContactForm = styled.form`
       cursor: pointer;
     }
   }
+
+  /* Tablet & Mobile: stack first and last name fields */
+  @media only screen and (max-width: 900px) {
+    input[type='text'] {
+      display: block;
+      width: 100%;
+
+      &:nth-child(2) {
+        margin-right: 0;
+      }
+    }
+  }
 `;
 
 const Contact = ({ location }) => {
