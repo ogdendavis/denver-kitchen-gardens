@@ -42,7 +42,7 @@ const FooterLeft = styled.div`
   }
 
   /* Styles for once FooterRight is hidden */
-  @media only screen and (max-width: 500px) {
+  @media only screen and (max-width: 650px) {
     margin: 0 auto;
     padding: 2rem 0 2.5rem;
   }
@@ -108,8 +108,13 @@ const FooterRight = styled.div`
   position: relative;
   left: 5rem;
 
-  /* Element disappears at 500px width */
-  @media only screen and (max-width: 500px) {
+  /* Prevent overflow caused by left offset */
+  @media only screen and (max-width: 1050px) {
+    left: 2rem;
+  }
+
+  /* Element disappears at 650px width */
+  @media only screen and (max-width: 650px) {
     display: none;
     visibility: hidden;
   }
