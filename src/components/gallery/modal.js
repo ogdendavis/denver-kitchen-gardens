@@ -81,10 +81,21 @@ const Modal = ({ closeFunc, images, index, setIndex }) => {
     onSwipedRight: e => {
       decrementIndex();
     },
+    onSwiping: e => {
+      // Prevent event propagation
+      return false;
+    },
+    // Stop background scrolling
+    preventDefaultTouchmoveEvent: true,
   });
 
   return (
-    <Outer onClick={closeFunc}>
+    <Outer
+      onClick={closeFunc}
+      {
+        /* Put swipe handlers on outer to prevent scroll of page underneath */ ...swipers
+      }
+    >
       <Inner>
         <Closer>&times;</Closer>
         <img
@@ -106,7 +117,6 @@ const Modal = ({ closeFunc, images, index, setIndex }) => {
               decrementIndex();
             }
           }}
-          {...swipers}
         />
       </Inner>
     </Outer>
