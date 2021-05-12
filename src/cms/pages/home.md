@@ -1,5 +1,5 @@
 ---
-hero: /images/uploads/jennyspringlaunchapril232021highreso-27_websize.jpg
+hero: /images/uploads/jennyspringlaunchapril232021highreso-37_websize.jpg
 hero_mobile: /images/uploads/jennyspringlaunchapril232021highreso-27_websize.jpg
 title: Your Front Range Kitchen Garden Partner
 hero_text: Whether you are new to gardening or just new to the area, Denver
