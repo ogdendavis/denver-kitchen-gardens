@@ -1,5 +1,5 @@
 ---
-hero: /images/uploads/tomatoes-and-shoes-2.png
+hero: /images/uploads/shoes-and-flowers-banner.jpg
 hero_mobile: /images/uploads/tomatoes-shoes.jpg
 title: Your Front Range Kitchen Garden Partner
 hero_text: Whether you are new to gardening or just new to the area, Denver
