@@ -2,7 +2,7 @@
 published: true
 title: Garden Coaching
 preview_heading: Garden Coaching
-preview_image: /images/uploads/jennyspringlaunchapril232021highreso-61_websize.jpg
+preview_image: /images/uploads/consultation-cutout.png
 preview_text: Need help with your existing garden? We can help.
 preview_on_homepage: true
 header_image: /images/uploads/coaching_hero.png
