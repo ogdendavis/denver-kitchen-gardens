@@ -2,7 +2,7 @@
 published: true
 title: Garden Coaching
 preview_heading: Garden Coaching
-preview_image: /images/uploads/seed-potatoes-resized.png
+preview_image: /images/uploads/seeds-in-hand.png
 preview_text: Need help with your existing garden? We can help.
 preview_on_homepage: true
 header_image: /images/uploads/coaching_hero.png
