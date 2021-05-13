@@ -2,7 +2,7 @@
 published: true
 title: Food Preservation
 preview_heading: Food Preservation
-preview_image: /images/uploads/canned-stuff.png
+preview_image: /images/uploads/canned-stuff-2.png
 preview_text: Workshops to preserve your harvest so you can enjoy it year-round.
 preview_on_homepage: true
 header_image: /images/uploads/preservation_hero.png
