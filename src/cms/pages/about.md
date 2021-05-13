@@ -1,5 +1,5 @@
 ---
-hero: /images/uploads/tomatoes-and-shoes-2.png
+hero: /images/uploads/tomato-banner.png
 hero_mobile: /images/uploads/about_hero_mobile.png
 title: Sharing a love of food and flowers
 hero_text: Denver Kitchen Gardens was born from a desire to share the knowledge
