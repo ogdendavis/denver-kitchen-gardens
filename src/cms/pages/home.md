@@ -4,7 +4,7 @@ hero_mobile: /images/uploads/tomatoes-shoes.jpg
 title: Your Front Range Kitchen Garden Partner
 hero_text: Whether you are new to gardening or just new to the area, Denver
   Kitchen Gardens is here to help!
-intro_image: /images/uploads/planting-action.png
+intro_image: /images/uploads/artichoke.png
 intro_heading: Food Growing Simplified
 intro_copy: >-
   Have you always wanted your own kitchen garden? Have you imagined harvesting
