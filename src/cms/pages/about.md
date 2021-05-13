@@ -29,5 +29,5 @@ content_copy: >-
 
   No matter what time of year it is, I can help you find solutions to your gardening problems and help you to create the garden (and cellar) of your dreams!
 image_1: /images/uploads/jenny_n_oscar.png
-image_2: /images/uploads/jenny_consulting.png
+image_2: /images/uploads/jennybusinesslaunchmarch27social-39_websize.jpg
 ---
