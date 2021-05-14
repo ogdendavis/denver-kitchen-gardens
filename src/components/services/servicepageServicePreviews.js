@@ -32,6 +32,15 @@ const ServicepageServicePreviews = () => {
           }
         }
       }
+      otherService: markdownRemark(
+        fileAbsolutePath: { regex: "//cms/pages/services.md/" }
+      ) {
+        frontmatter {
+          other_service_heading
+          other_service_image
+          other_service_text
+        }
+      }
     }
   `);
 
@@ -57,9 +66,9 @@ const ServicepageServicePreviews = () => {
     <ServicePreview
       key="preview-sp-general"
       title="contact"
-      heading="Other Services"
-      text="Looking for something specific? Please reach out to see if we can help."
-      image="/images/uploads/garlic.png"
+      heading={data.otherService.frontmatter.other_service_heading}
+      text={data.otherService.frontmatter.other_service_text}
+      image={data.otherService.frontmatter.other_service_image}
       variant="large"
     />
   );

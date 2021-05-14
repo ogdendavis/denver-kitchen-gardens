@@ -85,6 +85,21 @@ collections:
               widget: 'string',
             }
           - {
+              label: 'Other Service Heading',
+              name: 'other_service_heading',
+              widget: 'string',
+            }
+          - {
+              label: 'Other Service Image',
+              name: 'other_service_image',
+              widget: 'image',
+            }
+          - {
+              label: 'Other Service Text',
+              name: 'other_service_text',
+              widget: 'text',
+            }
+          - {
               label: 'Next Steps Heading',
               name: 'nextsteps_heading',
               widget: 'string',
