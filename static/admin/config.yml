@@ -180,14 +180,14 @@ collections:
           - { label: 'Form Heading', name: 'form_heading', widget: 'string' }
           - { label: 'Form Button Text', name: 'form_button', widget: 'string' }
   - name: 'services'
-    label: 'Service Pages'
-    label_singular: 'Service Page'
+    label: 'Services'
+    label_singular: 'Service'
     folder: 'src/cms/service_pages'
     create: true
     slug: '{{slug}}'
     fields:
       - {
-          label: 'Published',
+          label: 'Visible',
           name: 'published',
           widget: 'boolean',
           default: false,
