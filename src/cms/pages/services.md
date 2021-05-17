@@ -7,7 +7,7 @@ hero_text: Denver Kitchen Gardens is here to help! Take a look at our services
 services_heading: What I Offer
 other_service_heading: Other Services
 other_service_image: /images/uploads/other-services.png
-other_service_text: Looking for something specific? Please reach out to see if we can help.
+other_service_text: Looking for something specific? Let's connect and see how I can help!
 nextsteps_heading: How this works
 nextsteps_copy: >-
   Once you reach out, I'll schedule a 15 minute call to review what services you
