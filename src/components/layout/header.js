@@ -34,7 +34,7 @@ const HeaderText = styled.div`
     box-sizing: border-box;
     background: linear-gradient(#222b, #222b);
     color: ${props => props.theme.colors.text_white};
-    padding: 2rem;
+    padding: 2rem 8vw 2rem 2rem; /* 8vw aligns right edge with contact button */
 
     h1 {
       color: ${props => props.theme.colors.text_white};
