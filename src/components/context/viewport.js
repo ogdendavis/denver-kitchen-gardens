@@ -13,16 +13,10 @@ const ViewportProvider = ({ children }) => {
     inBrowser ? window.innerWidth : 0
   );
 
-  // State to hold viewport height
-  const [viewportHeight, setViewportHeight] = useState(
-    inBrowser ? window.innerHeight : 0
-  );
-
   // Function to fire when viewport is resized
   const resizeListener = () => {
-    // All we need to do is change the width and height in state
+    // All we need to do is change the width in state
     setViewportWidth(window.innerWidth);
-    setViewportHeight(window.innerHeight);
   };
 
   // On component mount, listen for window resize
@@ -38,9 +32,7 @@ const ViewportProvider = ({ children }) => {
 
   // Wrap children in provider so they can access value
   return (
-    <viewportContext.Provider
-      value={{ width: viewportWidth, height: viewportHeight }}
-    >
+    <viewportContext.Provider value={{ width: viewportWidth }}>
       {children}
     </viewportContext.Provider>
   );
