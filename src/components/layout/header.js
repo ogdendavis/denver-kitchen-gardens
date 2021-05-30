@@ -12,18 +12,19 @@ const HeaderContainer = styled.header`
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    height: 65vh;
+    height: ${({ height }) => height * 0.65}px;
   }
 
   &.hasHero.noHeading {
-    height: 35vh;
+    height: ${({ height }) => height * 0.35}px;
   }
 
   /* Mobile styles */
   @media only screen and (max-width: 700px) {
     &.hasHero,
     &.hasHero.noHeading {
-      height: 70vh;
+      /* This is the only height we NEED to size based on initial viewport height */
+      height: ${({ height }) => height * 0.7}px;
     }
   }
 `;
@@ -121,8 +122,8 @@ const Header = ({ heroImage, heroImageMobile, heading, text, phone }) => {
   // Matches media queries above (replace with classes?)
   const breakpoint = 700;
 
-  // Grab width from context
-  const { width } = useViewport();
+  // Grab viewport width and height from context
+  const { width, height } = useViewport();
 
   // State to indicate whether or not viewport is narrow enough that mobile view is needed
   // Default to mobile view
@@ -146,11 +147,19 @@ const Header = ({ heroImage, heroImageMobile, heading, text, phone }) => {
   // On desktop view, text should be rendered within container
   return isMobile ? (
     <>
-      <HeaderContainer heroImage={heroImageMobile} className={headerClass} />
+      <HeaderContainer
+        heroImage={heroImageMobile}
+        className={headerClass}
+        height={height}
+      />
       {renderText()}
     </>
   ) : (
-    <HeaderContainer heroImage={heroImage} className={headerClass}>
+    <HeaderContainer
+      heroImage={heroImage}
+      className={headerClass}
+      height={height}
+    >
       {renderText()}
     </HeaderContainer>
   );

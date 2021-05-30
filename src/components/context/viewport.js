@@ -13,10 +13,16 @@ const ViewportProvider = ({ children }) => {
     inBrowser ? window.innerWidth : 0
   );
 
+  // State to hold viewport height
+  const [viewportHeight, setViewportHeight] = useState(
+    inBrowser ? window.innerHeight : 0
+  );
+
   // Function to fire when viewport is resized
   const resizeListener = () => {
     // All we need to do is change the width in state
     setViewportWidth(window.innerWidth);
+    // NOT resetting height on resize, to avoid issue with hero image size flashing on mobile scroll
   };
 
   // On component mount, listen for window resize
@@ -32,7 +38,9 @@ const ViewportProvider = ({ children }) => {
 
   // Wrap children in provider so they can access value
   return (
-    <viewportContext.Provider value={{ width: viewportWidth }}>
+    <viewportContext.Provider
+      value={{ width: viewportWidth, height: viewportHeight }}
+    >
       {children}
     </viewportContext.Provider>
   );
