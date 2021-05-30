@@ -49,6 +49,48 @@ const Closer = styled.div`
   width: 100%;
 `;
 
+const Arrow = styled.div`
+  color: #fff;
+  font-size: 4rem;
+  font-weight: 700;
+  padding: 1rem;
+  position: fixed;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  /* Position right and left arrows */
+  &.right {
+    right: 1rem;
+  }
+  &.left {
+    left: 1rem;
+  }
+
+  @media only screen and (max-width: 900px) {
+    padding: 0.5rem;
+
+    &.right {
+      right: 0.5rem;
+    }
+    &.left {
+      left: 0.5rem;
+    }
+  }
+
+  @media only screen and (max-width: 600px) {
+    bottom: 3rem;
+
+    &.right {
+      right: 25%;
+    }
+    &.left {
+      left: 25%;
+    }
+  }
+`;
+
 const Modal = ({ closeFunc, images, index, setIndex }) => {
   // Get image to display by index
   const activeImage = images[index];
@@ -118,6 +160,24 @@ const Modal = ({ closeFunc, images, index, setIndex }) => {
             }
           }}
         />
+        <Arrow
+          className="left"
+          onClick={e => {
+            e.stopPropagation();
+            decrementIndex();
+          }}
+        >
+          &lang;
+        </Arrow>
+        <Arrow
+          className="right"
+          onClick={e => {
+            e.stopPropagation();
+            incrementIndex();
+          }}
+        >
+          &rang;
+        </Arrow>
       </Inner>
     </Outer>
   );
