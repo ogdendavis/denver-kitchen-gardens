@@ -20,9 +20,9 @@ const ViewportProvider = ({ children }) => {
 
   // Function to fire when viewport is resized
   const resizeListener = () => {
-    // All we need to do is change the width in state
+    // All we need to do is change the width and height in state
     setViewportWidth(window.innerWidth);
-    // NOT resetting height on resize, to avoid issue with hero image size flashing on mobile scroll
+    setViewportHeight(window.innerHeight);
   };
 
   // On component mount, listen for window resize

@@ -12,11 +12,11 @@ const HeaderContainer = styled.header`
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    height: ${({ height }) => height * 0.65}px;
+    height: ${({ height }) => (height ? height * 0.65 : 900)}px;
   }
 
   &.hasHero.noHeading {
-    height: ${({ height }) => height * 0.35}px;
+    height: ${({ height }) => (height ? height * 0.35 : 400)}px;
   }
 
   /* Mobile styles */
@@ -24,7 +24,7 @@ const HeaderContainer = styled.header`
     &.hasHero,
     &.hasHero.noHeading {
       /* This is the only height we NEED to size based on initial viewport height */
-      height: ${({ height }) => height * 0.7}px;
+      height: ${({ height }) => (height ? height * 0.7 : 470)}px;
     }
   }
 `;
