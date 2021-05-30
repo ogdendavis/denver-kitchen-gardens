@@ -179,7 +179,10 @@ const Footer = () => {
         <FooterLeft>
           <h2 className="footerHeading">Denver Kitchen Gardens</h2>
           <FooterLinks>
-            <Button to="/contact" variant={width > 500 ? 'light' : 'green'}>
+            <Button
+              to="/contact"
+              variant={width && width > 500 ? 'light' : 'green'}
+            >
               Contact
             </Button>
             <IconContainer>
