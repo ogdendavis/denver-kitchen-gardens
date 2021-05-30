@@ -52,7 +52,7 @@ const FooterLinks = styled.div`
   display: flex;
   flex-flow: row wrap;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   margin-top: 1.5rem;
 
   /* Styles for once button and icon stack */
