@@ -1,6 +1,6 @@
 ---
-hero: /images/uploads/tomato-banner.png
-hero_mobile: /images/uploads/about_hero_mobile.png
+hero: /images/uploads/tomato-banner.jpg
+hero_mobile: /images/uploads/about_hero_mobile.jpg
 title: Sharing a love of food and flowers
 hero_text: Denver Kitchen Gardens was born from a desire to share the knowledge
   and expertise I have gained over the years as an avid home gardener and urban
@@ -28,6 +28,6 @@ content_copy: >-
 
 
   No matter what time of year it is, I can help you find solutions to your gardening problems and help you to create the garden (and cellar) of your dreams!
-image_1: /images/uploads/jenny_n_oscar.png
+image_1: /images/uploads/jenny_n_oscar.jpg
 image_2: /images/uploads/jennybusinesslaunchmarch27social-39_websize.jpg
 ---
