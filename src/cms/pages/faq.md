@@ -13,8 +13,8 @@ questions:
     answer: Great question! Please [contact me](/contact) so we can discuss your
       scope of work and I can provide an estimate.
   - question: How much do your services cost?
-    answer: Great question! Please [contact us](/contact) to tell us about your
-      project and we will provide an estimate.
+    answer: Great question! Please [contact me](/contact) to discuss your project
+      and I can provide an estimate.
   - question: Do you offer full service garden management?
     answer: Sorry, no. I'm a one-woman show and am unable to tend your garden while
       you are on vacation.
