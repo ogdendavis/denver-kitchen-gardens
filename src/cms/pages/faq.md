@@ -7,12 +7,12 @@ questions:
       area. Please [contact me](/contact) if you live outside this range to see
       how we can work together.
   - question: Are you a landscaper?
-    answer: I am not! Denver Kitchen Gardens specializes in growing food, not
-      landscape design. Fortunately, there are lots of wonderful sustainable
-      landscapers in Denver that I can recommend.
+    answer: Denver Kitchen Gardens specializes in growing food, not landscape
+      design. Fortunately, there are lots of wonderful sustainable landscapers
+      in Denver that I can recommend.
   - question: Do you  offer installations?
-    answer: Great question! Please [contact me](/contact) so we can discuss your
-      scope of work and I can provide an estimate.
+    answer: While I do not plant your garden for you, I can help you at planting
+      time with my Garden Coaching servies. I love hands-on learning!
   - question: How much do your services cost?
     answer: Great question! Please [contact me](/contact) to discuss your project
       and I can provide an estimate.
