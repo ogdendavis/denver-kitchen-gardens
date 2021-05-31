@@ -19,4 +19,7 @@ questions:
   - question: Do you offer full service garden management?
     answer: Sorry, no. I'm a one-woman show and am unable to tend your garden while
       you are on vacation.
+  - question: What the heck is a kitchen garden?
+    answer: A kitchen garden is the edible garden space where you can grow fruits,
+      veggies and herbs to cook with in your home.
 ---
