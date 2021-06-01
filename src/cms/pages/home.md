@@ -13,7 +13,7 @@ intro_copy: >-
   not alone!
 
 
-  Don't let the challenges of growing food in Denver stop you from having the kitchen garden of your dreams. Denver Kitchen Gardens is the edible garden partner you've been looking for!
+  Don't let the challenges of growing food in Denver stop you from having the garden of your dreams. Denver Kitchen Gardens is the edible garden partner you've been looking for!
 above_pullquote: Any experienced (and honest) home gardener will tell you the
   key to gardening success is actually failure. Learning from failure is a great
   way to improve your gardening skills, but who wants to deal with that? Your
