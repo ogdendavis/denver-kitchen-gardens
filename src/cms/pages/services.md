@@ -1,6 +1,6 @@
 ---
-hero: /images/uploads/bee-seedling-2.jpg
-hero_mobile: /images/uploads/services_hero_mobile.jpg
+hero: /images/uploads/bee-banner-web.jpg
+hero_mobile: /images/uploads/bee-banner-services-mobile.jpg
 title: Services
 hero_text: Denver Kitchen Gardens is here to help! Take a look at our services
   to learn more.
