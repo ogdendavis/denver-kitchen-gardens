@@ -1,6 +1,6 @@
 ---
 hero: /images/uploads/shoes-and-flowers-banner.jpg
-hero_mobile: /images/uploads/tomatoes-shoes.jpg
+hero_mobile: /images/uploads/mobile-shoes-flowers.jpg
 title: Your Front Range Kitchen Garden Partner
 hero_text: Whether you are new to gardening or just new to the area, Denver
   Kitchen Gardens is here to help!
