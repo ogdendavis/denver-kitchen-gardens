@@ -35,7 +35,7 @@ process_points:
   - point_title: Suggested garden layout
     point_text: a planting diagram to inspire your garden design
   - point_title: Planting Guide & Journal
-    point_text: your gardening Cliff's Notes
+    point_text: your gardening reference guide and note keeping booklet
   - point_title: Resource guides
     point_text: tools, supplies, and trusted partners for all of your gardening needs
 call_text: No matter what time of year it is or the size of your gardening
