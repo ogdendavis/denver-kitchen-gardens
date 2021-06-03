@@ -34,8 +34,8 @@ process_points:
     point_text: a foolproof calendar for your garden plan
   - point_title: Suggested garden layout
     point_text: a planting diagram to inspire your garden design
-  - point_title: Reference materials
-    point_text: planting guidelines, annual checklist, and seed starting guid
+  - point_title: Planting Guide & Journal
+    point_text: your gardening Cliff's Notes
   - point_title: Resource guides
     point_text: tools, supplies, and trusted partners for all of your gardening needs
 call_text: No matter what time of year it is or the size of your gardening
