@@ -6,7 +6,7 @@ preview_image: /images/uploads/personalized-garden-consultations-web.jpg
 preview_text: Comprehensive and personalized plans for your dream garden.
 preview_on_homepage: true
 header_image: /images/uploads/personalized-garden-consultations-banner-web.jpg
-header_image_mobile: /images/uploads/consultation_hero_mobile.jpg
+header_image_mobile: /images/uploads/personalized-garden-consultations-banner-mobile.jpg
 intro_subheading: Having a garden can bring you so much joy but if you're new to
   it, there is so much to learn!
 intro_copy: >-
