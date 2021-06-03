@@ -2,7 +2,7 @@
 published: true
 title: Personalized Garden Consultations
 preview_heading: Garden Consultations
-preview_image: /images/uploads/tools-consultation.jpg
+preview_image: /images/uploads/personalized-garden-consultations-web.jpg
 preview_text: Comprehensive and personalized plans for your dream garden.
 preview_on_homepage: true
 header_image: /images/uploads/jennyspringlaunchapril232021highreso-15_websize.jpg
