@@ -31,7 +31,7 @@ process_points:
   - point_text: know how to protect your garden in Colorado's wild weather
   - point_text: understand how and when to harvest your produce
   - point_text: maximize your small space with high density planting
-  - point_text: with a shopping field trip to your local nursery
+  - point_text: pick out plants from your favorite nursery
   - point_text: have information on how to utilize an automated watering system
   - point_text: have help picking plants and seeds that are right for your space
   - point_text: The sky's the limit!
