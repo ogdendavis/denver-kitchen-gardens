@@ -1,6 +1,6 @@
 ---
-hero: /images/uploads/tomato-banner.jpg
-hero_mobile: /images/uploads/about_hero_mobile.jpg
+hero: /images/uploads/about-banner-web.jpg
+hero_mobile: /images/uploads/about-banner-mobile-web.jpg
 title: Sharing a love of food and flowers
 hero_text: Denver Kitchen Gardens was born from a desire to share the knowledge
   and expertise I have gained over the years as an avid home gardener and urban
