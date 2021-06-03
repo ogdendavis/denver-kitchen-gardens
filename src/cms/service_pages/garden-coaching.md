@@ -32,8 +32,8 @@ process_points:
   - point_text: understand how and when to harvest your produce
   - point_text: maximize your small space with high density planting
   - point_text: pick out plants from your favorite nursery with you
-  - point_text: have information on how to utilize an automated watering system
-  - point_text: have help picking plants and seeds that are right for your space
+  - point_text: advise on how to utilize an automated watering system
+  - point_text: select plants and seeds that are right for your space and needs
   - point_text: The sky's the limit!
 call_text: ""
 call_url: /contact
