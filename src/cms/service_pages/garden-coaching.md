@@ -2,11 +2,11 @@
 published: true
 title: Garden Coaching
 preview_heading: Garden Coaching
-preview_image: /images/uploads/seeds-in-hand.jpg
+preview_image: /images/uploads/garden-coaching-web.jpg
 preview_text: Need help with your existing garden? I can help.
 preview_on_homepage: true
-header_image: /images/uploads/coaching_hero.jpg
-header_image_mobile: /images/uploads/coaching_hero_mobile.jpg
+header_image: /images/uploads/gargen-coaching-banner-web.jpg
+header_image_mobile: /images/uploads/garden-coaching-banner-mobile.jpg
 intro_subheading: Personalized help for your existing garden.
 intro_copy: >-
   Do you already have a garden but feel you could use a little additional help?
