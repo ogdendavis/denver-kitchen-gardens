@@ -39,8 +39,8 @@ process_points:
   - point_title: Resource guides
     point_text: tools, supplies, and trusted partners for all of your gardening needs
 call_text: No matter what time of year it is or the size of your gardening
-  space, we can work together to create a game plan for you. Reach out today so
-  we can schedule a visit!
+  space, we can work together to create a game plan for you. Reach out today and
+  schedule a visit!
 call_url: /contact
 call_button: Schedule a consultation
 ---
