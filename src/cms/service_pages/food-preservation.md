@@ -5,7 +5,7 @@ preview_heading: Food Preservation
 preview_image: /images/uploads/food-preservation-web.jpg
 preview_text: Workshops to preserve your harvest so you can enjoy it year-round.
 preview_on_homepage: true
-header_image: /images/uploads/preservation_hero.jpg
+header_image: /images/uploads/food-preservation-banner-web.jpg
 header_image_mobile: /images/uploads/preservation_hero_mobile.jpg
 intro_subheading: A kitchen garden, at its heart, is meant for you to eat from.
 intro_copy: >-
