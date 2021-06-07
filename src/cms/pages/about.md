@@ -12,7 +12,7 @@ content_copy: >-
   flowers and herbs.
 
 
-  I've worked on small-scale farms and have tended community garden plots. I've planted seeds in raised beds, patio planters and in greenhouses. I've grown potatoes on balconies and lettuce on windowsills. Although I've learned so much from my mentors, I've learned the most by trial and error, through my personal successes and failures.
+  I've worked on small-scale farms and have tended community garden plots. I've planted seeds in raised beds, patio planters and in greenhouses. I've grown potatoes on balconies and lettuce on windowsills. Although I've learned so much from my mentors, I've learned the most from trial and error and through my personal successes and failures.
 
 
   > The trouble with trial and error is how long it takes to get results!
