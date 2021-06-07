@@ -2,6 +2,12 @@
 title: So Many Questions...
 hero_text: " "
 questions:
+  - question: I already have a garden, why do I need you?
+    answer: Even experienced gardeners run into issues or need a new perspective. My
+      [garden
+      coaching](https://denverkitchengardens.com/services/garden-coaching)
+      services are great for folks who could use a little help with issues or
+      edible garden design.
   - question: What areas do you service?
     answer: Denver Kitchen Gardens works with clients throughout the Denver-Metro
       area. Please [contact me](/contact) if you live outside this range to see
@@ -11,8 +17,9 @@ questions:
       design. Fortunately, there are lots of wonderful sustainable landscapers
       in Denver that I can recommend.
   - question: Do you  offer installations?
-    answer: While I do not plant your garden for you, I can help you at planting
-      time with my Garden Coaching servies. I love hands-on learning!
+    answer: Great question! Please [contact
+      me](https://denverkitchengardens.com/contact) to discuss your project and
+      I can provide an estimate.
   - question: How much do your services cost?
     answer: Great question! Please [contact me](/contact) to discuss your project
       and I can provide an estimate.
