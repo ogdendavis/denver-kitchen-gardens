@@ -2,6 +2,11 @@
 title: So Many Questions...
 hero_text: " "
 questions:
+  - question: What the heck is a kitchen garden?
+    answer: This is a space dedicated to growing fruits, veggies, herbs and flowers
+      for home cooking. Your curated kitchen garden is where you grow the foods
+      you love the most, usually close to your kitchen for convenience and
+      inspiration!
   - question: I already have a garden, why do I need you?
     answer: Even experienced gardeners run into issues or need a new perspective. My
       [garden
@@ -26,9 +31,4 @@ questions:
   - question: Do you offer full service garden management?
     answer: Sorry, no. I'm a one-woman show and am unable to tend your garden while
       you are on vacation.
-  - question: What the heck is a kitchen garden?
-    answer: This is a space dedicated to growing fruits, veggies, herbs and flowers
-      for home cooking. Your curated kitchen garden is where you grow the foods
-      you love the most, usually close to your kitchen for convenience and
-      inspiration!
 ---
