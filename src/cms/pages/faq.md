@@ -28,7 +28,4 @@ questions:
   - question: How much do your services cost?
     answer: Great question! Please [contact me](/contact) to discuss your project
       and I can provide an estimate.
-  - question: Do you offer full service garden management?
-    answer: Sorry, no. I'm a one-woman show and am unable to tend your garden while
-      you are on vacation.
 ---
