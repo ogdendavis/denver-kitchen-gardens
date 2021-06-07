@@ -25,7 +25,7 @@ detail_copy: >-
   Everyone's needs are different and there is no one size fits all approach to gardening. While books and websites are wonderful resources, nothing compares to in-person expert advice. I create individualized plans that work for the specific needs of my clients.
 
 
-  Each consultation includes a site assessment where I will note your challenges and opportunities. We'll discuss what your gardening goals are and create a plan for how to get there. each client receives personalized materials to help them save time, money, and effort.
+  Each consultation includes a site assessment where I will note your challenges and opportunities. We'll discuss what your gardening goals are and create a plan for how to get there. Each client receives personalized materials to help them save time, money, and effort.
 process_heading: Each client receives
 process_points:
   - point_title: Consultation Review
