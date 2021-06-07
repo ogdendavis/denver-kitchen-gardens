@@ -20,6 +20,8 @@ questions:
     answer: Sorry, no. I'm a one-woman show and am unable to tend your garden while
       you are on vacation.
   - question: What the heck is a kitchen garden?
-    answer: A kitchen garden is the edible garden space where you can grow food for
-      all of your culinary adventures!
+    answer: This is a space dedicated to growing fruits, veggies, herbs and flowers
+      for home cooking. Your curated kitchen garden is where you grow the foods
+      you love the most, usually close to your kitchen for convenience and
+      inspiration!
 ---
