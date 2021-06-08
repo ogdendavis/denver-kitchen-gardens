@@ -15,9 +15,9 @@ intro_copy: >-
 
   Don't let the challenges of growing food in Denver stop you from having the garden of your dreams. Denver Kitchen Gardens is the edible garden partner you've been looking for!
 above_pullquote: Any experienced (and honest) home gardener will tell you the
-  key to gardening success is actually failure. Learning from failure is a great
-  way to improve your gardening skills, but who wants to deal with that? Your
-  garden should bring you joy, not stress!
+  key to success is actually failure. Learning from failure is a great way to
+  improve your skills, but who wants to deal with that? Your garden should bring
+  you joy, not stress!
 pullquote: Denver Kitchen Gardens will work with you to create the garden that
   you want now, not the garden you could have in three years.
 below_pullquote: >-
