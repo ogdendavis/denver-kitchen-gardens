@@ -22,8 +22,9 @@ questions:
       design. Fortunately, there are lots of wonderful sustainable landscapers
       in Denver that I can recommend.
   - question: Do you offer installations?
-    answer: Sorry no, I'm unable to plant your garden for you. But, I'll give you
-      the tools and knowledge to succeed!
+    answer: I don't plant your garden for you. I do give you the tools and knowledge
+      to succeed and offer hourly garden coaching if you need more hands-on
+      help!
   - question: How much do your services cost?
     answer: Great question! Please [contact me](/contact) to discuss your project
       and I can provide an estimate.
