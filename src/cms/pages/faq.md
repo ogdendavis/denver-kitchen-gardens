@@ -23,8 +23,9 @@ questions:
       in Denver that I can recommend.
   - question: Do you offer installations?
     answer: I don't plant your garden for you. I do give you the tools and knowledge
-      to succeed and offer hourly garden coaching if you need more hands-on
-      help!
+      to succeed and offer hourly [garden
+      coaching](https://denverkitchengardens.com/services/garden-coaching) if
+      you need more hands-on help!
   - question: How much do your services cost?
     answer: Great question! Please [contact me](/contact) to discuss your project
       and I can provide an estimate.
