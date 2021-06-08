@@ -8,8 +8,8 @@ questions:
       you love the most, usually close to your kitchen for convenience and
       inspiration!
   - question: I already have a garden, why do I need you?
-    answer: Even experienced gardeners run into issues or need a new perspective. My
-      hourly [garden
+    answer: Even experienced gardeners run into issues or could use a new
+      perspective. My hourly [garden
       coaching](https://denverkitchengardens.com/services/garden-coaching)
       services are great for folks who could use a little help with issues or
       edible garden design.
