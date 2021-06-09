@@ -39,15 +39,19 @@ const BigHat = ({ subTitle, pageImage, location }) => {
         rel="stylesheet"
       />
       {/* <!-- Global site tag (gtag.js) - Google Analytics --> */}
-      {/* prettier-ignore */}
-      <script async src="https://www.googletagmanager.com/gtag/js?id=G-XW94DWK5VG"></script>
-      {/* prettier-ignore */}
-      <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments)}
-        gtag('js', new Date());
-        gtag('config', 'G-XW94DWK5VG');
-      </script>
+      <script
+        async
+        src="https://www.googletagmanager.com/gtag/js?id=G-XW94DWK5VG"
+      />
+      <script
+        dangerouslySetInnerHTML={{
+          __html: `window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+
+gtag('config', 'G-XW94DWK5VG');`,
+        }}
+      />
       {/* Favicon */}
       <link
         rel="apple-touch-icon"
