@@ -192,7 +192,7 @@ const Footer = () => {
                 rel="noreferrer"
               >
                 <InstaIcon />
-                <span>Follow us on Instagram</span>
+                <span>Follow me on Instagram</span>
               </a>
             </IconContainer>
           </FooterLinks>
