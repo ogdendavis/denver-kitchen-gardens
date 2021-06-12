@@ -16,9 +16,9 @@ intro_copy: >-
 
 
   Even a small kitchen garden will provide you with plenty to eat now and plenty to preserve and enjoy later. Denver Kitchen Gardens offers food preservation workshops so our clients can fully benefit from the hard work they have put into their gardens.
-detail_heading: We offer individual coaching and group classes on food preservation techniques
+detail_heading: I offer individual coaching and group classes on food preservation techniques
 detail_copy: ""
-process_heading: "Here are some of the food preservation workshops we offer:"
+process_heading: "Here are some of the food preservation workshops offered:"
 process_points:
   - point_title: "Water bath canning:"
     point_text: learn how to safely can up your excess produce
