@@ -30,7 +30,7 @@ process_heading: Each client receives
 process_points:
   - point_title: Consultation Review
     point_text: a recap of your goals and roadmap for how to get there
-  - point_title: Personalized Planting Calendar
+  - point_title: Custom Planting Calendar
     point_text: a foolproof calendar for your garden plan
   - point_title: Suggested garden layout
     point_text: a planting diagram to inspire your garden design
