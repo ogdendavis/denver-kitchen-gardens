@@ -64,5 +64,25 @@ module.exports = {
         },
       },
     },
+    {
+      resolve: `gatsby-plugin-google-gtag`,
+      options: {
+        // Using the Google Analytics 4 measurement ID here
+        trackingIds: ['G-XW94DWK5VG'],
+        // This object gets passed directly to the gtag config command
+        gtagConfig: {
+          config: 'G-XW94DWK5VG',
+          anonymize_ip: true,
+          cookie_expires: 0,
+        },
+        // Plugin-specific config
+        pluginConfig: {
+          // Put tracking script in the head instead of the body
+          head: true,
+          // Respect users' do not track settings
+          respectDNT: true,
+        },
+      },
+    },
   ],
 };
