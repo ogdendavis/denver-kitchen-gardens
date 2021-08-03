@@ -3,7 +3,7 @@ title: Jenny's Garden
 date: 2021.04.15
 images:
   - on_homepage: false
-    image: /images/uploads/garlic.jpg
+    image: /images/uploads/denverkitchengardensjune92021socialexport-49_websize.jpg
   - on_homepage: false
     image: /images/uploads/artichoke.jpg
   - on_homepage: true
