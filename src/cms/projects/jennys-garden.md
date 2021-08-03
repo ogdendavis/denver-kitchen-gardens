@@ -23,7 +23,7 @@ images:
   - on_homepage: false
     image: /images/uploads/denverkitchengardensjune92021socialexport-110_websize-1-.jpg
   - on_homepage: true
-    image: /images/uploads/oscar_shopping.jpg
+    image: /images/uploads/denverkitchengardensjune92021socialexport-110_websize-1-.jpg
   - on_homepage: false
     image: /images/uploads/bean_hands.jpg
   - on_homepage: true
