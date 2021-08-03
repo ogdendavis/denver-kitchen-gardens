@@ -11,7 +11,7 @@ images:
   - on_homepage: false
     image: /images/uploads/denverkitchengardensjune92021socialexport-22_websize.jpg
   - on_homepage: true
-    image: /images/uploads/squarsh.jpg
+    image: /images/uploads/denverkitchengardensjune92021socialexport-29_websize-1-.jpg
   - on_homepage: false
     image: /images/uploads/seedlings.jpg
   - on_homepage: true
