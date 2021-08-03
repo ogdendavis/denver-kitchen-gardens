@@ -27,11 +27,11 @@ images:
   - on_homepage: false
     image: /images/uploads/jennyspringlaunchapril232021socialexport-23_websize-1-.jpg
   - on_homepage: true
-    image: /images/uploads/strainer_veg.jpg
+    image: /images/uploads/denverkitchengardensjune92021highreso-35_websize.jpg
   - on_homepage: false
-    image: /images/uploads/bean_growing.jpg
+    image: /images/uploads/denverkitchengardensjune92021highreso-34_websize.jpg
   - on_homepage: false
-    image: /images/uploads/praying_mantis.jpg
+    image: /images/uploads/denverkitchengardensjune92021highreso-48_websize.jpg
   - on_homepage: false
     image: /images/uploads/so_many_onions.jpg
   - on_homepage: false
