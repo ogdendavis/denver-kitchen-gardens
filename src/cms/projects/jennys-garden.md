@@ -16,10 +16,10 @@ images:
     image: /images/uploads/denverkitchengardensjune92021socialexport-102_websize.jpg
   - on_homepage: false
     image: /images/uploads/denverkitchengardensjune92021socialexport-93_websize.jpg
-  - on_homepage: true
-    image: /images/uploads/denverkitchengardensjune92021socialexport-99_websize-1-.jpg
   - on_homepage: false
     image: /images/uploads/denverkitchengardensjune92021socialexport-43_websize-1-.jpg
+  - on_homepage: true
+    image: /images/uploads/denverkitchengardensjune92021socialexport-99_websize-1-.jpg
   - on_homepage: false
     image: /images/uploads/denverkitchengardensjune92021socialexport-110_websize-1-.jpg
   - on_homepage: true
