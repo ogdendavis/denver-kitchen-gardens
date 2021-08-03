@@ -13,7 +13,7 @@ images:
   - on_homepage: true
     image: /images/uploads/denverkitchengardensjune92021socialexport-29_websize-1-.jpg
   - on_homepage: false
-    image: /images/uploads/seedlings.jpg
+    image: /images/uploads/denverkitchengardensjune92021socialexport-93_websize.jpg
   - on_homepage: true
     image: /images/uploads/small_pickles.jpg
   - on_homepage: false
