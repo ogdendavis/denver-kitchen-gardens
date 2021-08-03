@@ -3,7 +3,7 @@ title: Jenny's Garden
 date: 2021.04.15
 images:
   - on_homepage: false
-    image: /images/uploads/denverkitchengardensjune92021socialexport-49_websize.jpg
+    image: /images/uploads/denverkitchengardensjune92021socialexport-55_websize-1-.jpg
   - on_homepage: false
     image: /images/uploads/denverkitchengardensjune92021socialexport-75_websize.jpg
   - on_homepage: true
@@ -19,7 +19,7 @@ images:
   - on_homepage: true
     image: /images/uploads/denverkitchengardensjune92021socialexport-99_websize-1-.jpg
   - on_homepage: false
-    image: /images/uploads/bowl_o_greens.jpg
+    image: /images/uploads/denverkitchengardensjune92021socialexport-43_websize-1-.jpg
   - on_homepage: false
     image: /images/uploads/tasty_veg.jpg
   - on_homepage: true
