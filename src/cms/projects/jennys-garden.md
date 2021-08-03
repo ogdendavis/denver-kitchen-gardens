@@ -9,7 +9,7 @@ images:
   - on_homepage: true
     image: /images/uploads/denverkitchengardensjune92021socialexport-3_websize.jpg
   - on_homepage: false
-    image: /images/uploads/pickles.jpg
+    image: /images/uploads/denverkitchengardensjune92021socialexport-22_websize.jpg
   - on_homepage: true
     image: /images/uploads/squarsh.jpg
   - on_homepage: false
