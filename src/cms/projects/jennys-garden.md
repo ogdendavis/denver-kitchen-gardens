@@ -21,7 +21,7 @@ images:
   - on_homepage: false
     image: /images/uploads/denverkitchengardensjune92021socialexport-43_websize-1-.jpg
   - on_homepage: false
-    image: /images/uploads/tasty_veg.jpg
+    image: /images/uploads/denverkitchengardensjune92021socialexport-110_websize-1-.jpg
   - on_homepage: true
     image: /images/uploads/oscar_shopping.jpg
   - on_homepage: false
