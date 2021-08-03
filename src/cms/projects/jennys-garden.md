@@ -23,7 +23,7 @@ images:
   - on_homepage: false
     image: /images/uploads/denverkitchengardensjune92021socialexport-110_websize-1-.jpg
   - on_homepage: true
-    image: /images/uploads/denverkitchengardensjune92021socialexport-110_websize-1-.jpg
+    image: /images/uploads/jennyspringlaunchapril232021socialexport-14_websize-1-.jpg
   - on_homepage: false
     image: /images/uploads/jennyspringlaunchapril232021socialexport-23_websize-1-.jpg
   - on_homepage: true
