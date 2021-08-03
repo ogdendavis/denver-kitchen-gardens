@@ -5,7 +5,7 @@ images:
   - on_homepage: false
     image: /images/uploads/denverkitchengardensjune92021socialexport-49_websize.jpg
   - on_homepage: false
-    image: /images/uploads/artichoke.jpg
+    image: /images/uploads/denverkitchengardensjune92021socialexport-75_websize.jpg
   - on_homepage: true
     image: /images/uploads/carrots.jpg
   - on_homepage: false
