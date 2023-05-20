@@ -3,7 +3,7 @@ module.exports = {
     title: 'Denver Kitchen Gardens',
   },
   plugins: [
-    'gatsby-plugin-netlify-cms',
+    'gatsby-plugin-static-cms',
     'gatsby-plugin-styled-components',
     'gatsby-plugin-image',
     'gatsby-plugin-sharp',
