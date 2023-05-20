@@ -10,7 +10,7 @@ header_image_mobile: /images/uploads/food-preservation-banner-mobile.jpg
 intro_subheading: A kitchen garden is meant for you to eat from.
 intro_copy: >
   From your first peas in the spring to your last pumpkin in the fall, your
-  garden will keep you well fed all throughout the growing season. But what
+  garden will keep you well-fed all throughout the growing season. But what
   about those cold months when you're not growing a garden? Wouldn't it be nice
   to keep on enjoying the harvest when there's snow on the ground?
 
