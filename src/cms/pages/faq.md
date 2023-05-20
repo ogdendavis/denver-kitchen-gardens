@@ -2,7 +2,7 @@
 title: So Many Questions...
 hero_text: " "
 questions:
-  - question: What the heck is a kitchen garden?
+  - question: What is a kitchen garden?
     answer: This is a space dedicated to growing fruits, veggies, herbs and flowers
       for home cooking. Your curated kitchen garden is where you grow the foods
       you love the most, usually close to your kitchen for convenience and
