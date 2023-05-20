@@ -1,6 +1,6 @@
 backend:
   name: git-gateway
-  branch: master
+  branch: main
   repo: ogdendavis/denver-kitchen-gardens
 
 media_folder: 'static/images/uploads'
